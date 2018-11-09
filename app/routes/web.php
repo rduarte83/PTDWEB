@@ -1,14 +1,29 @@
 <?php
 
 // Home
+/*
 Route::get('/', function () {
-    return view('home');
+    return view('template/index');
 });
+*/
+
+// Template Routes
+Route::get('/', "HomeController@index");
+Route::get('/index', "HomeController@index");
+Route::get('/about', "HomeController@about");
+Route::get('/blog', "HomeController@blog");
+Route::get('/blog-detail', "HomeController@blogDetail");
+Route::get('/cart', "HomeController@cart");
+Route::get('/contact', "HomeController@contact");
+Route::get('/home-02', "HomeController@home02");
+Route::get('/home-03', "HomeController@home03");
+Route::get('/product', "HomeController@product");
+Route::get('/product-detail', "HomeController@productDetail");
+
 
 // User
 Route::get('/register', "UserController@registerView");
 Route::get('/login', "UserController@loginView");
-Route::get('/admin', "UserController@adminView");
 
 // Products
 Route::get('/products/', "ProductController@showAll");
