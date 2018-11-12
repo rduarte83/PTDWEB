@@ -99,6 +99,12 @@ class CreateTrigger extends Migration
      */
     public function down()
     {
-        DB::unprepared('SELECT strip_all_triggers()');
+        DB::unprepared('
+            SELECT strip_all_triggers();
+            DROP FUNCTION f_password();
+            DROP FUNCTION f_logs();
+            DROP FUNCTION f_activeUser();
+            DROP FUNCTION strip_all_triggers();
+        ');
     }
 }

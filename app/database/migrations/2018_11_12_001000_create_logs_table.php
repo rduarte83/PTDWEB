@@ -19,8 +19,8 @@ class CreateLogsTable extends Migration
             $table->string('op')->nullable();
             $table->dateTime('time')->nullable()->default(now());
             $table->string('utilizador')->nullable();
-            $table->string('new')->nullable();
-            $table->string('old')->nullable();
+            $table->text('new')->nullable();
+            $table->text('old')->nullable();
             $table->timestamps();
         });
     }

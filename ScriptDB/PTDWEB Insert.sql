@@ -1,0 +1,135 @@
+INSERT INTO Botijas
+  (id, 
+  nome, 
+  tipo, 
+  marca, 
+  descricao, 
+  preco, 
+  preco_tara) 
+VALUES 
+  (?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?);
+INSERT INTO Botijas_compras
+  (botijasid, 
+  compraid, 
+  preco_compra, 
+  quantidade, 
+  tem_tara) 
+VALUES 
+  (?, 
+  ?, 
+  ?, 
+  ?, 
+  ?);
+INSERT INTO Botijas_Maquinas
+  (maquinasid, 
+  botijasid, 
+  stock, 
+  num_reservas) 
+VALUES 
+  (?, 
+  ?, 
+  ?, 
+  ?);
+INSERT INTO Compras
+  (id, 
+  utilizador, 
+  data, 
+  valor, 
+  meio_pagamento, 
+  qr, 
+  pin, 
+  data_recolha) 
+VALUES 
+  (?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?);
+INSERT INTO Logs
+  (id, 
+  tab, 
+  op, 
+  time, 
+  utilizador, 
+  new, 
+  old) 
+VALUES 
+  (?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?);
+INSERT INTO Maquinas
+  (id, 
+  nome, 
+  online) 
+VALUES 
+  (?, 
+  ?, 
+  ?);
+INSERT INTO Pagamentos
+  (id, 
+  meio) 
+VALUES 
+  (?, 
+  ?);
+INSERT INTO Roles
+  (id, 
+  role) 
+VALUES 
+  (?, 
+  ?);
+INSERT INTO Utilizadores
+  (id, 
+  email, 
+  password, 
+  nome, 
+  morada, 
+  codigo_postal, 
+  Localidade, 
+  nif, 
+  cc, 
+  genero, 
+  data_nascimento, 
+  contacto, 
+  role, 
+  data_registo, 
+  data_login, 
+  num_cartao) 
+VALUES 
+  (?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?, 
+  ?);
+INSERT INTO Utilizadores_Botijas
+  (utilizadoresid, 
+  botijasid, 
+  favorito) 
+VALUES 
+  (?, 
+  ?, 
+  ?);
+
