@@ -54,6 +54,16 @@ class HomeController extends Controller
     public function home03(){
         return view($this->dir . "home-03");
     }
+    /* Testes AP*/
+    public function logincliente(){
+        return view($this->dir . "login-cliente");
+    }
+    public function registocliente(){
+        return view($this->dir . "registo-cliente");
+    }
+    public function homecarrinho(){
+        return view($this->dir . "home-carrinho");
+    }
 
 
     /**

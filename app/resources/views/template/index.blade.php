@@ -110,6 +110,15 @@
 							<li>
 								<a href="contact">Contact</a>
 							</li>
+							<li>
+								<a href="login-cliente">Login</a>
+							</li>
+							<li>
+								<a href="registo-cliente">registo Cliente</a>
+							</li>
+							<li>
+								<a href="home-carrinho">home Carrinho</a>
+							</li>
 						</ul>
 					</nav>
 				</div>
@@ -122,17 +131,19 @@
 
 					<span class="linedivide1"></span>
 
+
 					<div class="header-wrapicon2">
 						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 						<span class="header-icons-noti">0</span>
-
 						<!-- Header cart noti -->
 						<div class="header-cart header-dropdown">
 							<ul class="header-cart-wrapitem">
+
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
 										<img src="images/item-cart-01.jpg" alt="IMG">
 									</div>
+
 
 									<div class="header-cart-item-txt">
 										<a href="#" class="header-cart-item-name">
@@ -197,10 +208,12 @@
 									</a>
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</div>
 
 		<!-- Header Mobile -->
