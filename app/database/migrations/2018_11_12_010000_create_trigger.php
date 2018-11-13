@@ -16,7 +16,7 @@ class CreateTrigger extends Migration
         DB::unprepared('
             CREATE OR REPLACE FUNCTION f_password() RETURNS trigger AS $$
                 BEGIN
-                    NEW.password := crypt(NEW.password, gen_salt(\'sha256\'));
+                    NEW.password := crypt(NEW.password, gen_salt(\'bf\', 8));
                     RETURN NEW;
                 END;
                 $$ LANGUAGE plpgsql SECURITY DEFINER;
