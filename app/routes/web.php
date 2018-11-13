@@ -19,6 +19,7 @@ Route::get('/home-02', "HomeController@home02");
 Route::get('/home-03', "HomeController@home03");
 Route::get('/product', "HomeController@product");
 Route::get('/product-detail', "HomeController@productDetail");
+
 // teste AP
 Route::get('/login-cliente', 'HomeController@logincliente' );
 Route::get('/registo-cliente', 'HomeController@registocliente' );
@@ -38,6 +39,11 @@ Route::get('/products/add/{id}', "ProductController@addToCart");
 Route::post('/register', "UserController@create");
 Route::post('/login', "UserController@login");
 
+// UI
+Route::get('/ui', "HomeController@ui");
+Route::get('/product', "HomeController@uiProduct");
+Route::get('/header', "HomeController@uiHeader");
+Route::get('/footer', "HomeController@uiFooter");
 
 // Telemoveis
 /*Route::get("/telemovel/show", "TelemovelController@showAll");

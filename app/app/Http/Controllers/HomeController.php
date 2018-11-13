@@ -54,6 +54,23 @@ class HomeController extends Controller
     public function home03(){
         return view($this->dir . "home-03");
     }
+
+    /**
+    * UI
+    */
+    public function uiFooter(){
+        return view("ui/". "footer");
+    }
+    public function uiHeader(){
+        return view("ui/". "geader");
+    }
+    public function uiProduct(){
+        return view("ui/". "product");
+    }
+    public function ui(){
+        return view("ui/". "index");
+    }
+
     /* Testes AP*/
     public function logincliente(){
         return view($this->dir . "login-cliente");
