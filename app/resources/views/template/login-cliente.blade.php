@@ -94,6 +94,7 @@
     </div>
 </main>
 
+
 <script src="{{asset('js/app.js')}}" type="javascript"></script>
 </body>
 </html>

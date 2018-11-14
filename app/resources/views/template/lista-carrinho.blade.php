@@ -1,9 +1,9 @@
 <div class="container col-md-12 offset-md-2 shadow-lg p-3 mb-5 bg-white rounded">
-<div class="card-header">
+<!--<div class="card-header">
 <div class="card title text-lg-center">
     <h2>Lista Carrinho</h2>
 </div>
-</div>
+</div>-->
 <div class="card-body">
 
     <div class="container-table-cart pos-relative">
@@ -67,8 +67,8 @@
                 </tbody></table>
         </div>
     </div>
-    <div class="flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm">
-        <div class="size10 trans-0-4 m-t-10 m-b-10">
+    <div class="card-footer text-right  flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm">
+        <div class="trans-0-4">
             <!-- Button -->
             <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 p-2">
                         Atualizar carrinho
@@ -78,4 +78,3 @@
 </div>
 
 </div>
-

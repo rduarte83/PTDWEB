@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--===============================================================================================-->
+
     <style>
         body{ padding: 40px;}
     </style>
@@ -44,14 +45,14 @@
 </head>
 <body>
 
-<!-- Registo de Cliente -->
+<!-- Home carrinho -->
 
 <main role="main" class="m-t-20">
     <div class="row">
         <div class="container shadow-lg p-3 mb-5 bg-white rounded">
             <div class="row">
                 <div class="col-sm">
-                    <h4>Carrinho</h4>
+                    <h4 class="font-weight-bold">Carrinho</h4>
                 </div>
                 <div class="col-sm">
                     <h4>Detalhes de compra</h4>
@@ -66,7 +67,8 @@
 
         </div>
 
-         @extends('template.lista-carrinho')
+         @extends('template.carrinho-final')
+
   </div>
 
 </main>
