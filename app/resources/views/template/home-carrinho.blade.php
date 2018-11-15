@@ -39,15 +39,14 @@
     <!--===============================================================================================-->
 
     <style>
-        body{ padding: 40px;}
+        .testesAP{ padding: 150px;}
     </style>
     <title>Login</title>
 </head>
 <body>
 
 <!-- Home carrinho -->
-
-<main role="main" class="m-t-20">
+<main role="main" class="m-t-20" class="testesAP">
     <div class="row">
         <div class="container shadow-lg p-3 mb-5 bg-white rounded">
             <div class="row">
@@ -67,7 +66,9 @@
 
         </div>
 
-         @extends('template.carrinho-final')
+
+        @include('template.historico-compras')
+
 
   </div>
 

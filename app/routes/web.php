@@ -39,6 +39,7 @@ Route::get('/products/add/{id}', "ProductController@addToCart");
 Route::post('/register', "UserController@create");
 Route::post('/login', "UserController@login");
 
+
 // UI
 Route::get('/ui', "HomeController@ui");
 Route::get('/product', "HomeController@uiProduct");

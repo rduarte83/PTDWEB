@@ -62,7 +62,7 @@ class HomeController extends Controller
         return view("ui/". "footer");
     }
     public function uiHeader(){
-        return view("ui/". "geader");
+        return view("ui/". "header");
     }
     public function uiProduct(){
         return view("ui/". "product");
@@ -80,6 +80,9 @@ class HomeController extends Controller
     }
     public function homecarrinho(){
         return view($this->dir . "home-carrinho");
+    }
+    public function historicoCompras(){
+        return view($this->dir . "historico-compras");
     }
 
 

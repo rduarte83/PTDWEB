@@ -1,3 +1,4 @@
+@section('carrinho-resumo')
 <div class="container col-md-12 offset-md-2 shadow-lg p-3 mb-5 bg-white rounded">
     <!--<div class="card-header">
         <div class="card title text-lg-center">
@@ -8,7 +9,6 @@
 
         <div class="row">
             <div class="col-lg-6">
-                <div class="form-check">
                     <table class="table table-hover">
                         <thead>
                         <tr>
@@ -33,7 +33,6 @@
                         </tr>
                         </tbody>
                     </table>
-                </div>
             </div>
             <div class="col-lg-6">
                 <div class="card">
@@ -70,3 +69,5 @@
         </div>
     </div>
 </div>
+
+@endsection

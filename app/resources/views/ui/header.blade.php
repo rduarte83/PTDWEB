@@ -1,4 +1,4 @@
-@section("header")
+
 <header class="header1">
     <!-- Header desktop -->
     <div class="container-menu-header">
@@ -340,4 +340,4 @@
         </nav>
     </div>
 </header>
-@endsection
+
