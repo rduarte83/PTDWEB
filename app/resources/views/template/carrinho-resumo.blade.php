@@ -1,4 +1,4 @@
-@section('carrinho-resumo')
+
 <div class="container col-md-12 offset-md-2 shadow-lg p-3 mb-5 bg-white rounded">
     <!--<div class="card-header">
         <div class="card title text-lg-center">
@@ -70,4 +70,3 @@
     </div>
 </div>
 
-@endsection

@@ -1,5 +1,4 @@
 
-@section('lista-carrinho')
 <div class="container col-md-12 offset-md-2 shadow-lg p-3 mb-5 bg-white rounded">
 <!--<div class="card-header">
 <div class="card title text-lg-center">
@@ -76,8 +75,13 @@
                         Atualizar carrinho
             </button>
         </div>
+        <div class="trans-0-4">
+            <!-- Button -->
+            <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 p-2">
+                Continuar
+            </button>
+        </div>
     </div>
 </div>
-
 </div>
-@endsection
+</div>

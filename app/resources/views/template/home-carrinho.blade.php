@@ -67,7 +67,7 @@
         </div>
 
 
-        @include('template.historico-compras')
+        @include('template.lista-favoritos-users')
 
 
   </div>

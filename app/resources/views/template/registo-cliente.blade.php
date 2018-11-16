@@ -126,19 +126,26 @@
             <div class="card border">
                 <div class="card-header">
                     <div class="card title text-lg-center">
-                        <h2>Crie a sua conta já hoje!</h2>
+                        <h2>POLÍTICA DE PRIVACIDADE</h2>
                     </div>
                 </div>
                 <div class="card-body">
-                    <p>
-                        Lorem ipsum dolor sit amet,consetetur sadipscing elitr,  consetetur sadipscing elitr,  sed diam voluptua.  Lorem ipsum dolor sit amet,  sed diam voluptua.  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  sed diam voluptua.  sed diam voluptua.  Lorem ipsum dolor sit amet,
 
-                        Lorem ipsum dolor sit amet,Stet clita kasd gubergren,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  Stet clita kasd gubergren,  no sea takimata sanctus est Lorem ipsum dolor sit amet.  Stet clita kasd gubergren,  sed diam voluptua.  At vero eos et accusam et justo duo dolores et ea rebum.  sed diam voluptua.
+                    <section class="content">
 
-                        Lorem ipsum dolor sit amet,At vero eos et accusam et justo duo dolores et ea rebum.  Stet clita kasd gubergren,  Lorem ipsum dolor sit amet,  At vero eos et accusam et justo duo dolores et ea rebum.  At vero eos et accusam et justo duo dolores et ea rebum.  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  no sea takimata sanctus est Lorem ipsum dolor sit amet.  At vero eos et accusam et justo duo dolores et ea rebum.  no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        <h4>Para que fins podemos utilizar os seus dados pessoais?</h4>
+
+                        <p>Serviço de apoio a clientes: utilizamos os seus Dados Pessoais para fins de serviço de apoio ao cliente, incluindo responder às suas questões. Esse processo envolve, normalmente, o uso de determinada informação de contacto pessoal e informação relacionada com o motivo da sua questão (por ex, questão técnica, questão/reclamação sobre o produto, questão de natureza geral, etc.).</p>
 
 
-                    </p>
+
+                        <h4>Contacte-nos</h4>
+
+                        <p>Se tiver alguma questão relacionada com a utilização dos seus dados pessoais poderá contactar o nosso Encarregado de Proteção de Dados através do seguinte endereço de e-mail: privacidade@mail.pt</p>
+
+                        <p>Página actualizada em: 16 de Novembro de 2018</p>
+                    </section>
+
 
                 </div>
             </div>
