@@ -1,343 +1,257 @@
-
 <header class="header1">
     <!-- Header desktop -->
     <div class="container-menu-header">
-        <div class="topbar">
-            <div class="topbar-social">
-                <a href="#" class="topbar-social-item fa fa-facebook"></a>
-                <a href="#" class="topbar-social-item fa fa-instagram"></a>
-                <a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-                <a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-                <a href="#" class="topbar-social-item fa fa-youtube-play"></a>
-            </div>
+      <div class="wrap_header">
+        <!-- Logo -->
+        <a href="index" class="logo">
+            <img src="images/icons/logo.png" alt="IMG-LOGO">
+        </a>
 
-            <span class="topbar-child1">
-					Free shipping for standard order over $100
-				</span>
+        <!-- Menu -->
+        <div class="wrap_menu">
+          <nav class="menu">
+            <ul class="main_menu">
 
-            <div class="topbar-child2">
-					<span class="topbar-email">
-						fashe@example.com
-					</span>
+              <div class="pos-relative bo11 of-hidden">
+                <input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-product" placeholder="Procurar produtos...">
 
-                <div class="topbar-language rs1-select2">
-                    <select class="selection-1" name="time">
-                        <option>USD</option>
-                        <option>EUR</option>
-                    </select>
-                </div>
-            </div>
+                <button class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4">
+                  <i class="fs-13 fa fa-search" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <span class="linedivide1"></span>
+
+              <li>
+                <a href="produtos">Loja</a>
+              </li>
+
+              <span class="linedivide1"></span>
+
+              <li>
+                <a href="mapa">Mapa</a>
+              </li>
+            </ul>
+          </nav> 
         </div>
 
-        <div class="wrap_header">
-            <!-- Logo -->
-            <a href="index" class="logo">
-                <img src="images/icons/logo.png" alt="IMG-LOGO">
-            </a>
+        <!-- Header Icon -->
+        <div class="header-icons">
 
-            <!-- Menu -->
-            <div class="wrap_menu">
-                <nav class="menu">
-                    <ul class="main_menu">
-                        <li>
-                            <a href="index">Home</a>
-                            <ul class="sub_menu">
-                                <li><a href="index">Homepage V1</a></li>
-                                <li><a href="home-02">Homepage V2</a></li>
-                                <li><a href="home-03">Homepage V3</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="product">Shop</a>
-                        </li>
-
-                        <li class="sale-noti">
-                            <a href="product">Sale</a>
-                        </li>
-
-                        <li>
-                            <a href="cart">Features</a>
-                        </li>
-
-                        <li>
-                            <a href="blog">Blog</a>
-                        </li>
-
-                        <li>
-                            <a href="about">About</a>
-                        </li>
-
-                        <li>
-                            <a href="contact">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-            <!-- Header Icon -->
-            <div class="header-icons">
-                <a href="#" class="header-wrapicon1 dis-block">
-                    <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-                </a>
-
-                <span class="linedivide1"></span>
-
-                <div class="header-wrapicon2">
-                    <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-                    <span class="header-icons-noti">0</span>
-
-                    <!-- Header cart noti -->
-                    <div class="header-cart header-dropdown">
-                        <ul class="header-cart-wrapitem">
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-01.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        White Shirt With Pleat Detail Back
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-02.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Converse All Star Hi Black Canvas
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-03.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Nixon Porter Leather Watch In Tan
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="header-cart-total">
-                            Total: $75.00
-                        </div>
-
-                        <div class="header-cart-buttons">
-                            <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    View Cart
-                                </a>
-                            </div>
-
-                            <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    Check Out
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+			<!-- USER DROPDOWN -->
+			<div class="header-wrapicon2">
+					<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+		
+					<!-- Header cart noti -->
+					<div class="header-cart header-dropdown">
+					  <ul class="header-cart-wrapitem">
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                 </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+
+                <div class="header-cart-buttons">
+                  <div class="header-cart-wrapbtn">
+                    <!-- Button -->
+                    <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Login</button>
+
+                  </div>
+
+                  <div class="header-cart-wrapbtn">
+
+                      <a href="criar-conta" class="s-text8">
+                          Não tem conta? Crie já!
+                      </a>
+                  </div>
+                </div>
+              </form>
+	
+					</div>
+				  </div>
+			
+			<!-- END USER DROPDOWN -->
+          <span class="linedivide1"></span>
+
+          <div class="header-wrapicon2">
+            <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+            <span class="header-icons-noti">0</span>
+
+            <!-- Header cart noti -->
+            <div class="header-cart header-dropdown">
+              <ul class="header-cart-wrapitem">
+
+                <!-- Card Item Example-->
+
+                <li class="header-cart-item">
+                  <div class="header-cart-item-img">
+                    <img src="images/item-cart-01.jpg" alt="IMG">
+                  </div>
+                  <div class="header-cart-item-txt">
+                    <a href="#" class="header-cart-item-name">
+                      White Shirt With Pleat Detail Back
+                    </a>
+
+                    <span class="header-cart-item-info">
+                      1 x $19.00
+                    </span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="header-cart-total">
+                Total:
+              </div>
+
+              <div class="header-cart-buttons">
+                <div class="header-cart-wrapbtn">
+                  <!-- Button -->
+                  <a href="cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                      Carrinho
+                  </a>
+                </div>
+
+                <div class="header-cart-wrapbtn">
+                  <!-- Button -->
+                  <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                    Checkout
+                  </a>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Header Mobile -->
     <div class="wrap_header_mobile">
-        <!-- Logo moblie -->
-        <a href="index" class="logo-mobile">
-            <img src="images/icons/logo.png" alt="IMG-LOGO">
-        </a>
+      <!-- Logo moblie -->
+      <a href="index" class="logo-mobile">
+          <img src="images/icons/logo.png" alt="IMG-LOGO">
+        <!--<embed src="images/gas.svg"width="30%" height="30%" alt="IMG-LOGO">-->
+      </a>
 
-        <!-- Button show menu -->
-        <div class="btn-show-menu">
-            <!-- Header Icon mobile -->
-            <div class="header-icons-mobile">
-                <a href="#" class="header-wrapicon1 dis-block">
-                    <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-                </a>
-
-                <span class="linedivide2"></span>
-
-                <div class="header-wrapicon2">
-                    <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-                    <span class="header-icons-noti">0</span>
-
-                    <!-- Header cart noti -->
-                    <div class="header-cart header-dropdown">
-                        <ul class="header-cart-wrapitem">
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-01.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        White Shirt With Pleat Detail Back
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-02.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Converse All Star Hi Black Canvas
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-03.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Nixon Porter Leather Watch In Tan
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="header-cart-total">
-                            Total: $75.00
-                        </div>
-
-                        <div class="header-cart-buttons">
-                            <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    View Cart
-                                </a>
-                            </div>
-
-                            <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    Check Out
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Button show menu -->
+      <div class="btn-show-menu">
+        <!-- Header Icon mobile -->
+        <div class="header-icons-mobile">
+			<!-- USER DROPDOWN -->
+			<div class="header-wrapicon2">
+					<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+		
+					<!-- Header cart noti -->
+					<div class="header-cart header-dropdown">
+					  <ul class="header-cart-wrapitem">
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                 </div>
-            </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
 
-            <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
+                <div class="header-cart-buttons">
+                  <div class="header-cart-wrapbtn">
+                    <!-- Button -->
+                    <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Login</button>
+
+                  </div>
+
+                  <div class="header-cart-wrapbtn">
+
+                      <a href="criar-conta" class="s-text8">
+                          Não tem conta? Crie já!
+                      </a>
+                  </div>
+                </div>
+              </form>
+	
+					</div>
+				  </div>
+			
+			<!-- END USER DROPDOWN -->
+
+          <span class="linedivide2"></span>
+
+          <div class="header-wrapicon2">
+            <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+            <span class="header-icons-noti">0</span>
+
+            <!-- Header cart noti -->
+            <div class="header-cart header-dropdown">
+              <ul class="header-cart-wrapitem">
+                <li class="header-cart-item">
+                  <div class="header-cart-item-img">
+                    <img src="images/item-cart-01.jpg" alt="IMG">
+                  </div>
+
+                  <div class="header-cart-item-txt">
+                    <a href="#" class="header-cart-item-name">
+                      White Shirt With Pleat Detail Back
+                    </a>
+
+                    <span class="header-cart-item-info">
+                      1 x $19.00
+                    </span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="header-cart-total">
+                Total: $75.00
+              </div>
+
+              <div class="header-cart-buttons">
+                <div class="header-cart-wrapbtn">
+                  <!-- Button -->
+                  <a href="cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                    Carrinho
+                  </a>
+                </div>
+
+                <div class="header-cart-wrapbtn">
+                  <!-- Button -->
+                  <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                    Checkout
+                  </a>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+
+        <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </div>
+      </div>
     </div>
 
     <!-- Menu Mobile -->
-    <div class="wrap-side-menu" >
-        <nav class="side-menu">
-            <ul class="main-menu">
-                <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<span class="topbar-child1">
-							Free shipping for standard order over $100
-						</span>
-                </li>
+    <div class="wrap-side-menu">
+      <nav class="side-menu">
+        <ul class="main-menu">
 
-                <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-                    <div class="topbar-child2-mobile">
-							<span class="topbar-email">
-								fashe@example.com
-							</span>
+            <div class="search-product pos-relative bo4 of-hidden">
+                <input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Procurar produtos...">
+            
+                <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
+                  <i class="fs-12 fa fa-search" aria-hidden="true"></i>
+                </button>
+              </div>
 
-                        <div class="topbar-language rs1-select2">
-                            <select class="selection-1" name="time">
-                                <option>USD</option>
-                                <option>EUR</option>
-                            </select>
-                        </div>
-                    </div>
-                </li>
+          <li class="item-menu-mobile">
+            <a href="produtos">Loja</a>
+          </li>
 
-                <li class="item-topbar-mobile p-l-10">
-                    <div class="topbar-social-mobile">
-                        <a href="#" class="topbar-social-item fa fa-facebook"></a>
-                        <a href="#" class="topbar-social-item fa fa-instagram"></a>
-                        <a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-                        <a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-                        <a href="#" class="topbar-social-item fa fa-youtube-play"></a>
-                    </div>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="index">Home</a>
-                    <ul class="sub-menu">
-                        <li><a href="index">Homepage V1</a></li>
-                        <li><a href="home-02">Homepage V2</a></li>
-                        <li><a href="home-03">Homepage V3</a></li>
-                    </ul>
-                    <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="product">Shop</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="product">Sale</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="cart">Features</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="blog">Blog</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="about">About</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
+          <li class="item-menu-mobile">
+            <a href="mapa">Mapa</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-</header>
-
+  </header>
