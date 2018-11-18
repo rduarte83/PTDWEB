@@ -14,21 +14,59 @@ class HomeController extends Controller
 
     private $dir = "template/";
 
+    /*
+     * Template
+     */
+    public function indexTemplate(){
+        return view( $this->dir . "index");
+    }
+
+    public function  aboutTemplate(){
+        return view( $this->dir ."about");
+    }
+
+    public function contactTemplate(){
+        return view( $this->dir . "contact");
+    }
+
+    public function  productTemplate(){
+        return view( $this->dir ."product");
+    }
+
+    public function productDetailTemplate(){
+        return view( $this->dir . "product-detail");
+    }
+
+    public function  cartTemplate(){
+        return view( $this->dir ."cart");
+    }
+
+    public function blogTemplate(){
+        return view( $this->dir . "blog");
+    }
+
+    public function  blogDetailTemplate(){
+        return view( $this->dir ."blog-detail");
+    }
+
+    /*
+     * End Template
+     */
     public function index()
     {
-        return view($this->dir . "index");
+        return view( "home");
     }
 
     public function  about(){
-        return view($this->dir . "about");
+        return view( "about");
     }
 
     public function contact(){
-        return view($this->dir . "contact");
+        return view( "contact");
     }
 
     public function product(){
-        return view($this->dir . "product");
+        return view( "products");
     }
 
     public function productDetail(){

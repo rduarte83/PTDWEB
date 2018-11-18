@@ -8,6 +8,19 @@ Route::get('/', function () {
 */
 
 // Template Routes
+Route::get('/template/', "HomeController@indexTemplate");
+Route::get('/template/index', "HomeController@indexTemplate");
+Route::get('/template/about', "HomeController@aboutTemplate");
+Route::get('/template/blog', "HomeController@blogTemplate");
+Route::get('/template/blog-detail', "HomeController@blogDetailTemplate");
+Route::get('/template/cart', "HomeController@cartTemplate");
+Route::get('/template/contact', "HomeController@contactTemplate");
+Route::get('/template/home-02', "HomeController@home02Template");
+Route::get('/template/home-03', "HomeController@home03Template");
+Route::get('/template/product', "HomeController@productTemplate");
+Route::get('/template/product-detail', "HomeController@productDetailTemplate");
+
+// Routes Project
 Route::get('/', "HomeController@index");
 Route::get('/index', "HomeController@index");
 Route::get('/about', "HomeController@about");
@@ -15,8 +28,6 @@ Route::get('/blog', "HomeController@blog");
 Route::get('/blog-detail', "HomeController@blogDetail");
 Route::get('/cart', "HomeController@cart");
 Route::get('/contact', "HomeController@contact");
-Route::get('/home-02', "HomeController@home02");
-Route::get('/home-03', "HomeController@home03");
 Route::get('/product', "HomeController@product");
 Route::get('/product-detail', "HomeController@productDetail");
 
