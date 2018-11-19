@@ -4,7 +4,7 @@
       <div class="wrap_header">
         <!-- Logo -->
         <a href="index" class="logo">
-            <img src="images/icons/logo.png" alt="IMG-LOGO">
+            <img src="images/logo/logo-small.png" alt="IMG-LOGO">
         </a>
 
         <!-- Menu -->
@@ -131,8 +131,7 @@
     <div class="wrap_header_mobile">
       <!-- Logo moblie -->
       <a href="index" class="logo-mobile">
-          <img src="images/icons/logo.png" alt="IMG-LOGO">
-        <!--<embed src="images/gas.svg"width="30%" height="30%" alt="IMG-LOGO">-->
+          <img src="images/logo/logo-small.png" alt="IMG-LOGO">
       </a>
 
       <!-- Button show menu -->
