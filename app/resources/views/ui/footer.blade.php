@@ -2,7 +2,7 @@
 <!-- Footer  -->
 <footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
     <div class="flex-w">
-      <div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
+      <div class="p-t-30 p-l-15 p-r-15 respon3 col-md">
         <h4 class="s-text12 p-b-30">
           Entre em contacto!
         </h4>
@@ -25,40 +25,7 @@
     </div>
 
 
-
-      <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-        <h4 class="s-text12 p-b-30">
-          Categories
-        </h4>
-
-        <ul>
-          <li class="p-b-9">
-            <a href="#" class="s-text7">
-              Men
-            </a>
-          </li>
-
-          <li class="p-b-9">
-            <a href="#" class="s-text7">
-              JOAO
-            </a>
-          </li>
-
-          <li class="p-b-9">
-            <a href="#" class="s-text7">
-              Dresses
-            </a>
-          </li>
-
-          <li class="p-b-9">
-            <a href="#" class="s-text7">
-              Sunglasses
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+      <div class="p-t-30 p-l-15 p-r-15 respon3 col-md">
         <h4 class="s-text12 p-b-30">
           Ajuda e Links
         </h4>
@@ -83,11 +50,11 @@
           </li>
         </ul>
       </div>
-      <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4" style="">
+      <div class="p-t-30 p-l-15 p-r-15 respon3 col-md" style="">
           <h4 class="s-text12 p-b-30">
               Localização
           </h4>
-         <div id='map' style='margin: auto; width: 370px; height: 230px;'></div>
+         <div id='map' style='margin: auto; width: 100%; height: 250px;'></div>
       </div>
 
     </div>
@@ -102,7 +69,6 @@
 
 
     <script>
-
         // ----- Linha em baixo tem de ser descomentada para poder usar os mapas
         // ----- apenas para poupar requests à API
         mapboxgl.accessToken = 'pk.eyJ1IjoicGluaG8yNyIsImEiOiJjamdvM3Z0dzgyeDc0MnFxbzV6Ym1pNjBsIn0.h2movOiQKha_yHE5R49Uig';
