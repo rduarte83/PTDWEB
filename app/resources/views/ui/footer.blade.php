@@ -87,11 +87,10 @@
           <h4 class="s-text12 p-b-30">
               Localização
           </h4>
-         <div id='map' style='text-align: center; margin: auto; width: 370px; height: 230px;'></div>
+         <div id='map' style='margin: auto; width: 370px; height: 230px;'></div>
       </div>
 
     </div>
-
 
 
 
@@ -102,13 +101,11 @@
     </div>
 
 
-
-
     <script>
 
         // ----- Linha em baixo tem de ser descomentada para poder usar os mapas
         // ----- apenas para poupar requests à API
-        //mapboxgl.accessToken = 'pk.eyJ1IjoicGluaG8yNyIsImEiOiJjamdvM3Z0dzgyeDc0MnFxbzV6Ym1pNjBsIn0.h2movOiQKha_yHE5R49Uig';
+        mapboxgl.accessToken = 'pk.eyJ1IjoicGluaG8yNyIsImEiOiJjamdvM3Z0dzgyeDc0MnFxbzV6Ym1pNjBsIn0.h2movOiQKha_yHE5R49Uig';
         var map = new mapboxgl.Map({
             container: "map",
             style: "mapbox://styles/mapbox/light-v9",
@@ -116,7 +113,6 @@
             center: [-8.4441281,40.5744432]
         });
         map.addControl(new mapboxgl.NavigationControl());
-        map.accessToken='pk.eyJ1IjoicGluaG8yNyIsImEiOiJjamdvM3Z0dzgyeDc0MnFxbzV6Ym1pNjBsIn0.h2movOiQKha_yHE5R49Uig';
 
         map.on("load", function () {
             /* Image: An image is loaded and added to the map. */

@@ -8,6 +8,7 @@
 
     </head>
     <body class="animsition">
+            @include("ui.script-includes")
 
             @include('ui.header')
             @yield("header")
@@ -20,7 +21,5 @@
 
             @include('ui.footer')
             @yield("footer")
-
-            @include("ui.script-includes")
     </body>
 </html>
