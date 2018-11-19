@@ -1,49 +1,11 @@
 <!doctype html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="csrf-token" content="{{csrf_token()}}">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/icons/favicon.png"/>
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!--===============================================================================================-->
-    <style>
-        body{ padding: 40px;}
-    </style>
-    <title>Login</title>
+    @include('ui.head')
 </head>
 <body>
-
+    @include('ui.header')
+    @yield("header")
 <!-- Registo de Cliente -->
 
 <main role="main">
@@ -88,7 +50,7 @@
                         <div class="form-group">
                             <label class="sr-only" for="email">Email Cliente</label>
                             <input type="email" name="email" id="email" class="form-control {{$errors->has('email') ? 'is-invalid' : ''}}" placeholder="E-mail do cliente">
-                            <small id="emailHelp" class="form-text text-muted">Nós nunca vamos compartilhar seu e-mail com mais ninguém.</small>
+                            <small id="emailHelp" class="form-text text-muted"></small>
                             @if($errors->has('email'))
                                 <div class="invalid-feedback">
                                     {{$errors->first('email')}}
@@ -154,7 +116,10 @@
 </main>
 
 
-<script src="{{asset('js/app.js')}}" type="javascript"></script>
+@include('ui.footer')
+@yield("footer")
+
+@include("ui.script-includes")
 </body>
 </html>
 

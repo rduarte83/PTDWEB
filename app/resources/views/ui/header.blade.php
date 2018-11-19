@@ -37,7 +37,6 @@
 
         <!-- Header Icon -->
         <div class="header-icons">
-
 			<!-- USER DROPDOWN -->
 			<div class="header-wrapicon2">
                 <img src="/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
@@ -45,29 +44,8 @@
                 <!-- Header cart noti -->
                 <div class="header-cart header-dropdown">
                   <ul class="header-cart-wrapitem">
-                      <form>
-                        <div class="form-group">
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
 
-                        <div class="header-cart-buttons">
-                          <div class="header-cart-wrapbtn">
-                            <!-- Button -->
-                            <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Login</button>
-
-                          </div>
-
-                          <div class="header-cart-wrapbtn">
-
-                              <a href="/criar-conta" class="s-text8">
-                                  Não tem conta? Crie já!
-                              </a>
-                          </div>
-                        </div>
-                      </form>
+                    @include('template.login-cliente')
                   </ul>
                 </div>
             </div>
@@ -145,29 +123,7 @@
                 <!-- Header cart noti -->
                 <div class="header-cart header-dropdown">
                   <ul class="header-cart-wrapitem">
-                      <form>
-                        <div class="form-group">
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-
-                        <div class="header-cart-buttons">
-                          <div class="header-cart-wrapbtn">
-                            <!-- Button -->
-                            <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Login</button>
-
-                          </div>
-
-                          <div class="header-cart-wrapbtn">
-
-                              <a href="/criar-conta" class="s-text8">
-                                  Não tem conta? Crie já!
-                              </a>
-                          </div>
-                        </div>
-                      </form>
+                    @include('template.login-cliente')
                     </ul>
                 </div>
           </div>
