@@ -1,4 +1,4 @@
-@section('carrinho-detalhes')
+
 <div class="container col-md-12 offset-md-2 shadow-lg p-3 mb-5 bg-white rounded">
    <!-- <div class="card-header">
         <div class="card title text-lg-center">
@@ -16,15 +16,15 @@
                 <blockquote class="blockquote mb-0">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="refmultibanco" id="refmultibanco" value="refenciaMultibanco">
-                        <label class="form-check-label" style="font-size: medium; for="refmultibanco">Referência multibanco</label>
+                        <label class="form-check-label" style="font-size: medium;" for="refmultibanco">Referência multibanco</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="cartcredito" id="cartcredito" value="cartaoCredito">
-                        <label class="form-check-label" style="font-size: medium; for="cartcredito">Cartão de crédito</label>
+                        <label class="form-check-label" style="font-size: medium;" for="cartcredito">Cartão de crédito</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="cartfisico" id="cartfisico" value="cartaofisico">
-                        <label class="form-check-label" style="font-size: medium; for="cartfisico">Cartão fisico associado</label>
+                        <label class="form-check-label" style="font-size: medium;" for="cartfisico">Cartão fisico associado</label>
                     </div>
                 </blockquote>
             </div>
@@ -38,11 +38,11 @@
                 <blockquote class="blockquote mb-0">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="simgarrafa" id="cartcredito" value="simGarrafa">
-                        <label class="form-check-label" style="font-size: medium; for="simgarrafa">Sim</label>
+                        <label class="form-check-label" style="font-size: medium;" for="simgarrafa">Sim</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="naogarrafa" id="cartfisico" value="naoGarrafa">
-                        <label class="form-check-label" style="font-size: medium; for="naogarrafa">Não (+ 2€)</label>
+                        <label class="form-check-label" style="font-size: medium;" for="naogarrafa">Não (+ 2€)</label>
                     </div>
                 </blockquote>
             </div>
@@ -91,4 +91,3 @@
     </div>
 
 </div>
-@endsection

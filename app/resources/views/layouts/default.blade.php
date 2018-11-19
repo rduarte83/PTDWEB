@@ -13,7 +13,7 @@
             @include('ui.header')
             @yield("header")
 
-            <div id="main" class="container-fluid">
+            <div id="main" class="">
 
                 @yield('content')
 

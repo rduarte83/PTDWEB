@@ -6,15 +6,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
     private $dir = "template/";
 
-    /*
+    /**
      * Template
      */
     public function indexTemplate(){
@@ -49,7 +43,7 @@ class HomeController extends Controller
         return view( $this->dir ."blog-detail");
     }
 
-    /*
+    /**
      * End Template
      */
     public function index()
@@ -65,37 +59,56 @@ class HomeController extends Controller
         return view( "contact");
     }
 
-    public function product(){
+    public function loja(){
         return view( "products");
     }
 
-    public function productDetail(){
-        return view($this->dir . "product-detail");
+    /*
+     * Profile
+     **/
+    public function profile(){
+        return view( "profile")->with("page", "carrinho");
     }
 
-    public function cart(){
-        return view($this->dir . "cart");
+    public function profilePage($page){
+        switch ($page){
+            case "carrinho":
+                return view( "profile/cart")->with("page", "carrinho");
+                break;
+            case "favoritos":
+                return view( "profile/favourites")->with("page", "favoritos");
+                break;
+            case "historico":
+                return view( "profile/history")->with("page", "historico");
+                break;
+            case "perfil":
+                return view( "profile/info")->with("page", "perfil");
+                break;
+            default:
+                return view( "profile")->with("page", "perfil");
+                break;
+        }
     }
 
-    public function blog(){
-        return view($this->dir . "blog");
-    }
 
-    public function blogDetail(){
-        return view($this->dir . "blog-detail");
-    }
 
-    public function home02(){
-        return view($this->dir . "home-02");
+    /* Testes AP*/
+    private $someDir = "includes/";
+    public function logincliente(){
+        return view($this->someDir . "login-cliente");
     }
-
-    public function home03(){
-        return view($this->dir . "home-03");
+    public function registocliente(){
+        return view($this->someDir . "registo-cliente");
     }
-
+    public function homecarrinho(){
+        return view($this->someDir . "home-carrinho");
+    }
+    public function historicoCompras(){
+        return view($this->someDir . "historico-compras");
+    }
     /**
-    * UI
-    */
+     * UI
+     */
     public function uiFooter(){
         return view("ui/". "footer");
     }
@@ -109,84 +122,4 @@ class HomeController extends Controller
         return view("ui/". "index");
     }
 
-    /* Testes AP*/
-    public function logincliente(){
-        return view($this->dir . "login-cliente");
-    }
-    public function registocliente(){
-        return view($this->dir . "registo-cliente");
-    }
-    public function homecarrinho(){
-        return view($this->dir . "home-carrinho");
-    }
-    public function historicoCompras(){
-        return view($this->dir . "historico-compras");
-    }
-
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

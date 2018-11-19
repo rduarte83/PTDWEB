@@ -23,13 +23,20 @@ Route::get('/template/product-detail', "HomeController@productDetailTemplate");
 // Routes Project
 Route::get('/', "HomeController@index");
 Route::get('/index', "HomeController@index");
+Route::get('/mapa', "HomeController@index");
+Route::get('/loja', "HomeController@loja");
 Route::get('/about', "HomeController@about");
 Route::get('/blog', "HomeController@blog");
 Route::get('/blog-detail', "HomeController@blogDetail");
 Route::get('/cart', "HomeController@cart");
 Route::get('/contact', "HomeController@contact");
 Route::get('/product', "HomeController@product");
+Route::get('/products', "HomeController@product");
 Route::get('/product-detail', "HomeController@productDetail");
+Route::get('/perfil', "HomeController@profile");
+Route::get('/perfil/{page}', "HomeController@profilePage");
+
+
 
 // teste AP
 Route::get('/login-cliente', 'HomeController@logincliente' );
@@ -42,8 +49,8 @@ Route::get('/register', "UserController@registerView");
 Route::get('/login', "UserController@loginView");
 
 // Products
-Route::get('/products/', "ProductController@showAll");
-Route::get('/products/{id}', "ProductController@show");
+//Route::get('/products/', "ProductController@showAll");
+//Route::get('/products/{id}', "ProductController@show");
 Route::get('/products/add/{id}', "ProductController@addToCart");
 
 // User Autentication
@@ -57,9 +64,4 @@ Route::get('/product', "HomeController@uiProduct");
 Route::get('/header', "HomeController@uiHeader");
 Route::get('/footer', "HomeController@uiFooter");
 
-// Telemoveis
-/*Route::get("/telemovel/show", "TelemovelController@showAll");
-Route::get("/telemovel/show/{id}", "TelemovelController@show");
-Route::get("/telemovel/create", "TelemovelController@create");
-Route::post("/telemovel/store", "TelemovelController@store");*/
 
