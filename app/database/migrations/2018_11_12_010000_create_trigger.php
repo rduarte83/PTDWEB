@@ -20,7 +20,7 @@ class CreateTrigger extends Migration
                     RETURN NEW;
                 END;
                 $$ LANGUAGE plpgsql SECURITY DEFINER;
-                CREATE TRIGGER t_password BEFORE INSERT OR UPDATE OF password ON utilizadores FOR EACH ROW EXECUTE PROCEDURE f_password();         
+            CREATE TRIGGER t_password BEFORE INSERT OR UPDATE OF password ON utilizadores FOR EACH ROW EXECUTE PROCEDURE f_password();         
         ');
 
         DB::unprepared('
@@ -98,6 +98,23 @@ class CreateTrigger extends Migration
                 END;
             $$ LANGUAGE plpgsql SECURITY DEFINER;
         ');
+		
+		DB::unprepared("
+			CREATE OR REPLACE FUNCTION f_alerta_estado() RETURNS trigger AS $$
+				BEGIN
+					IF NEW.online = false THEN
+						INSERT INTO notificacoes (id, data_hora, id_maquina, mensagem)
+						VALUES (DEFAULT, now(), NEW.id, 'Máquina ' || NEW.id || ' offline');
+						RETURN NEW;
+					ELSE
+						INSERT INTO notificacoes (id, data_hora, id_maquina, mensagem)
+						VALUES (DEFAULT, now(), NEW.id, 'Máquina ' || NEW.id || ' online');
+						RETURN NEW;
+					END IF;
+				END;
+			$$ LANGUAGE plpgsql SECURITY DEFINER;
+			CREATE TRIGGER alerta_treino BEFORE INSERT OR UPDATE OF online ON maquinas FOR EACH ROW EXECUTE PROCEDURE f_alerta_estado();
+		");
     }
 
     /**
@@ -112,6 +129,7 @@ class CreateTrigger extends Migration
             DROP FUNCTION f_password();
             DROP FUNCTION f_logs();
             DROP FUNCTION f_activeUser();
+			
             DROP FUNCTION strip_all_triggers();
             DROP FUNCTION select_all_triggers();
         ');

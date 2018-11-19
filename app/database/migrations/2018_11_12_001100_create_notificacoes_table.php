@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMaquinasTable extends Migration
+class CreateNotificacoesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateMaquinasTable extends Migration
      */
     public function up()
     {
-        Schema::create('maquinas', function (Blueprint $table) {
+        Schema::create('notificacoes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome');
-            $table->boolean('online');
+            $table->dateTime('data_hora')->default(now());
+            $table->integer('id_maquina');
+            $table->string('mensagem');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateMaquinasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('maquinas');
+        Schema::dropIfExists('notificacoes');
     }
 }
