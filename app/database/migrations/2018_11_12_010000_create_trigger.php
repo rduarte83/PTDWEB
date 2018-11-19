@@ -76,6 +76,14 @@ class CreateTrigger extends Migration
         ');
 
         DB::unprepared('
+            CREATE OR REPLACE FUNCTION select_all_triggers() RETURNS SETOF text AS $$ 
+            SELECT \'CREATE TRIGGER \' || tab_name || \' BEFORE INSERT OR UPDATE OR DELETE ON \' || t_name || \' FOR EACH ROW EXECUTE PROCEDURE f_logs();\' AS t_logs 
+	        FROM (  SELECT \'logs_\'|| table_name AS tab_name, table_name AS t_name FROM information_schema.tables 
+			WHERE table_schema=\'public\' AND table_name NOT ILIKE \'logs\' AND table_name NOT ILIKE \'vw_%\' ) tablist;
+            $$ LANGUAGE sql SECURITY DEFINER;
+        ');
+
+        DB::unprepared('
             CREATE OR REPLACE FUNCTION strip_all_triggers() RETURNS text AS $$ DECLARE
                 triggNameRecord RECORD;
                 triggTableRecord RECORD;
