@@ -14,7 +14,7 @@
 
                     <div class="block2-btn-addcart w-size1 trans-0-4">
                         <!-- Button -->
-                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                        <button class="flex-c-m size2 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
                             Adicionar ao carrinho
                         </button>
                     </div>

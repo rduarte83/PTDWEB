@@ -3,8 +3,8 @@
     <div class="container-menu-header">
       <div class="wrap_header">
         <!-- Logo -->
-        <a href="index" class="logo">
-            <img src="images/logo/logo-small.png" alt="IMG-LOGO">
+        <a href="/index" class="logo">
+            <img src="/images/logo/logo-small.png" alt="IMG-LOGO">
         </a>
 
         <!-- Menu -->
@@ -23,13 +23,13 @@
               <span class="linedivide1"></span>
 
               <li>
-                <a href="produtos">Loja</a>
+                <a href="/loja">Loja</a>
               </li>
 
               <span class="linedivide1"></span>
 
               <li>
-                <a href="mapa">Mapa</a>
+                <a href="/mapa">Mapa</a>
               </li>
             </ul>
           </nav> 
@@ -40,7 +40,7 @@
 
 			<!-- USER DROPDOWN -->
 			<div class="header-wrapicon2">
-                <img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                <img src="/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 
                 <!-- Header cart noti -->
                 <div class="header-cart header-dropdown">
@@ -62,7 +62,7 @@
 
                           <div class="header-cart-wrapbtn">
 
-                              <a href="criar-conta" class="s-text8">
+                              <a href="/criar-conta" class="s-text8">
                                   Não tem conta? Crie já!
                               </a>
                           </div>
@@ -77,7 +77,7 @@
           <span class="linedivide1"></span>
 
           <div class="header-wrapicon2">
-            <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+            <img src="/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
             <span class="header-icons-noti">0</span>
 
             <!-- Header cart noti -->
@@ -88,7 +88,7 @@
 
                 <li class="header-cart-item">
                   <div class="header-cart-item-img">
-                    <img src="images/item-cart-01.jpg" alt="IMG">
+                    <img src="/images/item-cart-01.jpg" alt="IMG">
                   </div>
                   <div class="header-cart-item-txt">
                     <a href="#" class="header-cart-item-name">
@@ -109,7 +109,7 @@
               <div class="header-cart-buttons">
                 <div class="header-cart-wrapbtn">
                   <!-- Button -->
-                  <a href="cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                  <a href="/cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                       Carrinho
                   </a>
                 </div>
@@ -130,8 +130,8 @@
     <!-- Header Mobile -->
     <div class="wrap_header_mobile">
       <!-- Logo moblie -->
-      <a href="index" class="logo-mobile">
-          <img src="images/logo/logo-small.png" alt="IMG-LOGO">
+      <a href="/index" class="logo-mobile">
+          <img src="/images/logo/logo-small.png" alt="IMG-LOGO">
       </a>
 
       <!-- Button show menu -->
@@ -140,7 +140,7 @@
         <div class="header-icons-mobile">
 			<!-- USER DROPDOWN -->
 			<div class="header-wrapicon2">
-                <img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                <img src="/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 
                 <!-- Header cart noti -->
                 <div class="header-cart header-dropdown">
@@ -162,7 +162,7 @@
 
                           <div class="header-cart-wrapbtn">
 
-                              <a href="criar-conta" class="s-text8">
+                              <a href="/criar-conta" class="s-text8">
                                   Não tem conta? Crie já!
                               </a>
                           </div>
@@ -177,7 +177,7 @@
           <span class="linedivide2"></span>
 
           <div class="header-wrapicon2">
-            <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+            <img src="/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
             <span class="header-icons-noti">0</span>
 
             <!-- Header cart noti -->
@@ -185,7 +185,7 @@
               <ul class="header-cart-wrapitem">
                 <li class="header-cart-item">
                   <div class="header-cart-item-img">
-                    <img src="images/item-cart-01.jpg" alt="IMG">
+                    <img src="/images/item-cart-01.jpg" alt="IMG">
                   </div>
 
                   <div class="header-cart-item-txt">
@@ -207,7 +207,7 @@
               <div class="header-cart-buttons">
                 <div class="header-cart-wrapbtn">
                   <!-- Button -->
-                  <a href="cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                  <a href="/cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                     Carrinho
                   </a>
                 </div>
@@ -245,11 +245,11 @@
               </div>
 
           <li class="item-menu-mobile">
-            <a href="produtos">Loja</a>
+            <a href="/produtos">Loja</a>
           </li>
 
           <li class="item-menu-mobile">
-            <a href="mapa">Mapa</a>
+            <a href="/mapa">Mapa</a>
           </li>
         </ul>
       </nav>

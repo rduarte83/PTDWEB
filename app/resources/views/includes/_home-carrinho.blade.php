@@ -67,7 +67,7 @@
         </div>
 
 
-        @include('template.lista-favoritos-users')
+        @include('includess.lista-favoritos-users')
 
 
   </div>
