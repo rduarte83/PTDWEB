@@ -113,6 +113,7 @@ class CreateTrigger extends Migration
             DROP FUNCTION f_logs();
             DROP FUNCTION f_activeUser();
             DROP FUNCTION strip_all_triggers();
+            DROP FUNCTION select_all_triggers();
         ');
     }
 }
