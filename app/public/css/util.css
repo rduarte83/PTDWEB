@@ -3022,6 +3022,25 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	text-transform: uppercase;
 }
 
+.s-text-small {
+	font-family: Montserrat-Regular;
+	font-size: 1.2em;
+	color: white;
+}
+
+.s-text-medium {
+	font-family: Montserrat-Regular;
+	font-size: 1.6em;
+	color: white;
+}
+
+.s-text-big {
+	font-family: Montserrat-Regular;
+	font-size: 2em;
+	color: white;
+	text-transform: uppercase;
+}
+
 .s-text2 {
 	font-family: Montserrat-Regular;
 	font-size: 15px;
