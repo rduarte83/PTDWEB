@@ -1,0 +1,50 @@
+.bg-page{
+    background-color: #FAF7F3;
+}
+
+.bg-primary{
+    background-color: #39665E;
+}
+
+.bg-accent{
+    background-color: #E59500;
+}
+
+.bg-sucess{
+    background-color: #4caf50;
+}
+
+.bg-error{
+    background-color: #d32f2f;
+}
+
+.bg-sucess:hover{
+    background-color: #3d9140;
+}
+
+.bg-error:hover{
+    background-color: #a82121;
+}
+
+
+.bg-neutral{
+    background-color: #4B4F4C; 
+}
+
+.btn-normal{
+    border-color: none;
+}
+
+.hov69:hover {
+    background-color: #333333;
+  	color: white;
+}
+
+.mapboxgl-popup {
+    max-width: 400px;
+    font: .9em 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.w-size300 {
+	width: 300px;
+}

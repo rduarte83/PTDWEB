@@ -72,8 +72,8 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="flex-c-m size1 bg4 bo-rad-20 hov1 s-text1 trans-0-4 m-b-5">Registar</button>
-                            <button type="reset" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Cancelar</button>
+                            <br>
+                            <button type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">Registar</button>
                         </div>
                     </form>
                 </div>

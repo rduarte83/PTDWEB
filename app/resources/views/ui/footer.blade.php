@@ -6,7 +6,7 @@
         <a href="/contact">
             <div class=" p-b-30" style="display: inline-block;">
                 <h4 class="s-text12 hover-border-bottom">
-                  Entre em contacto!
+                  Contacte-nos!
                 </h4>
             </div>
         </a>
@@ -36,8 +36,8 @@
 
         <ul>
           <li class="p-b-9">
-            <a href="#" class="s-text7">
-              Procurar
+            <a href="/contact" class="s-text7">
+              Contactos
             </a>
           </li>
 
