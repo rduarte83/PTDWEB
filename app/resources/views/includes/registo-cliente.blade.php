@@ -7,8 +7,7 @@
     @include('ui.header')
     @yield("header")
 <!-- Registo de Cliente -->
-
-<main role="main">
+<section class="cart bgwhite p-t-50 p-b-300">
     <div class="row">
         <div class="container col-md-4 offset-md-2 shadow-lg p-3 mb-5 bg-white rounded">
             <div class="card border">
@@ -75,9 +74,13 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="form-group col-md-8 offset-md-2">
-                        <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4 m-b-5">Gravar</button>
-                        <button type="calcel" class="flex-c-m size1 bg2 bo-rad-20 hov1 s-text1 trans-0-4">Cancelar</button>
+                        <div class="header-cart-buttons col-md-8 offset-md-2 m-auto">
+                            <div class="header-cart-wrapbtn">
+                                 <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Gravar</button>
+                            </div>
+                            <div class="header-cart-wrapbtn">
+                                 <button type="calcel" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Cancelar</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -113,8 +116,7 @@
             </div>
         </div>
     </div>
-</main>
-
+</section>
 
 @include('ui.footer')
 @yield("footer")
