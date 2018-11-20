@@ -2,8 +2,6 @@
 <html>
     <head>
 
-
-
         @include('ui.head')
 
     </head>
