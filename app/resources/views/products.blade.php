@@ -101,7 +101,7 @@
                     <div class="flex-sb-m flex-w p-b-35">
                         <div class="flex-w">
                             <div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
-                                <select class="selection-2" name="sorting">
+                                <select class="selection-1" name="sorting">
                                     <option>Ordenar por</option>
                                     <option>Popularidade</option>
                                     <option>Preço: mais baixo primeiro</option>
@@ -110,7 +110,7 @@
                             </div>
 
                             <div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
-                                <select class="selection-2" name="sorting">
+                                <select class="selection-1" name="sorting">
                                     <option>Preço</option>
                                     <option>0.00€ - 50.00€</option>
                                     <option>50.00€ - 100.00€</option>

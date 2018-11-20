@@ -30,9 +30,17 @@
         </div>
         <div class="form-group">
             <div class="header-cart-wrapbtn m-auto">
-            <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Login</button>
+                <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Login</button>
             </div>
+
         </div>
+
+        <!-- Other Option -->
+        <!--
+        <div class="form-group">
+            <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Login</button>
+         </div>-->
+
         <!--<div class="checkbox">
                <label>
                <input type="checkbox"> Mantenha-me conectado
