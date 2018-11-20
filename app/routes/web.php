@@ -45,7 +45,7 @@ Route::get('/home-carrinho', 'HomeController@homecarrinho' );
 
 
 // User
-Route::get('/register', "UserController@registerView");
+Route::get('/registar', "HomeController@register");
 Route::get('/login', "UserController@loginView");
 
 // Products
@@ -60,8 +60,8 @@ Route::post('/login', "UserController@login");
 
 // UI
 Route::get('/ui', "HomeController@ui");
-Route::get('/product', "HomeController@uiProduct");
-Route::get('/header', "HomeController@uiHeader");
-Route::get('/footer', "HomeController@uiFooter");
+Route::get('/ui/product', "HomeController@uiProduct");
+Route::get('/ui/header', "HomeController@uiHeader");
+Route::get('/ui/footer', "HomeController@uiFooter");
 
 

@@ -59,15 +59,29 @@ class HomeController extends Controller
         return view( "contact");
     }
 
-    public function loja(){
+
+
+    // Registo
+    public function register(){
+        return view( "register");
+    }
+
+    /**
+     * Product
+     */
+    public function loja(){ // All products
         return view( "products");
+    }
+
+    public function product(){ // Product Details
+        return view( "product");
     }
 
     /*
      * Profile
      **/
     public function profile(){
-        return view( "profile")->with("page", "carrinho");
+        return view( "profile")->with("page", "perfil");
     }
 
     public function profilePage($page){

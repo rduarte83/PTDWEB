@@ -3,9 +3,13 @@
 <footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
     <div class="flex-w">
       <div class="p-t-30 p-l-15 p-r-15 respon3 col-md" style="margin-right:10%">
-        <h4 class="s-text12 p-b-30">
-          Entre em contacto!
-        </h4>
+        <a href="/contact">
+            <div class=" p-b-30" style="display: inline-block;">
+                <h4 class="s-text12 hover-border-bottom">
+                  Entre em contacto!
+                </h4>
+            </div>
+        </a>
 
         <div>
           <p class="s-text7 w-size27">
@@ -38,7 +42,7 @@
           </li>
 
           <li class="p-b-9">
-            <a href="#" class="s-text7">
+            <a href="/about" class="s-text7">
               Sobre nós
             </a>
           </li>

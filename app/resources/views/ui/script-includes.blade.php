@@ -29,6 +29,8 @@
 <!--===============================================================================================-->
 <script type="text/javascript" src="/vendor/lightbox2/js/lightbox.min.js"></script>
 <!--===============================================================================================-->
+
+<!--===============================================================================================-->
 <script type="text/javascript" src="/vendor/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript">
     $('.block2-btn-addcart').each(function(){

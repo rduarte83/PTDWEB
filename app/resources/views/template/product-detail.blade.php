@@ -5,30 +5,30 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+	<link rel="icon" type="image/png" href="/images/icons/favicon.png"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/themify/themify-icons.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/elegant-font/html-css/style.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/slick/slick.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -39,11 +39,11 @@
 		<div class="container-menu-header">
 			<div class="topbar">
 				<div class="topbar-social">
-					<a href="#" class="topbar-social-item fa fa-facebook"></a>
-					<a href="#" class="topbar-social-item fa fa-instagram"></a>
-					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-					<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+					<a href="/#" class="topbar-social-item fa fa-facebook"></a>
+					<a href="/#" class="topbar-social-item fa fa-instagram"></a>
+					<a href="/#" class="topbar-social-item fa fa-pinterest-p"></a>
+					<a href="/#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+					<a href="/#" class="topbar-social-item fa fa-youtube-play"></a>
 				</div>
 
 				<span class="topbar-child1">
@@ -66,8 +66,8 @@
 
 			<div class="wrap_header">
 				<!-- Logo -->
-				<a href="index" class="logo">
-					<img src="images/icons/logo.png" alt="IMG-LOGO">
+				<a href="/index" class="logo">
+					<img src="/images/icons/logo.png" alt="IMG-LOGO">
 				</a>
 
 				<!-- Menu -->
@@ -75,36 +75,36 @@
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="index">Home</a>
+								<a href="/index">Home</a>
 								<ul class="sub_menu">
-									<li><a href="index">Homepage V1</a></li>
-									<li><a href="home-02">Homepage V2</a></li>
-									<li><a href="home-03">Homepage V3</a></li>
+									<li><a href="/index">Homepage V1</a></li>
+									<li><a href="/home-02">Homepage V2</a></li>
+									<li><a href="/home-03">Homepage V3</a></li>
 								</ul>
 							</li>
 
 							<li>
-								<a href="product">Shop</a>
+								<a href="/product">Shop</a>
 							</li>
 
 							<li class="sale-noti">
-								<a href="product">Sale</a>
+								<a href="/product">Sale</a>
 							</li>
 
 							<li>
-								<a href="cart">Features</a>
+								<a href="/cart">Features</a>
 							</li>
 
 							<li>
-								<a href="blog">Blog</a>
+								<a href="/blog">Blog</a>
 							</li>
 
 							<li>
-								<a href="about">About</a>
+								<a href="/about">About</a>
 							</li>
 
 							<li>
-								<a href="contact">Contact</a>
+								<a href="/contact">Contact</a>
 							</li>
 						</ul>
 					</nav>
@@ -112,14 +112,14 @@
 
 				<!-- Header Icon -->
 				<div class="header-icons">
-					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+					<a href="/#" class="header-wrapicon1 dis-block">
+						<img src="/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 					</a>
 
 					<span class="linedivide1"></span>
 
 					<div class="header-wrapicon2">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
@@ -127,11 +127,11 @@
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
+										<img src="/images/item-cart-01.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
+										<a href="/#" class="header-cart-item-name">
 											White Shirt With Pleat Detail Back
 										</a>
 
@@ -143,11 +143,11 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
+										<img src="/images/item-cart-02.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
+										<a href="/#" class="header-cart-item-name">
 											Converse All Star Hi Black Canvas
 										</a>
 
@@ -159,11 +159,11 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-03.jpg" alt="IMG">
+										<img src="/images/item-cart-03.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
+										<a href="/#" class="header-cart-item-name">
 											Nixon Porter Leather Watch In Tan
 										</a>
 
@@ -181,14 +181,14 @@
 							<div class="header-cart-buttons">
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="/cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										View Cart
 									</a>
 								</div>
 
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="/#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										Check Out
 									</a>
 								</div>
@@ -202,22 +202,22 @@
 		<!-- Header Mobile -->
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
-			<a href="index" class="logo-mobile">
-				<img src="images/icons/logo.png" alt="IMG-LOGO">
+			<a href="/index" class="logo-mobile">
+				<img src="/images/icons/logo.png" alt="IMG-LOGO">
 			</a>
 
 			<!-- Button show menu -->
 			<div class="btn-show-menu">
 				<!-- Header Icon mobile -->
 				<div class="header-icons-mobile">
-					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+					<a href="/#" class="header-wrapicon1 dis-block">
+						<img src="/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 					</a>
 
 					<span class="linedivide2"></span>
 
 					<div class="header-wrapicon2">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
@@ -225,11 +225,11 @@
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
+										<img src="/images/item-cart-01.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
+										<a href="/#" class="header-cart-item-name">
 											White Shirt With Pleat Detail Back
 										</a>
 
@@ -241,11 +241,11 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
+										<img src="/images/item-cart-02.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
+										<a href="/#" class="header-cart-item-name">
 											Converse All Star Hi Black Canvas
 										</a>
 
@@ -257,11 +257,11 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-03.jpg" alt="IMG">
+										<img src="/images/item-cart-03.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
+										<a href="/#" class="header-cart-item-name">
 											Nixon Porter Leather Watch In Tan
 										</a>
 
@@ -279,14 +279,14 @@
 							<div class="header-cart-buttons">
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="/cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										View Cart
 									</a>
 								</div>
 
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="/#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										Check Out
 									</a>
 								</div>
@@ -330,46 +330,46 @@
 
 					<li class="item-topbar-mobile p-l-10">
 						<div class="topbar-social-mobile">
-							<a href="#" class="topbar-social-item fa fa-facebook"></a>
-							<a href="#" class="topbar-social-item fa fa-instagram"></a>
-							<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-							<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-							<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+							<a href="/#" class="topbar-social-item fa fa-facebook"></a>
+							<a href="/#" class="topbar-social-item fa fa-instagram"></a>
+							<a href="/#" class="topbar-social-item fa fa-pinterest-p"></a>
+							<a href="/#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+							<a href="/#" class="topbar-social-item fa fa-youtube-play"></a>
 						</div>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="index">Home</a>
+						<a href="/index">Home</a>
 						<ul class="sub-menu">
-							<li><a href="index">Homepage V1</a></li>
-							<li><a href="home-02">Homepage V2</a></li>
-							<li><a href="home-03">Homepage V3</a></li>
+							<li><a href="/index">Homepage V1</a></li>
+							<li><a href="/home-02">Homepage V2</a></li>
+							<li><a href="/home-03">Homepage V3</a></li>
 						</ul>
 						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="product">Shop</a>
+						<a href="/product">Shop</a>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="product">Sale</a>
+						<a href="/product">Sale</a>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="cart">Features</a>
+						<a href="/cart">Features</a>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="blog">Blog</a>
+						<a href="/blog">Blog</a>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="about">About</a>
+						<a href="/about">About</a>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="contact">Contact</a>
+						<a href="/contact">Contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -378,17 +378,17 @@
 
 	<!-- breadcrumb -->
 	<div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm">
-		<a href="index" class="s-text16">
+		<a href="/index" class="s-text16">
 			Home
 			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
 		</a>
 
-		<a href="product" class="s-text16">
+		<a href="/product" class="s-text16">
 			Women
 			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
 		</a>
 
-		<a href="#" class="s-text16">
+		<a href="/#" class="s-text16">
 			T-Shirt
 			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
 		</a>
@@ -406,21 +406,21 @@
 					<div class="wrap-slick3-dots"></div>
 
 					<div class="slick3">
-						<div class="item-slick3" data-thumb="images/thumb-item-01.jpg">
+						<div class="item-slick3" data-thumb="/images/thumb-item-01.jpg">
 							<div class="wrap-pic-w">
-								<img src="images/product-detail-01.jpg" alt="IMG-PRODUCT">
+								<img src="/images/product-detail-01.jpg" alt="IMG-PRODUCT">
 							</div>
 						</div>
 
-						<div class="item-slick3" data-thumb="images/thumb-item-02.jpg">
+						<div class="item-slick3" data-thumb="/images/thumb-item-02.jpg">
 							<div class="wrap-pic-w">
-								<img src="images/product-detail-02.jpg" alt="IMG-PRODUCT">
+								<img src="/images/product-detail-02.jpg" alt="IMG-PRODUCT">
 							</div>
 						</div>
 
-						<div class="item-slick3" data-thumb="images/thumb-item-03.jpg">
+						<div class="item-slick3" data-thumb="/images/thumb-item-03.jpg">
 							<div class="wrap-pic-w">
-								<img src="images/product-detail-03.jpg" alt="IMG-PRODUCT">
+								<img src="/images/product-detail-03.jpg" alt="IMG-PRODUCT">
 							</div>
 						</div>
 					</div>
@@ -567,10 +567,10 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-								<img src="images/item-02.jpg" alt="IMG-PRODUCT">
+								<img src="/images/item-02.jpg" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+									<a href="/#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
@@ -585,7 +585,7 @@
 							</div>
 
 							<div class="block2-txt p-t-20">
-								<a href="product-detail" class="block2-name dis-block s-text3 p-b-5">
+								<a href="/product-detail" class="block2-name dis-block s-text3 p-b-5">
 									Herschel supply co 25l
 								</a>
 
@@ -600,10 +600,10 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-03.jpg" alt="IMG-PRODUCT">
+								<img src="/images/item-03.jpg" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+									<a href="/#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
@@ -618,7 +618,7 @@
 							</div>
 
 							<div class="block2-txt p-t-20">
-								<a href="product-detail" class="block2-name dis-block s-text3 p-b-5">
+								<a href="/product-detail" class="block2-name dis-block s-text3 p-b-5">
 									Denim jacket blue
 								</a>
 
@@ -633,10 +633,10 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-05.jpg" alt="IMG-PRODUCT">
+								<img src="/images/item-05.jpg" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+									<a href="/#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
@@ -651,7 +651,7 @@
 							</div>
 
 							<div class="block2-txt p-t-20">
-								<a href="product-detail" class="block2-name dis-block s-text3 p-b-5">
+								<a href="/product-detail" class="block2-name dis-block s-text3 p-b-5">
 									Coach slim easton black
 								</a>
 
@@ -666,10 +666,10 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-								<img src="images/item-07.jpg" alt="IMG-PRODUCT">
+								<img src="/images/item-07.jpg" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+									<a href="/#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
@@ -684,7 +684,7 @@
 							</div>
 
 							<div class="block2-txt p-t-20">
-								<a href="product-detail" class="block2-name dis-block s-text3 p-b-5">
+								<a href="/product-detail" class="block2-name dis-block s-text3 p-b-5">
 									Frayed denim shorts
 								</a>
 
@@ -703,10 +703,10 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-								<img src="images/item-02.jpg" alt="IMG-PRODUCT">
+								<img src="/images/item-02.jpg" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+									<a href="/#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
@@ -721,7 +721,7 @@
 							</div>
 
 							<div class="block2-txt p-t-20">
-								<a href="product-detail" class="block2-name dis-block s-text3 p-b-5">
+								<a href="/product-detail" class="block2-name dis-block s-text3 p-b-5">
 									Herschel supply co 25l
 								</a>
 
@@ -736,10 +736,10 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-03.jpg" alt="IMG-PRODUCT">
+								<img src="/images/item-03.jpg" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+									<a href="/#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
@@ -754,7 +754,7 @@
 							</div>
 
 							<div class="block2-txt p-t-20">
-								<a href="product-detail" class="block2-name dis-block s-text3 p-b-5">
+								<a href="/product-detail" class="block2-name dis-block s-text3 p-b-5">
 									Denim jacket blue
 								</a>
 
@@ -769,10 +769,10 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-05.jpg" alt="IMG-PRODUCT">
+								<img src="/images/item-05.jpg" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+									<a href="/#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
@@ -787,7 +787,7 @@
 							</div>
 
 							<div class="block2-txt p-t-20">
-								<a href="product-detail" class="block2-name dis-block s-text3 p-b-5">
+								<a href="/product-detail" class="block2-name dis-block s-text3 p-b-5">
 									Coach slim easton black
 								</a>
 
@@ -802,10 +802,10 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-								<img src="images/item-07.jpg" alt="IMG-PRODUCT">
+								<img src="/images/item-07.jpg" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+									<a href="/#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
@@ -820,7 +820,7 @@
 							</div>
 
 							<div class="block2-txt p-t-20">
-								<a href="product-detail" class="block2-name dis-block s-text3 p-b-5">
+								<a href="/product-detail" class="block2-name dis-block s-text3 p-b-5">
 									Frayed denim shorts
 								</a>
 
@@ -855,11 +855,11 @@
 					</p>
 
 					<div class="flex-m p-t-30">
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-pinterest-p"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-snapchat-ghost"></a>
-						<a href="#" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
+						<a href="/#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
+						<a href="/#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
+						<a href="/#" class="fs-18 color1 p-r-20 fa fa-pinterest-p"></a>
+						<a href="/#" class="fs-18 color1 p-r-20 fa fa-snapchat-ghost"></a>
+						<a href="/#" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
 					</div>
 				</div>
 			</div>
@@ -871,25 +871,25 @@
 
 				<ul>
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="/#" class="s-text7">
 							Men
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="/#" class="s-text7">
 							Women
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="/#" class="s-text7">
 							Dresses
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="/#" class="s-text7">
 							Sunglasses
 						</a>
 					</li>
@@ -903,25 +903,25 @@
 
 				<ul>
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="/#" class="s-text7">
 							Search
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="/#" class="s-text7">
 							About Us
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="/#" class="s-text7">
 							Contact Us
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="/#" class="s-text7">
 							Returns
 						</a>
 					</li>
@@ -935,25 +935,25 @@
 
 				<ul>
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="/#" class="s-text7">
 							Track Order
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="/#" class="s-text7">
 							Returns
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="/#" class="s-text7">
 							Shipping
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="/#" class="s-text7">
 							FAQs
 						</a>
 					</li>
@@ -983,28 +983,28 @@
 		</div>
 
 		<div class="t-center p-l-15 p-r-15">
-			<a href="#">
-				<img class="h-size2" src="images/icons/paypal.png" alt="IMG-PAYPAL">
+			<a href="/#">
+				<img class="h-size2" src="/images/icons/paypal.png" alt="IMG-PAYPAL">
 			</a>
 
-			<a href="#">
-				<img class="h-size2" src="images/icons/visa.png" alt="IMG-VISA">
+			<a href="/#">
+				<img class="h-size2" src="/images/icons/visa.png" alt="IMG-VISA">
 			</a>
 
-			<a href="#">
-				<img class="h-size2" src="images/icons/mastercard.png" alt="IMG-MASTERCARD">
+			<a href="/#">
+				<img class="h-size2" src="/images/icons/mastercard.png" alt="IMG-MASTERCARD">
 			</a>
 
-			<a href="#">
-				<img class="h-size2" src="images/icons/express.png" alt="IMG-EXPRESS">
+			<a href="/#">
+				<img class="h-size2" src="/images/icons/express.png" alt="IMG-EXPRESS">
 			</a>
 
-			<a href="#">
-				<img class="h-size2" src="images/icons/discover.png" alt="IMG-DISCOVER">
+			<a href="/#">
+				<img class="h-size2" src="/images/icons/discover.png" alt="IMG-DISCOVER">
 			</a>
 
 			<div class="t-center s-text8 p-t-20">
-				Copyright © 2018 All rights reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+				Copyright © 2018 All rights reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="/https://colorlib.com" target="_blank">Colorlib</a>
 			</div>
 		</div>
 	</footer>
@@ -1025,14 +1025,14 @@
 
 
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+	<script type="text/javascript" src="/vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
-	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+	<script type="text/javascript" src="/vendor/select2/select2.min.js"></script>
 	<script type="text/javascript">
 		$(".selection-1").select2({
 			minimumResultsForSearch: 20,
@@ -1045,10 +1045,10 @@
 		});
 	</script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
-	<script type="text/javascript" src="js/slick-custom.js"></script>
+	<script type="text/javascript" src="/vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="/js/slick-custom.js"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
+	<script type="text/javascript" src="/vendor/sweetalert/sweetalert.min.js"></script>
 	<script type="text/javascript">
 		$('.block2-btn-addcart').each(function(){
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
@@ -1073,7 +1073,7 @@
 	</script>
 
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<script src="/js/main.js"></script>
 
 </body>
 </html>

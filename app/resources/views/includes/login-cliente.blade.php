@@ -1,11 +1,11 @@
 
 
-<!-- Login -->
+<!-- Login
 <div class="header">
     <div class="card title text-lg-center">
         <h2>Login</h2>
     </div>
-</div>
+</div>-->
 <div class="body">
 
     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
@@ -28,7 +28,7 @@
                 </div>
             @endif
         </div>
-        <div class="form-group">
+        <div class="form- p-t-5">
             <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Login</button>
         </div>
         <!--<div class="checkbox">
@@ -36,7 +36,7 @@
                <input type="checkbox"> Mantenha-me conectado
                </label>
             </div>-->
-        <div class="help-block text-center"><a href="registo-cliente">Não tem Conta? Registe-se já!</a></div>
+        <div class="help-block text-center p-t-5"><a href="/registar">Não tem Conta? Registe-se já!</a></div>
         <div class="help-block text-center"><a href="">Recuperar Conta</a></div>
     </form>
 
