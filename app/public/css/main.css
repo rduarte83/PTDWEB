@@ -1135,7 +1135,7 @@ li.sale-noti > a {
 .side-menu .sub-menu a:hover {
   text-decoration: none;
   padding-left: 20px;
-  color: #007bff!important !important;
+  color: #007bff !important;
 }
 
 .side-menu .sub-menu {
@@ -2389,6 +2389,8 @@ input.num-product::-webkit-inner-spin-button {
     margin: 0; 
 }
 
-
+.hov1:hover{
+    color:white!important;
+}
 
 

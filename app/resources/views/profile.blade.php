@@ -34,15 +34,6 @@
                             </li>
 
                             <span class="linedivide1"></span>
-                            <li>
-                                <a href="/perfil/carrinho"
-                                @if($page ==  "carrinho")
-                                    class="font-weight-bold"
-                                @endif
-                                >Carrinho</a>
-                            </li>
-
-                            <span class="linedivide1"></span>
 
                             <li>
                                 <a href="/perfil/historico"
@@ -81,15 +72,6 @@
                            class="font-weight-bold"
                             @endif
                         >Favoritos</a>
-                    </li>
-
-                    <span class="linedivide"></span>
-                    <li>
-                        <a href="/perfil/carrinho"
-                           @if($page ==  "carrinho")
-                           class="font-weight-bold"
-                            @endif
-                        >Carrinho</a>
                     </li>
 
                     <span class="linedivide"></span>

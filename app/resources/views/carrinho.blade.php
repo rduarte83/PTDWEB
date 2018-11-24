@@ -1,8 +1,9 @@
-@extends("profile")
+@extends("layouts.default")
 @section("title")
     Carrinho
 @endsection
-@section("content-profile")
+@section("content")
+
     <!-- Fazer Menu de escolha ... -->
     <!-- Menu -->
     <div class="bg5">
@@ -14,11 +15,11 @@
                     <nav class="menu">
                         <ul class="main_menu">
                             <li>
-                                <a href="/perfil/info"
-                                   @if($page == "info" || $page ==  "perfil")
-                                   class="font-weight-bold"
-                                    @endif
-                                >Perfil
+                                <a href="/carrinho"
+                                @if($page ==  "carrinho")
+                                    class="font-weight-bold"
+                                @endif
+                                >Carrinho
                                 </a>
 
                             </li>
@@ -26,30 +27,30 @@
                             <span class="linedivide1"></span>
 
                             <li>
-                                <a href="/perfil/favoritos"
-                                   @if($page ==  "favoritos")
-                                   class="font-weight-bold"
-                                    @endif
-                                >Favoritos</a>
+                                <a href="/carrinho/detalhes"
+                                @if($page ==  "detalhes")
+                                    class="font-weight-bold"
+                                @endif
+                                >Detalhes de compra</a>
                             </li>
 
                             <span class="linedivide1"></span>
                             <li>
-                                <a href="/perfil/carrinho"
-                                   @if($page ==  "carrinho")
-                                   class="font-weight-bold"
-                                    @endif
-                                >Carrinho</a>
+                                <a href="/carrinho/resumo"
+                                @if($page ==  "resumo")
+                                    class="font-weight-bold"
+                                @endif
+                                >Resumo</a>
                             </li>
 
                             <span class="linedivide1"></span>
 
                             <li>
-                                <a href="/perfil/historico"
-                                   @if($page ==  "historico")
-                                   class="font-weight-bold"
-                                    @endif
-                                >Histórico</a>
+                                <a href="/carrinho/final"
+                                @if($page ==  "final")
+                                    class="font-weight-bold"
+                                @endif
+                                >Final</a>
                             </li>
                         </ul>
                     </nav>
@@ -65,9 +66,9 @@
 
                     <li>
                         <a href="/carrinho"
-                           @if($page == "info" || $page ==  "perfil")
+                        @if($page == "info" || $page ==  "carrinho")
                             class="font-weight-bold"
-                           @endif
+                        @endif
                         >Carrinho
                         </a>
 
@@ -77,34 +78,36 @@
 
                     <li>
                         <a href="/carrinho/detalhes"
-                           @if($page ==  "favoritos")
-                           class="font-weight-bold"
-                            @endif
-                        >Favoritos</a>
+                        @if($page ==  "detalhes")
+                            class="font-weight-bold"
+                        @endif
+                        >Detalhes de compra</a>
                     </li>
 
                     <span class="linedivide"></span>
                     <li>
-                        <a href="/perfil/carrinho"
-                           @if($page ==  "carrinho")
-                           class="font-weight-bold"
-                            @endif
-                        >Carrinho</a>
+                        <a href="/carrinho/resumo"
+                        @if($page ==  "resumo")
+                            class="font-weight-bold"
+                        @endif
+                        >Resumo</a>
                     </li>
 
                     <span class="linedivide"></span>
 
                     <li>
-                        <a href="/perfil/historico"
-                           @if($page ==  "historico")
-                           class="font-weight-bold"
-                            @endif
-                        >Histórico</a>
+                        <a href="/carrinho/final"
+                        @if($page ==  "final")
+                            class="font-weight-bold"
+                        @endif
+                        >Final</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </div>
+
     <!-- Fazer o menu que se vai incluir no carrinho -->
-    @include("includes.carrinho-resumo")
+    @yield("content-carrinho")
+
 @endsection

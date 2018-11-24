@@ -1,12 +1,5 @@
 <?php
 
-// Home
-/*
-Route::get('/', function () {
-    return view('template/index');
-});
-*/
-
 // Template Routes
 Route::get('/template/', "HomeController@indexTemplate");
 Route::get('/template/index', "HomeController@indexTemplate");
@@ -36,6 +29,10 @@ Route::get('/product-detail', "HomeController@productDetail");
 Route::get('/perfil', "HomeController@profile");
 Route::get('/perfil/{page}', "HomeController@profilePage");
 
+
+// Carrinho
+Route::get("/carrinho", "HomeController@carrinhoDetalhes");
+Route::get("/carrinho/{page}", "HomeController@carrinhoPage");
 
 
 // teste AP

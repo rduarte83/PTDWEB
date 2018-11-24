@@ -81,20 +81,20 @@
               </ul>
 
               <div class="header-cart-total">
-                Total:
+                Total: 500€
               </div>
 
               <div class="header-cart-buttons">
                 <div class="header-cart-wrapbtn">
                   <!-- Button -->
-                  <a href="/perfil/carrinho" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                  <a href="/carrinho" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                       Carrinho
                   </a>
                 </div>
 
                 <div class="header-cart-wrapbtn">
                   <!-- Button -->
-                  <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                  <a href="/carrinho/resumo" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                     Checkout
                   </a>
                 </div>
@@ -170,7 +170,7 @@
 
                 <div class="header-cart-wrapbtn">
                   <!-- Button -->
-                  <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                  <a href="/carrinho/resumo" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                     Checkout
                   </a>
                 </div>

@@ -3845,6 +3845,8 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
 /*[  ]
 -----------------------------------------------------------
 */
+.bo-rad-0-top {border-radius: 0px;}
+.bo-rad-0-bottom {border-radius: 0px;}
 .bo-rad-2 {border-radius: 2px;}
 .bo-rad-3 {border-radius: 3px;}
 .bo-rad-4 {border-radius: 4px;}
@@ -3981,6 +3983,9 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 /*[ Hover ]
 ///////////////////////////////////////////////////////////
 */
+.hov1{
+    cursor:pointer;
+}
 .hov1:hover {
     background-color: #007bff!important;
   	color: white;

@@ -86,9 +86,6 @@ class HomeController extends Controller
 
     public function profilePage($page){
         switch ($page){
-            case "carrinho":
-                return view( "profile/cart")->with("page", "carrinho");
-                break;
             case "favoritos":
                 return view( "profile/favourites")->with("page", "favoritos");
                 break;
@@ -107,8 +104,25 @@ class HomeController extends Controller
     /**
      * Carrinho
      */
+
+    public function carrinhoPage($page){
+        switch ($page){
+            case "detalhes":
+                return view( "carrinho/detalhes")->with("page", "detalhes");
+                break;
+            case "resumo":
+                return view( "carrinho/resumo")->with("page", "resumo");
+                break;
+            case "final":
+                return view( "carrinho/final")->with("page", "final");
+                break;
+            default:
+                return view( "carrinho/carrinho")->with("page", "carrinho");
+                break;
+        }
+    }
     public function carrinhoDetalhes(){
-        return view($this->someDir . "historico-compras");
+        return view("carrinho/carrinho")->with("page", "carrinho");
     }
 
     public function carrinhoFinal(){

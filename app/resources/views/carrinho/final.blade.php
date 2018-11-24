@@ -1,4 +1,9 @@
-@section('carrinho-final')
+@extends("carrinho")
+@section("title")
+    Carrinho - Final
+@endsection
+@section("content-carrinho")
+
     <div class="container col-md-12 offset-md-2 shadow-lg p-3 mb-5 bg-white rounded">
         <!-- <div class="card-header">
              <div class="card title text-lg-center">
@@ -14,10 +19,10 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <h5 class="font-weight-bold">Compra efetuada com sucesso <span
-                                                    class="glyphicon glyphicon-thumbs-up"></span></h5>
+                                                class="glyphicon glyphicon-thumbs-up"></span></h5>
                                     </div>
                                     <div class="card-body">
-                                        <p>Use o código nesta página para levantar a suabotija em quarquer ponto de
+                                        <p>Use o código nesta página para levantar a sua botija em quarquer ponto de
                                             recolha.</p>
                                     </div>
                                 </div>
@@ -47,9 +52,9 @@
         <div class="card-footer text-right  flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm">
             <div class="trans-0-4">
                 <!-- Button -->
-                <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 p-2">
+                <a class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 p-2 text-white">
                     Voltar à homepage
-                </button>
+                </a>
             </div>
         </div>
     </div>
