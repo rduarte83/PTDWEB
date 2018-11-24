@@ -104,7 +104,20 @@ class HomeController extends Controller
         }
     }
 
+    /**
+     * Carrinho
+     */
+    public function carrinhoDetalhes(){
+        return view($this->someDir . "historico-compras");
+    }
 
+    public function carrinhoFinal(){
+        return view($this->someDir . "historico-compras");
+    }
+
+    public function carrinhoResumo(){
+        return view($this->someDir . "historico-compras");
+    }
 
     /* Testes AP*/
     private $someDir = "includes/";
