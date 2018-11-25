@@ -66,6 +66,12 @@ class HomeController extends Controller
         return view( "register");
     }
 
+    // Login
+
+    public function login(){
+        return $this->profilePage("perfil");
+    }
+
     /**
      * Product
      */

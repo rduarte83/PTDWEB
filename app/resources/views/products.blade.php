@@ -68,7 +68,7 @@
                                 </div>
 
                                 <div class="s-text3 p-t-10 p-b-10">
-                                    Range: $<span id="value-lower">0</span> - $<span id="value-upper">100</span>
+                                    Range: <span id="value-lower">0</span> - <span id="value-upper">100</span>
                                 </div>
                             </div>
                         </div>
@@ -144,7 +144,7 @@
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Add to Cart
+                                                Adicionar ao Carrinho
                                             </button>
                                         </div>
                                     </div>
@@ -156,7 +156,7 @@
                                     </a>
 
                                     <span class="block2-price m-text6 p-r-5">
-										$75.00
+										75.00€
 									</span>
                                 </div>
                             </div>
@@ -177,7 +177,7 @@
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Add to Cart
+                                                Adicionar ao Carrinho
                                             </button>
                                         </div>
                                     </div>
@@ -189,7 +189,7 @@
                                     </a>
 
                                     <span class="block2-price m-text6 p-r-5">
-										$92.50
+										92.50€
 									</span>
                                 </div>
                             </div>
@@ -210,7 +210,7 @@
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Add to Cart
+                                                Adicionar ao Carrinho
                                             </button>
                                         </div>
                                     </div>
@@ -222,7 +222,7 @@
                                     </a>
 
                                     <span class="block2-price m-text6 p-r-5">
-										$165.90
+										165.90€
 									</span>
                                 </div>
                             </div>
@@ -243,7 +243,7 @@
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Add to Cart
+                                                Adicionar ao Carrinho
                                             </button>
                                         </div>
                                     </div>
@@ -255,11 +255,11 @@
                                     </a>
 
                                     <span class="block2-oldprice m-text7 p-r-5">
-										$29.50
+										29.50€
 									</span>
 
                                     <span class="block2-newprice m-text8 p-r-5">
-										$15.90
+										15.90€
 									</span>
                                 </div>
                             </div>
@@ -280,7 +280,7 @@
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Add to Cart
+                                                Adicionar ao Carrinho
                                             </button>
                                         </div>
                                     </div>
@@ -292,7 +292,7 @@
                                     </a>
 
                                     <span class="block2-price m-text6 p-r-5">
-										$75.00
+										75.00€
 									</span>
                                 </div>
                             </div>
@@ -313,7 +313,7 @@
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Add to Cart
+                                                Adicionar ao Carrinho
                                             </button>
                                         </div>
                                     </div>
@@ -325,7 +325,7 @@
                                     </a>
 
                                     <span class="block2-price m-text6 p-r-5">
-										$92.50
+										92.50€
 									</span>
                                 </div>
                             </div>
@@ -346,7 +346,7 @@
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Add to Cart
+                                                Adicionar ao Carrinho
                                             </button>
                                         </div>
                                     </div>
@@ -358,7 +358,7 @@
                                     </a>
 
                                     <span class="block2-price m-text6 p-r-5">
-										$75.00
+										75.00€
 									</span>
                                 </div>
                             </div>
@@ -379,7 +379,7 @@
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Add to Cart
+                                                Adicionar ao Carrinho
                                             </button>
                                         </div>
                                     </div>
@@ -391,7 +391,7 @@
                                     </a>
 
                                     <span class="block2-price m-text6 p-r-5">
-										$92.50
+										92.50€
 									</span>
                                 </div>
                             </div>
@@ -412,7 +412,7 @@
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Add to Cart
+                                                Adicionar ao Carrinho
                                             </button>
                                         </div>
                                     </div>
@@ -424,7 +424,7 @@
                                     </a>
 
                                     <span class="block2-price m-text6 p-r-5">
-										$165.90
+										165.90€
 									</span>
                                 </div>
                             </div>
@@ -445,7 +445,7 @@
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Add to Cart
+                                                Adicionar ao Carrinho
                                             </button>
                                         </div>
                                     </div>
@@ -457,11 +457,11 @@
                                     </a>
 
                                     <span class="block2-oldprice m-text7 p-r-5">
-										$29.50
+										29.50€
 									</span>
 
                                     <span class="block2-newprice m-text8 p-r-5">
-										$15.90
+										15.90€
 									</span>
                                 </div>
                             </div>
@@ -482,7 +482,7 @@
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Add to Cart
+                                                Adicionar ao Carrinho
                                             </button>
                                         </div>
                                     </div>
@@ -494,7 +494,7 @@
                                     </a>
 
                                     <span class="block2-price m-text6 p-r-5">
-										$75.00
+										75.00
 									</span>
                                 </div>
                             </div>
@@ -515,7 +515,7 @@
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Add to Cart
+                                                Adicionar ao Carrinho
                                             </button>
                                         </div>
                                     </div>
@@ -527,7 +527,7 @@
                                     </a>
 
                                     <span class="block2-price m-text6 p-r-5">
-										$92.50
+										92.50
 									</span>
                                 </div>
                             </div>

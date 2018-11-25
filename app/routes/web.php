@@ -52,7 +52,7 @@ Route::get('/products/add/{id}', "ProductController@addToCart");
 
 // User Autentication
 Route::post('/register', "UserController@create");
-Route::post('/login', "UserController@login");
+Route::post('/login', "HomeController@login");
 
 
 // UI
