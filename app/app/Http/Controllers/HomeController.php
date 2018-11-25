@@ -46,17 +46,20 @@ class HomeController extends Controller
     /**
      * End Template
      */
-    public function index()
-    {
-        return view( "home");
+    public function index(){
+        return view("home");
+    }
+
+    public function mapa(){
+        return view("mapa");
     }
 
     public function  about(){
-        return view( "about");
+        return view("about");
     }
 
     public function contact(){
-        return view( "contact");
+        return view("contact");
     }
 
 
