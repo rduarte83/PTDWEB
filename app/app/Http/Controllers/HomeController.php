@@ -87,7 +87,7 @@ class HomeController extends Controller
      * Profile
      **/
     public function profile(){
-        return view( "profile")->with("page", "perfil");
+        return view( "profile/info")->with("page", "perfil");
     }
 
     public function profilePage($page){
@@ -101,8 +101,11 @@ class HomeController extends Controller
             case "perfil":
                 return view( "profile/info")->with("page", "perfil");
                 break;
+            case "editar":
+                return view( "profile/edit")->with("page", "editar");
+                break;
             default:
-                return view( "profile")->with("page", "perfil");
+                return view( "profile/info")->with("page", "perfil");
                 break;
         }
     }

@@ -1,4 +1,4 @@
 @extends("profile")
 @section("content-profile")
-    @include("includes.lista-favoritos-users")
+    @include("includes.show-profile")
 @endsection

@@ -22,7 +22,7 @@
             </div>
 
             <div class="block2-txt p-t-20">
-                <a href="product-detail" class="block2-name dis-block s-text3 p-b-5">
+                <a href="product" class="block2-name dis-block s-text3 p-b-5">
                     Botija de gás
                 </a>
                 <span class="block2-price m-text6 p-r-5">
