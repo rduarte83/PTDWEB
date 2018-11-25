@@ -4,7 +4,7 @@
         <!-- Block2 -->
         <div class="block2">
             <div class="block2-img wrap-pic-w of-hidden pos-relative ">
-                <img src="images/item-07.jpg" alt="IMG-PRODUCT">
+                <img src="{{URL::asset("images/garrafas/butano-13kg.png")}}" alt="IMG-PRODUCT">
 
                 <div class="block2-overlay trans-0-4">
                     <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -22,8 +22,8 @@
             </div>
 
             <div class="block2-txt p-t-20">
-                <a href="product-detail" class="block2-name dis-block s-text3 p-b-5">
-                    Botija de gás
+                <a href="/product" class="block2-name dis-block s-text3 p-b-5">
+                    Botija de gás Propano - GALP
                 </a>
                 <span class="block2-price m-text6 p-r-5">
                     15.90€

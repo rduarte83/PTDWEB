@@ -32,8 +32,8 @@
                             <div class="card-body">
                                 <div class="card">
 
-                                    <img class="class= img-thumbnail text-center" style="width:150px;height:100px;"
-                                         src="../images/codigobarras.png" alt="Código de barras">
+                                    <img class="class= img-thumbnail text-center" style="width:150px; height:100px;"
+                                         src="{{URL::asset("images/codigobarras.png")}}" alt="Código de barras">
 
 
                                 </div>

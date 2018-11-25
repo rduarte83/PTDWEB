@@ -18,14 +18,22 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td>Botija de Gas Galp <span class="float-lg-right"><img class="" alt="ICON" src="images/icons/icon-header-02.png"></span></td>
+                                <td>Botija de Gas Galp
+                                    <span class="float-lg-right img-small">
+                                        <img class="img-small" alt="ICON" src="{{URL::asset("images/garrafas/butano-13kg.png")}}">
+                                    </span>
+                                </td>
                                 <td>1</td>
                                 <td>5.40€</td>
                                 <td>14/11/2018 10h13</td>
                                 <td>Rua da Travessa, 431 - Santa Maria da Feira</td>
                             </tr>
                             <tr>
-                                <td>Botija de Gas PR10 <span class="float-lg-right"><img class="" alt="ICON" src="images/icons/icon-header-02.png"></span></td>
+                                <td>Botija de Gas PR10
+                                    <span class="float-lg-right img-small">
+                                        <img class="img-small" alt="ICON" src="{{URL::asset("images/garrafas/butano_13kg.png")}}">
+                                    </span>
+                                </td>
                                 <td>1</td>
                                 <td>5.40€</td>
                                 <td>14/11/2018 10h13</td>

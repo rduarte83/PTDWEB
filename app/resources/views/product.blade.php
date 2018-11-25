@@ -1,6 +1,6 @@
 @extends("layouts.default")
 @section("title")
-    Produto - @php($produto)
+    Produto - @php($produto) Botija de gás Propano - Galp
 @endsection
 @section("content")
     <!-- breadcrumb -->
@@ -21,7 +21,7 @@
         </a>
 
         <span class="s-text17">
-			Galp Propano 2000
+			Botija de gás Propano - Galp
 		</span>
     </div>
 
@@ -33,21 +33,21 @@
                     <div class="wrap-slick3-dots"></div>
 
                     <div class="slick3">
-                        <div class="item-slick3" data-thumb="/images/thumb-item-01.jpg">
+                        <div class="item-slick3" data-thumb="{{URL::asset("images/garrafas/butano-13kg.png")}}">
                             <div class="wrap-pic-w">
-                                <img src="/images/product-detail-01.jpg" alt="IMG-PRODUCT">
+                                <img src="{{URL::asset("images/garrafas/butano-13kg.png")}}" alt="IMG-PRODUCT">
                             </div>
                         </div>
 
-                        <div class="item-slick3" data-thumb="/images/thumb-item-02.jpg">
+                        <div class="item-slick3" data-thumb="{{URL::asset("images/garrafas/butano_13kg.png")}}">
                             <div class="wrap-pic-w">
-                                <img src="/images/product-detail-02.jpg" alt="IMG-PRODUCT">
+                                <img src="{{URL::asset("images/garrafas/butano_13kg.png")}}" alt="IMG-PRODUCT">
                             </div>
                         </div>
 
-                        <div class="item-slick3" data-thumb="/images/thumb-item-03.jpg">
+                        <div class="item-slick3" data-thumb="{{URL::asset("images/garrafas/butano_125.png")}}">
                             <div class="wrap-pic-w">
-                                <img src="/images/product-detail-03.jpg" alt="IMG-PRODUCT">
+                                <img src="{{URL::asset("images/garrafas/butano_125.png")}}" alt="IMG-PRODUCT">
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
 
             <div class="w-size14 p-t-30 respon5">
                 <h4 class="product-detail-name m-text16 p-b-13">
-                    Galp Propano 2000
+                    Botija de gás Propano - Galp
                 </h4>
 
                 <span class="m-text17">
@@ -64,7 +64,7 @@
 				</span>
 
                 <p class="s-text8 p-t-10">
-                    Botija de gás propano da galp 2000, com capacidade para 15 dias de uso corrente.
+                    Botija de gás propano da galp, com capacidade para 15 dias de uso corrente.
                 </p>
 
                 <!--  -->
@@ -123,7 +123,7 @@
                 </div>
                 <div class="p-b-45">
                     <span class="s-text8 m-r-35">SKU: GALP-01</span>
-                    <span class="s-text8">Categoria: GALP, 2000</span>
+                    <span class="s-text8">Categoria: GALP, propano</span>
                 </div>
 
                 <!--  -->

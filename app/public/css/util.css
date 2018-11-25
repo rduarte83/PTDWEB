@@ -2356,6 +2356,12 @@
 */
 .wrap-pic-w img {width: 100%;}
 .wrap-pic-max-w img {max-width: 100%;}
+.img-product img {
+    width: 270px;
+    max-width: 270px;
+    height: 350px;
+    max-height: 350px;
+}
 
 /* ------------------------------------ */
 .wrap-pic-h img {height: 100%;}
@@ -4164,4 +4170,10 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
 
 .hover-border-bottom:hover {
     border-bottom: 1px solid #333333;
+}
+
+.img-small {
+    width: 80px;
+    position: relative;
+    margin-right: 20px;
 }

@@ -35,6 +35,7 @@
                             </li>
 
                             <span class="linedivide1"></span>
+
                             <li>
                                 <a href="/carrinho/resumo"
                                 @if($page ==  "resumo")

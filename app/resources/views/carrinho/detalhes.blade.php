@@ -16,15 +16,15 @@
                     <div class="container">
                         <div class="form-check form-check-inline">
                             <input class="" type="radio" name="metodoPagaemento" id="refmultibanco" value="refenciaMultibanco">
-                            <label class="form-check-label" style="font-size: medium;" for="refmultibanco">Referência multibanco</label>
+                            <label class="form-check-label" style="font-size: medium;" for="refmultibanco">Paypal</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="" type="radio" name="metodoPagaemento" id="cartcredito" value="cartaoCredito">
-                            <label class="form-check-label" style="font-size: medium;" for="cartcredito">Cartão de crédito</label>
+                            <label class="form-check-label" style="font-size: medium;" for="cartcredito">MBWay</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="" type="radio" name="metodoPagaemento" id="cartfisico" value="cartaofisico">
-                            <label class="form-check-label" style="font-size: medium;" for="cartfisico">Cartão fisico associado</label>
+                            <label class="form-check-label" style="font-size: medium;" for="cartfisico">Cartão Pré-pago</label>
                         </div>
                     </div>
                 </div>

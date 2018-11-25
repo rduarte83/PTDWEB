@@ -56,7 +56,7 @@
 
           <div class="header-wrapicon2">
             <img src="/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-            <span class="header-icons-noti">0</span>
+            <span class="header-icons-noti">1</span>
 
             <!-- Header cart noti -->
             <div class="header-cart header-dropdown">
@@ -66,15 +66,15 @@
 
                 <li class="header-cart-item">
                   <div class="header-cart-item-img">
-                    <img src="/images/item-cart-01.jpg" alt="IMG">
+                    <img src="{{URL::asset("images/garrafas/butano-13kg.png")}}" alt="IMG">
                   </div>
                   <div class="header-cart-item-txt">
                     <a href="#" class="header-cart-item-name">
-                      White Shirt With Pleat Detail Back
+                      Botija de gás Propano - GALP
                     </a>
 
                     <span class="header-cart-item-info">
-                      1 x $19.00
+                      1 x 19.00€
                     </span>
                   </div>
                 </li>
@@ -134,23 +134,23 @@
 
           <div class="header-wrapicon2">
             <img src="/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-            <span class="header-icons-noti">0</span>
+            <span class="header-icons-noti">1</span>
 
             <!-- Header cart noti -->
             <div class="header-cart header-dropdown">
               <ul class="header-cart-wrapitem">
                 <li class="header-cart-item">
                   <div class="header-cart-item-img">
-                    <img src="/images/item-cart-01.jpg" alt="IMG">
+                    <img src="{{URL::asset("images/garrafas/butano-13kg.png")}}" alt="IMG">
                   </div>
 
                   <div class="header-cart-item-txt">
                     <a href="#" class="header-cart-item-name">
-                      White Shirt With Pleat Detail Back
+                        Botija de gás Propano - GALP
                     </a>
 
                     <span class="header-cart-item-info">
-                      1 x $19.00
+                      1 x 19.00€
                     </span>
                   </div>
                 </li>
