@@ -8,16 +8,20 @@
         </div>
         <div class="col-md">
             <h5>Nome de utilizador</h5>
-            <span>{{'$user_name'}}</span>
+            <!--<span>{{'$user_name'}}</span>-->
+            <span>Luís Figo</span>
             <br><br>
             <h5>Email</h5>
-            <span>{{'$email'}}</span>
+            <!--<span>{{'$email'}}</span>-->
+            <span>luisfigo@mail.com</span>
             <br><br>
             <h5>NIF</h5>
-            <span>{{'$n_contribuinte'}}</span>
+            <!--<span>{{'$n_contribuinte'}}</span>-->
+            <span>192159875</span>
             <br><br>
             <h5>Morada</h5>
-            <span>{{'$morada'}}</span>
+            <!--<span>{{'$morada'}}</span>-->
+            <span>Rua da Alegria Nº25 - Santa Maria da Feira</span>
             <br><br>
             
             <!-- A função onclick serve apenas para o protótipo. -->
