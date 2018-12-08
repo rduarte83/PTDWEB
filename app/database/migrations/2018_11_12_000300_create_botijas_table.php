@@ -20,7 +20,7 @@ class CreateBotijasTable extends Migration
             $table->string('marca');
             $table->string('descricao')->nullable();
             $table->decimal('preco');
-            $table->decimal('preco_tararo');
+            $table->decimal('preco_tara');
             $table->timestamps();
         });
     }
