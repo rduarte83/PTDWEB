@@ -108,7 +108,11 @@
             </div>
             
             <!-- A função onclick serve apenas para o protótipo. -->
-            <button type="submit" onclick="window.location.href='/perfil/editar'" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Editar perfil</button>
+            {{--<button type="submit" onclick="window.location.href='/perfil/editar'" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Editar perfil</button>--}}
+            <div class="w-size25">
+                <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/perfil/editar">Editar perfil</a>
+            </div>
+
         </div>
         <div class="col-md"></div>
         <div class="col-md"></div>

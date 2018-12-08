@@ -133,10 +133,10 @@
 
             <div class="text-center  flex-w flex-sb-m p-t-25 p-b-25  p-l-35 p-r-60 p-lr-15-sm">
                 <div class="w-size25">
-                    <button type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white">Guardar alterações</button>
+                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/perfil">Cancelar</a>
                 </div>
                 <div class="w-size25">
-                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/perfil">Cancelar</a>
+                    <button type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white">Guardar alterações</button>
                 </div>
             </div>
         </form>
