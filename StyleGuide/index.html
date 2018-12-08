@@ -24,270 +24,18 @@
 
   <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
   <title>Stylesheet</title>
 </head>
 
 <body>
-  
-  <header class="header1">
-    <!-- Header desktop -->
-    <div class="container-menu-header">
-      <div class="wrap_header">
-        <!-- Logo -->
-        <a href="index" class="logo">
-            <img src="images/logo/logo-small.png" alt="IMG-LOGO">
-        </a>
 
-        <!-- Menu -->
-        <div class="wrap_menu">
-          <nav class="menu">
-            <ul class="main_menu">
-
-              <div class="pos-relative bo11 of-hidden">
-                <input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-product" placeholder="Procurar produtos...">
-
-                <button class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4">
-                  <i class="fs-13 fa fa-search" aria-hidden="true"></i>
-                </button>
-              </div>
-
-              <span class="linedivide1"></span>
-
-              <li>
-                <a href="produtos">Loja</a>
-              </li>
-
-              <span class="linedivide1"></span>
-
-              <li>
-                <a href="mapa">Mapa</a>
-              </li>
-            </ul>
-          </nav> 
-        </div>
-
-        <!-- Header Icon -->
-        <div class="header-icons">
-
-			<!-- USER DROPDOWN -->
-			<div class="header-wrapicon2">
-					<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-		
-					<!-- Header cart noti -->
-					<div class="header-cart header-dropdown">
-					  <ul class="header-cart-wrapitem">
-              <form>
-                <div class="form-group">
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                </div>
-                <div class="form-group">
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-
-                <div class="header-cart-buttons">
-                  <div class="header-cart-wrapbtn">
-                    <!-- Button -->
-                    <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Login</button>
-
-                  </div>
-
-                  <div class="header-cart-wrapbtn">
-
-                      <a href="criar-conta" class="s-text8">
-                          Não tem conta? Crie já!
-                      </a>
-                  </div>
-                </div>
-              </form>
-	
-					</div>
-				  </div>
-			
-			<!-- END USER DROPDOWN -->
-          <span class="linedivide1"></span>
-
-          <div class="header-wrapicon2">
-            <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-            <span class="header-icons-noti">0</span>
-
-            <!-- Header cart noti -->
-            <div class="header-cart header-dropdown">
-              <ul class="header-cart-wrapitem">
-
-                <!-- Card Item Example-->
-
-                <li class="header-cart-item">
-                  <div class="header-cart-item-img">
-                    <img src="images/item-cart-01.jpg" alt="IMG">
-                  </div>
-                  <div class="header-cart-item-txt">
-                    <a href="#" class="header-cart-item-name">
-                      White Shirt With Pleat Detail Back
-                    </a>
-
-                    <span class="header-cart-item-info">
-                      1 x $19.00
-                    </span>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="header-cart-total">
-                Total:
-              </div>
-
-              <div class="header-cart-buttons">
-                <div class="header-cart-wrapbtn">
-                  <!-- Button -->
-                  <a href="cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                      Carrinho
-                  </a>
-                </div>
-
-                <div class="header-cart-wrapbtn">
-                  <!-- Button -->
-                  <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                    Checkout
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="row header" style="text-align: center;">
+        <h1>Styleguide</h1>
     </div>
 
-    <!-- Header Mobile -->
-    <div class="wrap_header_mobile">
-      <!-- Logo moblie -->
-      <a href="index" class="logo-mobile">
-          <img src="images/logo/logo-small.png" alt="IMG-LOGO">
-        <!--<embed src="images/gas.svg"width="30%" height="30%" alt="IMG-LOGO">-->
-      </a>
-
-      <!-- Button show menu -->
-      <div class="btn-show-menu">
-        <!-- Header Icon mobile -->
-        <div class="header-icons-mobile">
-			<!-- USER DROPDOWN -->
-			<div class="header-wrapicon2">
-					<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-		
-					<!-- Header cart noti -->
-					<div class="header-cart header-dropdown">
-					  <ul class="header-cart-wrapitem">
-              <form>
-                <div class="form-group">
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                </div>
-                <div class="form-group">
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-
-                <div class="header-cart-buttons">
-                  <div class="header-cart-wrapbtn">
-                    <!-- Button -->
-                    <button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Login</button>
-
-                  </div>
-
-                  <div class="header-cart-wrapbtn">
-
-                      <a href="criar-conta" class="s-text8">
-                          Não tem conta? Crie já!
-                      </a>
-                  </div>
-                </div>
-              </form>
-	
-					</div>
-				  </div>
-			
-			<!-- END USER DROPDOWN -->
-
-          <span class="linedivide2"></span>
-
-          <div class="header-wrapicon2">
-            <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-            <span class="header-icons-noti">0</span>
-
-            <!-- Header cart noti -->
-            <div class="header-cart header-dropdown">
-              <ul class="header-cart-wrapitem">
-                <li class="header-cart-item">
-                  <div class="header-cart-item-img">
-                    <img src="images/item-cart-01.jpg" alt="IMG">
-                  </div>
-
-                  <div class="header-cart-item-txt">
-                    <a href="#" class="header-cart-item-name">
-                      White Shirt With Pleat Detail Back
-                    </a>
-
-                    <span class="header-cart-item-info">
-                      1 x $19.00
-                    </span>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="header-cart-total">
-                Total: $75.00
-              </div>
-
-              <div class="header-cart-buttons">
-                <div class="header-cart-wrapbtn">
-                  <!-- Button -->
-                  <a href="cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                    Carrinho
-                  </a>
-                </div>
-
-                <div class="header-cart-wrapbtn">
-                  <!-- Button -->
-                  <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                    Checkout
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Mobile -->
-    <div class="wrap-side-menu">
-      <nav class="side-menu">
-        <ul class="main-menu">
-
-            <div class="search-product pos-relative bo4 of-hidden">
-                <input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Procurar produtos...">
-            
-                <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
-                  <i class="fs-12 fa fa-search" aria-hidden="true"></i>
-                </button>
-              </div>
-
-          <li class="item-menu-mobile">
-            <a href="produtos">Loja</a>
-          </li>
-
-          <li class="item-menu-mobile">
-            <a href="mapa">Mapa</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-    <!---------- 
+  <!---------- 
     --------------
     ---------------
     ---COMPONENTES---
@@ -295,299 +43,379 @@
     --------------
     ----------->
 
-      <h1>H1</h1>
-      <h2>H2</h2>
-      <h3>H3</h3>
-      <h4>H4</h4>
-      <h5>H5</h5>
-      <h6>H6</h6>
+  <div class="row header">
+    <h2>Títulos</h2>
+  </div>
 
+  <h1>H1</h1>
+  <h2>H2</h2>
+  <h3>H3</h3>
+  <h4>H4</h4>
+  <h5>H5</h5>
+  <h6>H6</h6>
+
+  <div class="row header">
+    <h2>Pesquisa</h2>
+  </div>
+
+  <div class="row" style="background-color: #F0F0F0;">
+    <div class="col-auto" style="margin: auto;">
       <div class="pos-relative bo4 of-hidden size15 m-b-20 w-size300">
         <input class="sizefull s-text7 p-l-22 p-r-22" type="tel" name="phone-number" placeholder="Telemóvel">
       </div>
+    </div>
 
+
+    <div class="col mx-auto">
+      <pre><code class="html">
+          &lt;div class=&quot;pos-relative bo4 of-hidden size15 m-b-20 w-size300&quot;&gt;
+            &lt;input class=&quot;sizefull s-text7 p-l-22 p-r-22&quot; type=&quot;tel&quot; name=&quot;phone-number&quot; placeholder=&quot;Telem&oacute;vel&quot;&gt;
+          &lt;/div&gt;
+      </code></pre>
+    </div>
+  </div>
+
+  <div class="row" style="background-color: #F0F0F0;">
+    <div class="col-auto" style="margin: auto;">
       <div class="pos-relative bo4 of-hidden size15 m-b-20 w-size300">
         <input class="sizefull s-text7 p-l-22 p-r-22" type="email" name="phone-number" placeholder="Email">
       </div>
+    </div>
 
+    <div class="col mx-auto">
+      <pre><code class="html">
+          &lt;div class=&quot;pos-relative bo4 of-hidden size15 m-b-20 w-size300&quot;&gt;
+            &lt;input class=&quot;sizefull s-text7 p-l-22 p-r-22&quot; type=&quot;email&quot; name=&quot;phone-number&quot; placeholder=&quot;Email&quot;&gt;
+          &lt;/div&gt;
+      </code></pre>
+    </div>
+  </div>
+
+  <div class="row" style="background-color: #F0F0F0;">
+    <div class="col-auto" style="margin: auto;">
       <div class="pos-relative bo4 of-hidden size15 m-b-20 w-size300">
         <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="phone-number" placeholder="Texto">
       </div>
-
-
-  <!-- ButtonS -->
-  <div class="w-size1">
-    <a href="#" class="flex-c-m size2 m-text1 bg-accent hov69 trans-0-4 bo-rad-23">
-      Accent
-    </a>
-  </div>
-
-  <div class="w-size1">
-    <a href="#" class="flex-c-m size2 m-text1 bg-sucess hov1 trans-0-4 bo-rad-23">
-      Sucess
-    </a>
-  </div>
-
-  <div class="w-size1">
-    <a href="#" class="flex-c-m size2 m-text1 bg-error hov1 trans-0-4 bo-rad-23">
-      Error
-    </a>
-  </div>
-
-  <div class="w-size1">
-      <a href="#" class="flex-c-m size2 m-text1 bg-primary hov1 trans-0-4 bo-rad-23">
-        Primary
-      </a>
     </div>
 
-    <div class="w-size1">
+
+    <div class="col mx-auto">
+      <pre><code class="html">
+            &lt;div class=&quot;pos-relative bo4 of-hidden size15 m-b-20 w-size300&quot;&gt;
+              &lt;input class=&quot;sizefull s-text7 p-l-22 p-r-22&quot; type=&quot;text&quot; name=&quot;phone-number&quot; placeholder=&quot;Texto&quot;&gt;
+            &lt;/div&gt;
+        </code></pre>
+    </div>
+  </div>
+
+  <!-- ButtonS -->
+  <div class="row header">
+    <h2>Buttons</h2>
+  </div>
+
+
+  <div class="row" style="background-color: #F0F0F0;">
+    <div class="col-auto" style="margin: auto;">
+      <div class="w-size1">
+        <a href="#" class="flex-c-m size2 m-text1 bg-accent hov69 trans-0-4 bo-rad-23">
+          Accent
+        </a>
+      </div>
+    </div>
+
+
+    <div class="col mx-auto">
+      <pre><code class="html">
+        &lt;div class=&quot;w-size1&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;flex-c-m size2 m-text1 bg-accent hov69 trans-0-4 bo-rad-23&quot;&gt;
+            Accent
+          &lt;/a&gt;
+        &lt;/div&gt; 
+      </code></pre>
+    </div>
+  </div>
+
+
+  <div class="row" style="background-color: #F0F0F0;">
+    <div class="col-auto" style="margin: auto;">
+      <div class="w-size1">
+        <a href="#" class="flex-c-m size2 m-text1 bg-sucess hov1 trans-0-4 bo-rad-23">
+          Sucess
+        </a>
+      </div>
+    </div>
+
+
+    <div class="col mx-auto">
+      <pre><code class="html">
+        &lt;div class=&quot;w-size1&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;flex-c-m size2 m-text1 bg-sucess hov1 trans-0-4 bo-rad-23&quot;&gt;
+            Sucess
+          &lt;/a&gt;
+        &lt;/div&gt;
+      </code></pre>
+    </div>
+  </div>
+
+  <div class="row" style="background-color: #F0F0F0;">
+    <div class="col-auto" style="margin: auto;">
+      <div class="w-size1">
+        <a href="#" class="flex-c-m size2 m-text1 bg-error hov1 trans-0-4 bo-rad-23">
+          Error
+        </a>
+      </div>
+    </div>
+
+
+    <div class="col mx-auto">
+      <pre><code class="html">
+        &lt;div class=&quot;w-size1&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;flex-c-m size2 m-text1 bg-error hov1 trans-0-4 bo-rad-23&quot;&gt;
+            Error
+          &lt;/a&gt;
+        &lt;/div&gt;
+      </code></pre>
+    </div>
+  </div>
+
+  <div class="row" style="background-color: #F0F0F0;">
+    <div class="col-auto" style="margin: auto;">
+      <div class="w-size1">
+        <a href="#" class="flex-c-m size2 m-text1 bg-primary hov1 trans-0-4 bo-rad-23">
+          Primary
+        </a>
+      </div>
+    </div>
+
+
+    <div class="col mx-auto">
+      <pre><code class="html">
+          &lt;div class=&quot;w-size1&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;flex-c-m size2 m-text1 bg-primary hov1 trans-0-4 bo-rad-23&quot;&gt;
+              Primary
+            &lt;/a&gt;
+          &lt;/div&gt;
+        </code></pre>
+    </div>
+  </div>
+
+  <div class="row" style="background-color: #F0F0F0;">
+    <div class="col-auto" style="margin: auto;">
+      <div class="w-size1">
         <a href="#" class="flex-c-m size2 m-text1 bg-neutral hov69 trans-0-4 bo-rad-23">
           Neutral
         </a>
       </div>
+    </div>
+
+
+    <div class="col mx-auto">
+      <pre><code class="html">
+            &lt;div class=&quot;w-size1&quot;&gt;
+              &lt;a href=&quot;#&quot; class=&quot;flex-c-m size2 m-text1 bg-neutral hov69 trans-0-4 bo-rad-23&quot;&gt;
+                Neutral
+              &lt;/a&gt;
+            &lt;/div&gt;
+        </code></pre>
+    </div>
+  </div>
+
+
 
   <!-- Search rectangular-->
 
-  <div class="search-product pos-relative bo4 of-hidden w-size300">
-    <input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Procurar produtos...">
+  <div class="row header">
+    <h2>Search bars</h2>
+  </div>
 
-    <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
-      <i class="fs-12 fa fa-search" aria-hidden="true"></i>
-    </button>
+  <div class="row" style="background-color: #F0F0F0;">
+    <div class="col-auto" style="margin: auto;">
+
+      <div class="search-product pos-relative bo4 of-hidden w-size300">
+        <input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Procurar produtos...">
+
+        <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
+          <i class="fs-12 fa fa-search" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+
+    <div class="col mx-auto">
+      <pre><code class="html">
+            &lt;div class=&quot;search-product pos-relative bo4 of-hidden w-size300&quot;&gt;
+              &lt;input class=&quot;s-text7 size6 p-l-23 p-r-50&quot; type=&quot;text&quot; name=&quot;search-product&quot; placeholder=&quot;Procurar produtos...&quot;&gt;
+
+              &lt;button class=&quot;flex-c-m size5 ab-r-m color2 color0-hov trans-0-4&quot;&gt;
+                &lt;i class=&quot;fs-12 fa fa-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+        </code></pre>
+    </div>
   </div>
 
   <!-- Search round-->
-  <div class="pos-relative bo11 of-hidden w-size300">
-      <input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-product" placeholder="Procurar">
 
-      <button class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4">
-        <i class="fs-13 fa fa-search" aria-hidden="true"></i>
-      </button>
+  <div class="row" style="background-color: #F0F0F0;">
+    <div class="col-auto" style="margin: auto;">
+      <div class="pos-relative bo11 of-hidden w-size300">
+        <input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-product" placeholder="Procurar">
+
+        <button class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4">
+          <i class="fs-13 fa fa-search" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
 
+
+    <div class="col mx-auto">
+      <pre><code class="html">
+            &lt;div class=&quot;pos-relative bo11 of-hidden w-size300&quot;&gt;
+              &lt;input class=&quot;s-text7 size16 p-l-23 p-r-50&quot; type=&quot;text&quot; name=&quot;search-product&quot; placeholder=&quot;Procurar&quot;&gt;
+
+              &lt;button class=&quot;flex-c-m size5 ab-r-m color1 color0-hov trans-0-4&quot;&gt;
+                &lt;i class=&quot;fs-13 fa fa-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+
+        </code></pre>
+    </div>
+  </div>
+
+  <div class="row header">
+    <h2>Elemento da lista</h2>
+  </div>
   <!-- Elemento de lista
   -->
 
-  <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
-      <!-- Block2 -->
-      <div class="block2">
-        <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-          <img src="images/item-02.jpg" alt="IMG-PRODUCT">
+  <div class="row" style="background-color: #F0F0F0;">
+    <div class="col-auto" style="margin: auto;">
 
-          <div class="block2-overlay trans-0-4">
-            <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-              <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-              <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-            </a>
+      <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+        <!-- Block2 -->
+        <div class="block2">
+          <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+            <img src="images/item-02.jpg" alt="IMG-PRODUCT">
 
-            <div class="block2-btn-addcart w-size1 trans-0-4">
-              <!-- Button -->
-              <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                Add to Cart
-              </button>
+            <div class="block2-overlay trans-0-4">
+              <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+              </a>
+
+              <div class="block2-btn-addcart w-size1 trans-0-4">
+                <!-- Button -->
+                <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                  Add to Cart
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="block2-txt p-t-20">
-          <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-            Herschel supply co 25l
-          </a>
+          <div class="block2-txt p-t-20">
+            <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+              Herschel supply co 25l
+            </a>
 
-          <span class="block2-price m-text6 p-r-5">
-            $75.00
-          </span>
+            <span class="block2-price m-text6 p-r-5">
+              $75.00
+            </span>
+          </div>
         </div>
       </div>
+
     </div>
+
+
+    <div class="col mx-auto">
+      <pre><code class="html">
+
+        &lt;div class=&quot;col-sm-12 col-md-6 col-lg-4 p-b-50&quot;&gt;
+          &lt;!-- Block2 --&gt;
+          &lt;div class=&quot;block2&quot;&gt;
+            &lt;div class=&quot;block2-img wrap-pic-w of-hidden pos-relative block2-labelnew&quot;&gt;
+              &lt;img src=&quot;images/item-02.jpg&quot; alt=&quot;IMG-PRODUCT&quot;&gt;
+      
+              &lt;div class=&quot;block2-overlay trans-0-4&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block2-btn-addwishlist hov-pointer trans-0-4&quot;&gt;
+                  &lt;i class=&quot;icon-wishlist icon_heart_alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                  &lt;i class=&quot;icon-wishlist icon_heart dis-none&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+      
+                &lt;div class=&quot;block2-btn-addcart w-size1 trans-0-4&quot;&gt;
+                  &lt;!-- Button --&gt;
+                  &lt;button class=&quot;flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4&quot;&gt;
+                    Add to Cart
+                  &lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+      
+            &lt;div class=&quot;block2-txt p-t-20&quot;&gt;
+              &lt;a href=&quot;product-detail.html&quot; class=&quot;block2-name dis-block s-text3 p-b-5&quot;&gt;
+                Herschel supply co 25l
+              &lt;/a&gt;
+      
+              &lt;span class=&quot;block2-price m-text6 p-r-5&quot;&gt;
+                $75.00
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;      
+        </code></pre>
+    </div>
+  </div>
 
   <!-- FIM Elemento de lista-->
 
 
   <!-- Dropdown-->
-  <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 w-size300">
-      <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
-        Drop Title
-        <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
-        <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
-      </h5>
-      <div class="dropdown-content dis-none p-t-15 p-b-23" style="display: none;">
-        <p class="s-text8">
-          Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris placerat
-        </p>
+  <div class="row header">
+      <h2>Dropdown</h2>
+  </div>
+  
+  <div class="row" style="background-color: #F0F0F0;">
+    <div class="col-auto" style="margin: auto;">
+      <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 w-size300">
+        <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
+          Drop Title
+          <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+          <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+        </h5>
+        <div class="dropdown-content dis-none p-t-15 p-b-23" style="display: none;">
+          <p class="s-text8">
+            Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin
+            gravida arcu nisl, a dignissim mauris placerat
+          </p>
+        </div>
       </div>
     </div>
+
+
+    <div class="col mx-auto">
+      <pre><code class="html">
+            &lt;div class=&quot;wrap-dropdown-content bo6 p-t-15 p-b-14 w-size300&quot;&gt;
+              &lt;h5 class=&quot;js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4&quot;&gt;
+                Drop Title
+                &lt;i class=&quot;down-mark fs-12 color1 fa fa-minus dis-none&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;up-mark fs-12 color1 fa fa-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;/h5&gt;
+              &lt;div class=&quot;dropdown-content dis-none p-t-15 p-b-23&quot; style=&quot;display: none;&quot;&gt;
+                &lt;p class=&quot;s-text8&quot;&gt;
+                  Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin
+                  gravida arcu nisl, a dignissim mauris placerat
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+        </code></pre>
+    </div>
+  </div>
 
   <!-- Fim Dropdown-->
 
 
   <!-- FIM ELEMENTOS -->
-
-  <!-- Footer  -->
-  <footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
-    <div class="flex-w">
-      <div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
-        <h4 class="s-text12 p-b-30">
-          Entre em contacto!
-        </h4>
-
-        <div>
-          <p class="s-text7 w-size27">
-            Alguma questão? Entre em contacto connosco a partir de redes sociais ou ligue para o 234 123 456. A nossa
-            loja encontra-se em
-            Rua do Augusto, Edificio Avenida, piso 8, 3810-123 Aveiro.
-          </p>
-
-          <div class="flex-m p-t-30">
-            <a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
-            <a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
-            <a href="#" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
-          </div>
-		</div>
-
-		<div id='map' style='width: 370px; height: 230px;'></div>
-    </div>
-
-    <script>
-
-        // ----- Linha em baixo tem de ser descomentada para poder usar os mapas
-        // ----- apenas para poupar requests à API
-        //mapboxgl.accessToken = 'pk.eyJ1IjoicGluaG8yNyIsImEiOiJjamdvM3Z0dzgyeDc0MnFxbzV6Ym1pNjBsIn0.h2movOiQKha_yHE5R49Uig';
-    var map = new mapboxgl.Map({
-			container: "map",
-			style: "mapbox://styles/mapbox/light-v9",
-			zoom:5,
-  			center: [-8.4441281,40.5744432]
-		});
-		map.addControl(new mapboxgl.NavigationControl());
-
-		map.on("load", function () {
-			/* Image: An image is loaded and added to the map. */
-			map.loadImage("https://i.imgur.com/MK4NUzI.png", function(error, image) {
-				if (error) throw error;
-				map.addImage("custom-marker", image);
-				/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
-				map.addLayer({
-					id: "markers",
-					type: "symbol",
-					/* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
-					source: {
-						type: "geojson",
-						data: {
-							type: "FeatureCollection",
-							features:[{
-								"type":"Feature",
-								"properties": {
-									"description": "<strong>Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
-									"icon": "theatre"
-								},
-								"geometry":{
-									"type":"Point",
-									"coordinates":[-8.4441281,40.5744432]
-								}
-							}]
-						}
-					},
-					layout: {
-						"icon-image": "custom-marker",
-					}
-				});
-			});
-			map.on('click', 'markers', function (e) {
-				var coordinates = e.features[0].geometry.coordinates.slice();
-				var description = e.features[0].properties.description;
-
-				// Ensure that if the map is zoomed out such that multiple
-				// copies of the feature are visible, the popup appears
-				// over the copy being pointed to.
-				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-				}
-
-				new mapboxgl.Popup()
-					.setLngLat(coordinates)
-					.setHTML(description)
-					.addTo(map);
-			});
-
-			// Change the cursor to a pointer when the mouse is over the places layer.
-			map.on('mouseenter', 'markers', function () {
-				map.getCanvas().style.cursor = 'pointer';
-			});
-
-			// Change it back to a pointer when it leaves.
-			map.on('mouseleave', 'markers', function () {
-				map.getCanvas().style.cursor = '';
-			});	
-    });
-    </script>
-
-      <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-        <h4 class="s-text12 p-b-30">
-          Categories
-        </h4>
-
-        <ul>
-          <li class="p-b-9">
-            <a href="#" class="s-text7">
-              Men
-            </a>
-          </li>
-
-          <li class="p-b-9">
-            <a href="#" class="s-text7">
-              Women
-            </a>
-          </li>
-
-          <li class="p-b-9">
-            <a href="#" class="s-text7">
-              Dresses
-            </a>
-          </li>
-
-          <li class="p-b-9">
-            <a href="#" class="s-text7">
-              Sunglasses
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-        <h4 class="s-text12 p-b-30">
-          Ajuda e Links
-        </h4>
-
-        <ul>
-          <li class="p-b-9">
-            <a href="#" class="s-text7">
-              Procurar
-            </a>
-          </li>
-
-          <li class="p-b-9">
-            <a href="#" class="s-text7">
-              Sobre nós
-            </a>
-          </li>
-
-          <li class="p-b-9">
-            <a href="#" class="s-text7">
-              FAQs
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="t-center p-l-15 p-r-15">
-      <div class="t-center s-text8 p-t-20">
-        Copyright © 2018 OniGas - Grp2
-      </div>
-    </div>
-  </footer>
-
 
   <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
@@ -606,5 +434,11 @@
     });
   </script>
   <script src="js/main.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
 </body>
+
 </html>
