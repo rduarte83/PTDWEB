@@ -16,10 +16,10 @@
                         <tbody>
                         <tr class="table-head">
                             <th class="column-1"></th>
-                            <th class="column-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">produtos</font></font></th>
-                            <th class="column-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Preço</font></font></th>
-                            <th class="column-4 p-l-70"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quantidade</font></font></th>
-                            <th class="column-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total</font></font></th>
+                            <th class="column-2"><span style="vertical-align: inherit;">produtos</span></th>
+                            <th class="column-3"><span style="vertical-align: inherit;">Preço</span></th>
+                            <th class="column-4"><span style="vertical-align: inherit;">Quantidade</span></th>
+                            <th class="column-5"><span style="vertical-align: inherit;">Total</span></th>
                         </tr>
 
                         <tr class="table-row">
@@ -28,9 +28,9 @@
                                     <img src="{{URL::asset("images/garrafas/butano-13kg.png")}}" alt="IMG-PRODUCT">
                                 </div>
                             </td>
-                            <td class="column-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Botija de gás Propano - GALP</font></font></td>
-                            <td class="column-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">19,00€</font></font></td>
-                            <td class="column-4">
+                            <td class="column-2"><span style="vertical-align: inherit;">Botija de gás Propano - GALP</span></td>
+                            <td class="column-3"><span style="vertical-align: inherit;">19,00€</span></td>
+                            <td class="column-4"><span style="vertical-align: inherit;"></span></th>
                                 <div class="flex-w bo5 of-hidden w-size17">
                                     <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
                                         <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
@@ -43,7 +43,7 @@
                                     </button>
                                 </div>
                             </td>
-                            <td class="column-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">36,00€</font></font></td>
+                            <td class="column-5"><span style="vertical-align: inherit;">36,00€</span></td>
                         </tr>
 
                         </tbody>
@@ -53,14 +53,14 @@
             <div class="card-footer text-center flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm">
                 <div class="w-size25 float-right">
                     <!-- Button -->
-                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/carrinho/detalhes">
-                        Continuar a Compar
+                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/loja">
+                        Continuar a comprar
                     </a>
                 </div>
-                <div class="w-size25 float-right">
+                <div class="w-size25">
                     <!-- Button -->
                     <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/carrinho/detalhes">
-                        Continuar
+                        Prosseguir com a compra
                     </a>
                 </div>
             </div>

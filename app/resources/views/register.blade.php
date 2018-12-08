@@ -53,7 +53,7 @@
                 </div>
                 <small id="termos" class="form-text text-muted m-t-2">
                     <a class="text-sm" data-toggle="collapse" href="#pprivacidade" role="button" aria-expanded="false" aria-controls="pprivacidade">
-                        Política de privacidade
+                        <strong><u>Política de privacidade</u></strong>
                     </a>
                 </small>
                 <div class="form-group w-size25 ">

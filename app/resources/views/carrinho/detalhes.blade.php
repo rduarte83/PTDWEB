@@ -10,7 +10,7 @@
         <div class="card-body">
             <div class="card  bo-rad-0-bottom">
                 <div class="card-header">
-                    <h5 class="font-weight-bold">Metodo de pagamento</h5>
+                    <h5 class="font-weight-bold">Método de pagamento</h5>
                 </div>
                 <div class="card-body">
                     <div class="container">
@@ -92,17 +92,17 @@
                 </div>
                 -->
             </div>
-            <div class="card-footer text-right  flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm">
+            <div class="card-footer text-center  flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm">
                 <div class="w-size25">
                     <!-- Button -->
-                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/carrinho/final">
-                        Anular Carrinho
+                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/carrinho">
+                        Retroceder
                     </a>
                 </div>
                 <div class="w-size25">
                     <!-- Button -->
                     <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/carrinho/resumo">
-                        Continuar
+                        Prosseguir com a compra
                     </a>
                 </div>
             </div>
