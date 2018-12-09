@@ -3,8 +3,9 @@
     <div class="container-menu-header">
       <div class="wrap_header">
         <!-- Logo -->
-        <a href="/index" class="logo">
-            <img src="/images/logo/logo-small.png" alt="IMG-LOGO">
+        <a href="{{URL("index")}}" class="logo">
+            <img src="{{URL("images/logo/logo-small.png")}}" alt="IMG-LOGO">
+
         </a>
 
         <!-- Menu -->
@@ -23,13 +24,13 @@
               <span class="linedivide1"></span>
 
               <li>
-                <a href="/loja">Loja</a>
+                <a href="{{URL("loja")}}">Loja</a>
               </li>
 
               <span class="linedivide1"></span>
 
               <li>
-                <a href="/mapa">Mapa</a>
+                <a href="{{URL("mapa")}}">Mapa</a>
               </li>
             </ul>
           </nav> 
@@ -39,8 +40,8 @@
         <div class="header-icons">
 			<!-- USER DROPDOWN -->
 			<div class="header-wrapicon2">
-                <img src="/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-
+                <img src="{{URL("images/icons/icon-header-01.png")}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
+            <!--  -->
                 <!-- Header cart noti -->
                 <div class="header-cart header-dropdown">
                   <ul class="header-cart-wrapitem">
@@ -55,7 +56,7 @@
           <span class="linedivide1"></span>
 
           <div class="header-wrapicon2">
-            <img src="/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+            <img src="{{URL::asset("images/icons/icon-header-02.png")}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
             <span class="header-icons-noti">1</span>
 
             <!-- Header cart noti -->
@@ -87,14 +88,14 @@
               <div class="header-cart-buttons">
                 <div class="header-cart-wrapbtn">
                   <!-- Button -->
-                  <a href="/carrinho" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                  <a href="{{URL("carrinho")}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                       Carrinho
                   </a>
                 </div>
 
                 <div class="header-cart-wrapbtn">
                   <!-- Button -->
-                  <a href="/carrinho/resumo" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                  <a href="{{URL("carrinho/resumo")}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                     Checkout
                   </a>
                 </div>
@@ -109,7 +110,7 @@
     <div class="wrap_header_mobile">
       <!-- Logo moblie -->
       <a href="/index" class="logo-mobile">
-          <img src="/images/logo/logo-small.png" alt="IMG-LOGO">
+          <img src="{{URL::asset("images/logo/logo-small.png")}}" alt="IMG-LOGO">
       </a>
 
       <!-- Button show menu -->
@@ -118,7 +119,7 @@
         <div class="header-icons-mobile">
 			<!-- USER DROPDOWN -->
 			<div class="header-wrapicon2">
-                <img src="/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                <img src="{{URL::asset("images/icons/icon-header-01.png")}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
 
                 <!-- Header cart noti -->
                 <div class="header-cart header-dropdown">
@@ -133,7 +134,7 @@
           <span class="linedivide2"></span>
 
           <div class="header-wrapicon2">
-            <img src="/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+            <img src="{{URL::asset("images/icons/icon-header-02.png")}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
             <span class="header-icons-noti">1</span>
 
             <!-- Header cart noti -->
@@ -163,14 +164,14 @@
               <div class="header-cart-buttons">
                 <div class="header-cart-wrapbtn">
                   <!-- Button -->
-                  <a href="/perfil/carrinho" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                  <a href="{{URL("perfil/carrinho")}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                     Carrinho
                   </a>
                 </div>
 
                 <div class="header-cart-wrapbtn">
                   <!-- Button -->
-                  <a href="/carrinho/resumo" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                  <a href="{{URL("carrinho/resumo")}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                     Checkout
                   </a>
                 </div>
@@ -201,11 +202,11 @@
               </div>
 
           <li class="item-menu-mobile">
-            <a href="/produtos">Loja</a>
+            <a href="{{URL("loja")}}">Loja</a>
           </li>
 
           <li class="item-menu-mobile">
-            <a href="/mapa">Mapa</a>
+            <a href="{{URL("mapa")}}">Mapa</a>
           </li>
         </ul>
       </nav>

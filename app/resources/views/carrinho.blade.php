@@ -15,7 +15,7 @@
                     <nav class="menu">
                         <ul class="main_menu">
                             <li>
-                                <a href="/carrinho"
+                                <a href="{{URL("carrinho")}}"
                                 @if($page ==  "carrinho")
                                     class="font-weight-bold"
                                 @endif
@@ -27,7 +27,7 @@
                             <span class="linedivide1"></span>
 
                             <li>
-                                <a href="/carrinho/detalhes"
+                                <a href="{{URL("carrinho/detalhes")}}"
                                 @if($page ==  "detalhes")
                                     class="font-weight-bold"
                                 @endif
@@ -37,7 +37,7 @@
                             <span class="linedivide1"></span>
 
                             <li>
-                                <a href="/carrinho/resumo"
+                                <a href="{{URL("carrinho/resumo")}}"
                                 @if($page ==  "resumo")
                                     class="font-weight-bold"
                                 @endif
@@ -47,7 +47,7 @@
                             <span class="linedivide1"></span>
 
                             <li>
-                                <a href="/carrinho/final"
+                                <a href="{{URL("carrinho/final")}}"
                                 @if($page ==  "final")
                                     class="font-weight-bold"
                                 @endif
@@ -66,7 +66,7 @@
                     <span class="linedivide-mobile"></span>
 
                     <li>
-                        <a href="/carrinho"
+                        <a href="{{URL("carrinho")}}"
                         @if($page == "info" || $page ==  "carrinho")
                             class="font-weight-bold"
                         @endif
@@ -78,7 +78,7 @@
                     <span class="linedivide"></span>
 
                     <li>
-                        <a href="/carrinho/detalhes"
+                        <a href="{{URL("carrinho/detalhes")}}"
                         @if($page ==  "detalhes")
                             class="font-weight-bold"
                         @endif
@@ -97,7 +97,7 @@
                     <span class="linedivide"></span>
 
                     <li>
-                        <a href="/carrinho/final"
+                        <a href="{{URL("carrinho/final")}}"
                         @if($page ==  "final")
                             class="font-weight-bold"
                         @endif

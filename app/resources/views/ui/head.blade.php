@@ -7,8 +7,8 @@
  */
 ?>
 
-<meta name="description" content="Grupo 2 ( OniGas )">
-<meta name="author" content="Grupo 2 ( OniGas )">
+<meta name="description" content="Grupo 2 ( OnGas )">
+<meta name="author" content="Grupo 2 ( OnGas )">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta charset="UTF-8">
@@ -52,4 +52,4 @@
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet'/>
 
-<title>OniGas - @yield("title")</title>
+<title>OnGas - @yield("title")</title>

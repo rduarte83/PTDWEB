@@ -70,7 +70,7 @@
                 <!--  -->
                 <div class="p-t-33 p-b-60">
                     <div class="flex-m flex-w p-b-10">
-                        <div class="s-text15 w-size15 t-center">
+                        <div class="s-text15 w-size15 t-center m-l-4-">
                             Tamanho da botija
                         </div>
 
@@ -80,20 +80,6 @@
                                 <option>Pequena</option>
                                 <option>Média</option>
                                 <option>Grande</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="flex-m flex-w">
-                        <div class="s-text15 w-size15 t-center">
-                            Tipo de gás
-                        </div>
-
-                        <div class="rs2-select2 rs3-select2 bo4 of-hidden w-size16">
-                            <select class="selection-1" name="color">
-                                <option>Escolha a opção</option>
-                                <option>Propano</option>
-                                <option>Butano</option>
                             </select>
                         </div>
                     </div>
@@ -141,33 +127,6 @@
                     </div>
                 </div>
 
-                <div class="wrap-dropdown-content bo7 p-t-15 p-b-14">
-                    <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
-                        Informação Adicional
-                        <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
-                        <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
-                    </h5>
-
-                    <div class="dropdown-content dis-none p-t-15 p-b-23">
-                        <p class="s-text8">
-                            Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris placerat
-                        </p>
-                    </div>
-                </div>
-
-                <div class="wrap-dropdown-content bo7 p-t-15 p-b-14">
-                    <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
-                        Comentários (0)
-                        <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
-                        <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
-                    </h5>
-
-                    <div class="dropdown-content dis-none p-t-15 p-b-23">
-                        <p class="s-text8">
-                            Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris placerat
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

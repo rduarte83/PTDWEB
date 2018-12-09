@@ -8,9 +8,6 @@
         <h2 class="l-text2 t-center">
             Loja
         </h2>
-        <p class="m-text13 t-center">
-            Botijas de Gás
-        </p>
     </section>
 
 
@@ -66,10 +63,6 @@
                                         Filtrar
                                     </button>
                                 </div>
-
-                                <div class="s-text3 p-t-10 p-b-10">
-                                    Range: <span id="value-lower">0</span> - <span id="value-upper">100</span>
-                                </div>
                             </div>
                         </div>
 
@@ -81,7 +74,7 @@
                             <ul class="">
 
                                 <li class="m-r-10">
-                                    <a href="loja/galp"> GALP </a>
+                                    <a href="{{URL("loja/galp")}}"> GALP </a>
                                 </li>
                             </ul>
                         </div>
@@ -136,7 +129,7 @@
                                     <img src="{{URL::asset("images/garrafas/butano-13kg.png")}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
-                                        <a href="/product" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                        <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
                                             <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
                                             <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                         </a>
@@ -151,7 +144,7 @@
                                 </div>
 
                                 <div class="block2-txt p-t-20">
-                                    <a href="/product" class="block2-name dis-block s-text3 p-b-5">
+                                    <a href="{{URL("product")}}" class="block2-name dis-block s-text3 p-b-5">
                                         Botija de gás Butano (Pequena) - GALP
                                     </a>
 
@@ -169,7 +162,7 @@
                                     <img src="{{URL::asset("images/garrafas/propano-11kg.png")}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
-                                        <a href="/product" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                        <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
                                             <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
                                             <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                         </a>
@@ -184,7 +177,7 @@
                                 </div>
 
                                 <div class="block2-txt p-t-20">
-                                    <a href="/product" class="block2-name dis-block s-text3 p-b-5">
+                                    <a href="{{URL("product")}}" class="block2-name dis-block s-text3 p-b-5">
                                         Botija de gás Propano (Pequena) - GALP
                                     </a>
 
@@ -202,7 +195,7 @@
                                     <img src="{{URL::asset("images/garrafas/Gas_11K.carburante.png")}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
-                                        <a href="/product" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                        <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
                                             <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
                                             <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                         </a>
@@ -217,7 +210,7 @@
                                 </div>
 
                                 <div class="block2-txt p-t-20">
-                                    <a href="/product" class="block2-name dis-block s-text3 p-b-5">
+                                    <a href="{{URL("product")}}" class="block2-name dis-block s-text3 p-b-5">
                                         Botija de gás Carburante (Pequena) - Oz
                                     </a>
 
@@ -235,7 +228,7 @@
                                     <img src="{{URL::asset("images/garrafas/rubis_propano_ft.png")}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
-                                        <a href="/product" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                        <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
                                             <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
                                             <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                         </a>
@@ -250,7 +243,7 @@
                                 </div>
 
                                 <div class="block2-txt p-t-20">
-                                    <a href="/product" class="block2-name dis-block s-text3 p-b-5">
+                                    <a href="{{URL("product")}}" class="block2-name dis-block s-text3 p-b-5">
                                         Botija de gás Propano (Pequena) - Rubis Gás
                                     </a>
 
@@ -268,7 +261,7 @@
                                     <img src="{{URL::asset("images/garrafas/propano_galo_verde_s.png")}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
-                                        <a href="/product" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                        <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
                                             <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
                                             <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                         </a>
@@ -283,7 +276,7 @@
                                 </div>
 
                                 <div class="block2-txt p-t-20">
-                                    <a href="/product" class="block2-name dis-block s-text3 p-b-5">
+                                    <a href="{{URL("product")}}" class="block2-name dis-block s-text3 p-b-5">
                                         Botija de gás Propano (Pequena) - Oz
                                     </a>
 
@@ -301,7 +294,7 @@
                                     <img src="{{URL::asset("images/garrafas/propano_45kg_verde_s.png")}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
-                                        <a href="/product" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                        <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
                                             <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
                                             <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                         </a>
@@ -316,7 +309,7 @@
                                 </div>
 
                                 <div class="block2-txt p-t-20">
-                                    <a href="/product" class="block2-name dis-block s-text3 p-b-5">
+                                    <a href="{{URL("product")}}" class="block2-name dis-block s-text3 p-b-5">
                                         Botija de gás Propano (Grande) - Oz
                                     </a>
 

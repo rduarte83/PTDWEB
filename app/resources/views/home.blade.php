@@ -9,7 +9,7 @@ Homepage
         <div class="container">
             <div class="sec-title p-b-60">
                 <h2 class="s-text-big t-center text-white">
-                    OniGás
+                    OnGás
                 </h2>
             </div>
 
@@ -36,7 +36,7 @@ Homepage
         <div class="container">
             <div class="sec-title p-b-60">
                 <h3 class="m-text5 t-center">
-                    Botijas de Gás
+                    Mais vendidos
                 </h3>
             </div>
 
