@@ -2393,4 +2393,9 @@ input.num-product::-webkit-inner-spin-button {
     color:white!important;
 }
 
+/* class esta a ser usada na página gegisto AP */
+main.largura_1 {
+    max-width: 600px;
+    margin: auto;
 
+}

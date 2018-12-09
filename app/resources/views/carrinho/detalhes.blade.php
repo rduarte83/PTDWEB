@@ -10,7 +10,7 @@
         <div class="card-body">
             <div class="card  bo-rad-0-bottom">
                 <div class="card-header">
-                    <h5 class="font-weight-bold">Metodo de pagamento</h5>
+                    <h5 class="font-weight-bold">Método de pagamento</h5>
                 </div>
                 <div class="card-body">
                     <div class="container">
@@ -29,26 +29,41 @@
                     </div>
                 </div>
             </div>
-
             <div class="card bo-rad-0-top bo-rad-0-bottom">
                 <div class="card-header">
                     <h5 class="font-weight-bold">Compra com entrega de garrafa vazia</h5>
                 </div>
-                <div class="card-body ">
+                <div class="card-body p-t-50">
                     <div class="container">
-                        <div class="form-check form-check-inline">
-                            <input class="" type="radio" name="garrafa" id="simgarrafa" value="simGarrafa">
-                            <label class="form-check-label" style="font-size: medium;" for="simgarrafa">Sim</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="" type="radio" name="garrafa" id="naogarrafa" value="naoGarrafa">
-                            <label class="form-check-label" style="font-size: medium;" for="naogarrafa">Não (+ 2€)</label>
+                        <div class="row">
+                            <div class="form-check form-check-inline">
+                                <input class="" type="radio" name="garrafa" id="simgarrafa" value="simGarrafa">
+                                <label class="form-check-label" style="font-size: medium;" for="simgarrafa">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="" type="radio" name="garrafa" id="naogarrafa" value="naoGarrafa">
+                                <label class="form-check-label" style="font-size: medium;" for="naogarrafa">Não (+ 2€)</label>
+                            </div>
+                            <span class="m-l-20">Quantidade a entregar</span>
+                            <div class="form-group flex-w bo5 of-hidden w-size17 m-l-20">
+                                <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
+                                    <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
+                                </button>
+
+                                <input class="size8 m-text18 t-center num-product" type="number" name="num-product1" value="1">
+
+                                <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
+                                    <i class="fs-12 fa fa-plus" aria-hidden="true"></i>
+                                </button>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="card bo-rad-0-top">
+                <!--
                 <div class="card-header">
                     <h5 class="font-weight-bold">Pretende escolher um ponto de recolha</h5>
                 </div>
@@ -75,16 +90,24 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
-            <div class="card-footer text-right  flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm">
-                <div class="trans-0-4">
+            <div class="card-footer text-center  flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm">
+                <div class="w-size25">
                     <!-- Button -->
-                    <a class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 p-2 text-white" href="/carrinho/resumo">
-                        Continuar
+                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/carrinho">
+                        Retroceder
+                    </a>
+                </div>
+                <div class="w-size25">
+                    <!-- Button -->
+                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/carrinho/resumo">
+                        Prosseguir com a compra
                     </a>
                 </div>
             </div>
         </div>
+
     </form>
 </div>
 
