@@ -175,4 +175,10 @@ class HomeController extends Controller
         return view("ui/". "index");
     }
 
+    // Style Guide
+    public function StyleGuide(){
+        return view("styleGuides/". "index");
+
+    }
+
 }

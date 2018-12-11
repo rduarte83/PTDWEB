@@ -61,4 +61,8 @@ Route::get('/ui/product', "HomeController@uiProduct");
 Route::get('/ui/header', "HomeController@uiHeader");
 Route::get('/ui/footer', "HomeController@uiFooter");
 
+// StyleGuide
+Route::get('/styleGuide', "HomeController@StyleGuide");
+
+
 
