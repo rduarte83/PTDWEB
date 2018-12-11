@@ -2399,3 +2399,11 @@ main.largura_1 {
     margin: auto;
 
 }
+
+.block2-img > img {
+    object-fit: cover;
+}
+
+.img-fit{
+
+}

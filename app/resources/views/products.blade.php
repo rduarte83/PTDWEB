@@ -47,25 +47,6 @@
                             Filtros
                         </h4>
 
-                        <div class="filter-price p-t-22 p-b-50 bo3">
-                            <div class="m-text15 p-b-17">
-                                Preço
-                            </div>
-
-                            <div class="wra-filter-bar">
-                                <div id="filter-bar"></div>
-                            </div>
-
-                            <div class="flex-sb-m flex-w p-t-16">
-                                <div class="w-size11">
-                                    <!-- Button -->
-                                    <button class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4">
-                                        Filtrar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="filter-color p-t-22 p-b-50 bo3">
                             <div class="m-text15 p-b-12">
                                 Marcas
@@ -126,7 +107,7 @@
                             <!-- Block2 -->
                             <div class="block2">
                                 <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                    <img src="{{URL::asset("images/garrafas/butano-13kg.png")}}" alt="IMG-PRODUCT">
+                                    <img class="img-fit" src="{{URL::asset("images/garrafas/butano-13kg.png")}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
                                         <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -159,7 +140,7 @@
                             <!-- Block2 -->
                             <div class="block2">
                                 <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                    <img src="{{URL::asset("images/garrafas/propano-11kg.png")}}" alt="IMG-PRODUCT">
+                                    <img class="img-fit" src="{{URL::asset("images/garrafas/propano-11kg.png")}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
                                         <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -192,7 +173,7 @@
                             <!-- Block2 -->
                             <div class="block2">
                                 <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                    <img src="{{URL::asset("images/garrafas/Gas_11K.carburante.png")}}" alt="IMG-PRODUCT">
+                                    <img class="img-fit" src="{{URL::asset("images/garrafas/Gas_11K.carburante.png")}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
                                         <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -225,7 +206,7 @@
                             <!-- Block2 -->
                             <div class="block2">
                                 <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                    <img src="{{URL::asset("images/garrafas/rubis_propano_ft.png")}}" alt="IMG-PRODUCT">
+                                    <img class="img-fit" src="{{URL::asset("images/garrafas/rubis_propano_ft.png")}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
                                         <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -258,7 +239,7 @@
                             <!-- Block2 -->
                             <div class="block2">
                                 <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                    <img src="{{URL::asset("images/garrafas/propano_galo_verde_s.png")}}" alt="IMG-PRODUCT">
+                                    <img class="img-fit" src="{{URL::asset("images/garrafas/propano_galo_verde_s.png")}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
                                         <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -291,7 +272,7 @@
                             <!-- Block2 -->
                             <div class="block2">
                                 <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                    <img src="{{URL::asset("images/garrafas/propano_45kg_verde_s.png")}}" alt="IMG-PRODUCT">
+                                    <img class="img-fit" src="{{URL::asset("images/garrafas/propano_45kg_verde_s.png")}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
                                         <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">

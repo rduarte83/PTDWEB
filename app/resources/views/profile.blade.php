@@ -14,7 +14,7 @@
                     <nav class="menu">
                         <ul class="main_menu">
                             <li>
-                                <a href="/perfil/info"
+                                <a href="{{URL("perfil/info")}}"
                                 @if($page == "info" || $page ==  "perfil")
                                     class="font-weight-bold"
                                 @endif
@@ -26,7 +26,7 @@
                             <span class="linedivide1"></span>
 
                             <li>
-                                <a href="/perfil/favoritos"
+                                <a href="{{URL("perfil/favoritos")}}"
                                @if($page ==  "favoritos")
                                    class="font-weight-bold"
                                 @endif
@@ -36,7 +36,7 @@
                             <span class="linedivide1"></span>
 
                             <li>
-                                <a href="/perfil/historico"
+                                <a href="{{URL("perfil/historico")}}"
                                 @if($page ==  "historico")
                                     class="font-weight-bold"
                                 @endif
@@ -55,7 +55,7 @@
                     <span class="linedivide-mobile"></span>
 
                     <li>
-                        <a href="/perfil/info"
+                        <a href="{{URL("perfil/info")}}"
                            @if($page == "info" || $page ==  "perfil")
                            class="font-weight-bold"
                             @endif
@@ -67,7 +67,7 @@
                     <span class="linedivide"></span>
 
                     <li>
-                        <a href="/perfil/favoritos"
+                        <a href="{{URL("perfil/favoritos")}}"
                            @if($page ==  "favoritos")
                            class="font-weight-bold"
                             @endif
@@ -77,7 +77,7 @@
                     <span class="linedivide"></span>
 
                     <li>
-                        <a href="/perfil/historico"
+                        <a href="{{URL("perfil/historico")}}"
                            @if($page ==  "historico")
                            class="font-weight-bold"
                             @endif
