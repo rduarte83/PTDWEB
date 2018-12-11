@@ -21,7 +21,7 @@ Homepage
                         Sobre nós
                     </h5>
                     <br>
-                    <p class="s-text-small">Somos uma empresa de venda de gás online. O nosso foco é permitir que o utilizador
+                    <p class="s-text-small">Somos uma aplicação de venda de gás online. O nosso foco é permitir que o utilizador
                         possa comprar a sua botija de gás favorita em qualquer altura e em qualquer lugar.
                     </p>
 
