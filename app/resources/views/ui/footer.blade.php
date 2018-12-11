@@ -3,7 +3,7 @@
 <footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
     <div class="flex-w">
       <div class="p-t-30 p-l-15 p-r-15 respon3 col-md" style="margin-right:10%">
-        <a href="/contact">
+        <a href="{{URL("contact")}}">
             <div class=" p-b-30" style="display: inline-block;">
                 <h4 class="s-text12 hover-border-bottom">
                   Contacte-nos!
@@ -36,13 +36,13 @@
 
         <ul>
           <li class="p-b-9">
-            <a href="/contact" class="s-text7">
+            <a href="{{URL("contact")}}" class="s-text7">
               Contactos
             </a>
           </li>
 
           <li class="p-b-9">
-            <a href="/about" class="s-text7">
+            <a href="{{URL("about")}}" class="s-text7">
               Sobre nós
             </a>
           </li>

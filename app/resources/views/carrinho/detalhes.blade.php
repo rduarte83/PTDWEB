@@ -95,13 +95,13 @@
             <div class="card-footer text-center  flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm">
                 <div class="w-size25">
                     <!-- Button -->
-                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/carrinho">
+                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="{{URL("carrinho")}}">
                         Retroceder
                     </a>
                 </div>
                 <div class="w-size25">
                     <!-- Button -->
-                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="/carrinho/resumo">
+                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="{{URL("carrinho/resumo")}}">
                         Prosseguir com a compra
                     </a>
                 </div>
