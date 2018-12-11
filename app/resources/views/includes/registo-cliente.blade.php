@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="/clienteregisto" method="post">
+                    <form action="{{URL("clienteregisto")}}" method="post">
                         @csrf
                         <div class="form-group">
                             <label class="sr-only" for="nome">Nome</label>

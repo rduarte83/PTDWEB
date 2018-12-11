@@ -30,7 +30,7 @@
         <div class="form-group">
             <div class="header-cart-wrapbtn m-auto">
                 <!-- A função onclick serve apenas para o protótipo. -->
-                <button type="submit" onclick="window.location.href='/perfil'" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Login</button>
+                <button type="submit" onclick="window.location.href={{URL("perfil")}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">Login</button>
             </div>
         </div>
 
@@ -45,8 +45,8 @@
                <input type="checkbox"> Mantenha-me conectado
                </label>
             </div>-->
-        <div class="help-block text-center p-t-5"><a href="/registar">Não tem Conta? Registe-se já!</a></div>
-        <div class="help-block text-center"><a href="">Recuperar Conta</a></div>
+        <div class="help-block text-center p-t-5"><a href="{{URL("registar")}}">Não tem Conta? Registe-se já!</a></div>
+        <div class="help-block text-center"><a href="#">Recuperar Conta</a></div>
     </form>
 </div>
 
