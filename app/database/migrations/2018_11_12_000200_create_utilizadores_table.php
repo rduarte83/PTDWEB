@@ -22,9 +22,6 @@ class CreateUtilizadoresTable extends Migration
             $table->char('codigo_postal', 8)->nullable();
             $table->string('localidade')->nullable();
             $table->char('nif', 9)->unique()->nullable();
-            $table->char('cc', 11)->unique()->nullable();
-            $table->date('data_nascimento')->nullable();
-            $table->char('contacto', 13)->nullable();
             $table->unsignedInteger('role');
             $table->dateTime('data_registo')->default(now());
             $table->dateTime('data_login')->nullable();

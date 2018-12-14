@@ -52,6 +52,17 @@
                     @endif
                 </div>
 
+                Número de Contribuinte
+                <div class="form-group bo4 of-hidden size15 m-b-20">
+                    <label class="sr-only" for="nif">Número de Contribuinte</label>
+                    <input type="number" name="nif" id="nif" class="form-control {{$errors->has('nif') ? 'is-invalid' : ''}}" placeholder="Número de Contribuinte">
+                    @if($errors->has('nif'))
+                        <div class="invalid-feedback">
+                            {{$errors->first('nif')}}
+                        </div>
+                    @endif
+                </div>
+
                 Morada
                 <div class="form-group bo4 of-hidden size15 m-b-20">
                     <label class="sr-only" for="morada">Morada</label>
@@ -84,51 +95,6 @@
                         </div>
                     @endif
                 </div>
-
-                Número de Contribuinte
-                <div class="form-group bo4 of-hidden size15 m-b-20">
-                    <label class="sr-only" for="nif">Número de Contribuinte</label>
-                    <input type="number" name="nif" id="nif" class="form-control {{$errors->has('nif') ? 'is-invalid' : ''}}" placeholder="Número de Contribuinte">
-                    @if($errors->has('nif'))
-                        <div class="invalid-feedback">
-                            {{$errors->first('nif')}}
-                        </div>
-                    @endif
-                </div>
-
-                Cartão de Cidadão
-                <div class="form-group bo4 of-hidden size15 m-b-20">
-                    <label class="sr-only" for="cc">Cartão de Cidadão</label>
-                    <input type="text" name="cc" id="cc" class="form-control {{$errors->has('cc') ? 'is-invalid' : ''}}" placeholder="Cartão de Cidadão">
-                    @if($errors->has('cc'))
-                        <div class="invalid-feedback">
-                            {{$errors->first('cc')}}
-                        </div>
-                    @endif
-                </div>
-
-                Data de Nascimento
-                <div class="form-group bo4 of-hidden size15 m-b-20">
-                    <label class="sr-only" for="nascimento">Data de Nascimento</label>
-                    <input type="date" name="nascimento" id="nascimento" class="form-control {{$errors->has('nascimento') ? 'is-invalid' : ''}}" placeholder="Data de Nascimento">
-                    @if($errors->has('nascimento'))
-                        <div class="invalid-feedback">
-                            {{$errors->first('nascimento')}}
-                        </div>
-                    @endif
-                </div>
-
-                Contacto
-                <div class="form-group bo4 of-hidden size15 m-b-20">
-                    <label class="sr-only" for="contacto">Contacto</label>
-                    <input type="number" name="contacto" id="contacto" class="form-control {{$errors->has('contacto') ? 'is-invalid' : ''}}" placeholder="Contacto">
-                    @if($errors->has('contacto'))
-                        <div class="invalid-feedback">
-                            {{$errors->first('contacto')}}
-                        </div>
-                    @endif
-                </div>
-
 
                 <div class="text-center  flex-w flex-sb-m p-t-25 p-b-25  p-l-35 p-r-60 p-lr-15-sm">
                     <div class="w-size25">

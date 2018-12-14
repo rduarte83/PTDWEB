@@ -18,7 +18,7 @@
                             <th class="column-1"></th>
                             <th class="column-2"><span style="vertical-align: inherit;">produtos</span></th>
                             <th class="column-3"><span style="vertical-align: inherit;">Preço</span></th>
-                            <th class="column-4"><span style="vertical-align: inherit;">Quantidade</span></th>
+                            <th class="column-3"><span style="vertical-align: inherit;">Quantidade</span></th>
                             <th class="column-5"><span style="vertical-align: inherit;">Total</span></th>
                         </tr>
 
@@ -30,7 +30,7 @@
                             </td>
                             <td class="column-2"><span style="vertical-align: inherit;">Botija de gás Propano - GALP</span></td>
                             <td class="column-3"><span style="vertical-align: inherit;">19,00€</span></td>
-                            <td class="column-4"><span style="vertical-align: inherit;"></span></th>
+                            <td class="column-3"><span style="vertical-align: inherit;"></span></th>
                                 <div class="flex-w bo5 of-hidden w-size17">
                                     <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
                                         <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
