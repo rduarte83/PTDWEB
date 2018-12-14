@@ -31,7 +31,8 @@ Route::get('/perfil/{page}', "HomeController@profilePage");
 
 
 // Carrinho
-Route::get("/carrinho", "HomeController@carrinhoDetalhes");
+//Route::get("/carrinho", "HomeController@carrinhoDetalhes");
+Route::get("/carrinho", "CarrinhoController@index");
 Route::get("/carrinho/{page}", "HomeController@carrinhoPage");
 
 

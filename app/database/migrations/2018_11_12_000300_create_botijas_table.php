@@ -21,6 +21,7 @@ class CreateBotijasTable extends Migration
             $table->string('descricao')->nullable();
             $table->decimal('preco');
             $table->decimal('preco_tara');
+            $table->string('imagem');
             $table->timestamps();
         });
     }
