@@ -42,6 +42,15 @@
 			<!-- USER DROPDOWN -->
 			<div class="header-wrapicon2">
                 <img src="{{URL("images/icons/icon-header-01.png")}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
+              <div class="card-body">
+                @if (session('status'))
+                  <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                  </div>
+                @endif
+
+                You are logged in!
+              </div>
             <!--  -->
                 <!-- Header cart noti -->
                 <div class="header-cart header-dropdown">

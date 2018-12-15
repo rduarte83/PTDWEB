@@ -53,7 +53,8 @@ Route::get('/login', "UserController@loginView");
 Route::get('/products/add/{id}', "ProductController@addToCart");
 
 // User Autentication
-Route::post('/register', "UserController@create");
+//Route::post('/register', "UserController@create");
+Route::post('/register', "UtilizadorControlador@store");
 Route::post('/login', "HomeController@login");
 
 

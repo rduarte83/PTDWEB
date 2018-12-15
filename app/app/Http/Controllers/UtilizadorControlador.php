@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Utilizador;
+use Illuminate\Support\Facades\Auth;
 
 class UtilizadorControlador extends Controller
 {
@@ -12,10 +13,21 @@ class UtilizadorControlador extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    /*public function __construct(){
+        $this->middleware('auth');
+    }*/
     public function index()
     {
+
         $utilizadores = Utilizador::all();
-        return view('info', compact('utilizadores'));
+        //$users = Utilizador::all();
+        $page = Utilizador::all();
+        //return view('profile.info', compact('utilizadores'), compact('page'));
+        return view('profile.info', array('utilizadores' => $utilizadores), array('page' => $page));
+        //return view('profile.info', array('users' => $users), array('page' => $page));
+
+
     }
 
     /**
@@ -25,7 +37,7 @@ class UtilizadorControlador extends Controller
      */
     public function create()
     {
-        return view('register');
+        return view('profile.info');
     }
 
     /**
@@ -36,13 +48,36 @@ class UtilizadorControlador extends Controller
      */
     public function store(Request $request)
     {
-        /*
+
+        $regras = [
+            'nome' => "required | min:3 | max:20",
+            'email' => "required | email | unique:utilizadores",
+            'password1' => "min:8 | max:20 | required_with:password2 | same:password2",
+            'password2'  => "min:8 | max:20 |",
+        ];
+        $mensagens = [
+            'required' => 'O Campo ":attribute" é de preenchimento obrigatório!',
+            'nome.min' => 'Mínimo 3 caracteres no nome!',
+            'nome.max' => 'Máximo 20 caracteres no nome!',
+            'email.unique' => 'O email ' . $request->input('email') . ', já se encontra registado!',
+            'email.email' => 'Insira um endereço de email válido!',
+            'password1.min' => 'Mínimo 8 caracteres na password!',
+            'password1.max' => 'Máximo 20 caracteres na password!',
+            'password1.same' => 'A ":attribute" e a "password2" devem corresponder',
+            'password2.min' => 'Mínimo 8 caracteres na password de confirmação!',
+            'password2.max' => 'Máximo 20 caracteres na password!'
 
 
+        ];
 
+        $request->validate($regras, $mensagens);
 
+        $reg = new Utilizador();
+        $reg->nome = $request->input('nome');
+        $reg->email = $request->input('email');
+        $reg->password = $request->input('password1');
+        $reg->save();
 
-         */
     }
 
     /**

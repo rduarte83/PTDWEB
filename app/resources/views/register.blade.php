@@ -1,4 +1,4 @@
-@extends("layouts.default")
+@extends("layouts.default", ["current" => "register"])
 @section("title")
     Registo
 @endsection
@@ -12,10 +12,10 @@
             <div class="title text-lg-center">
                 <h2 class="m-text26 p-b-36 p-t-15">Registo de Cliente</h2>
             </div>
-            <form action="/clienteregisto" method="post">
+            <form action="/register" method="POST">
                 <!-- Token -->
                 @csrf
-                <div class="form-group bo4 of-hidden size15 m-b-20">
+                <div class="form-group bo4">
                     <label class="sr-only" for="nome">Nome</label>
                     <input type="text" name="nome" id="nome" class="form-control {{$errors->has('nome') ? 'is-invalid' : ''}}" placeholder="Nome">
                     @if($errors->has('nome'))
@@ -24,28 +24,28 @@
                         </div>
                     @endif
                 </div>
-                <div class="form-group bo4 of-hidden size15 m-b-20">
+                <div class="form-group bo4">
                     <label class="sr-only" for="email">Email Cliente</label>
                     <input type="email" name="email" id="email" class="form-control {{$errors->has('email') ? 'is-invalid' : ''}}" placeholder="E-mail do cliente">
-                    <small id="emailHelp" class="form-text text-muted"></small>
+                    <small id="emailHelp" class="form-text text-muted" class="m-t-5"></small>
                     @if($errors->has('email'))
                         <div class="invalid-feedback">
                             {{$errors->first('email')}}
                         </div>
                     @endif
                 </div>
-                <div class="form-group bo4 of-hidden size15 m-b-20">
+                <div class="form-group bo4">
                     <label class="sr-only" for="Password">Palavra-passe</label>
-                    <input type="password1" class="form-control {{$errors->has('password1') ? 'is-invalid' : ''}}" id="password1" placeholder="Palavra-passe" required="">
+                    <input type="password" class="form-control {{$errors->has('password1') ? 'is-invalid' : ''}}" name="password1" id="password1" placeholder="Palavra-passe">
                     @if($errors->has('password1'))
                         <div class="invalid-feedback">
                             {{$errors->first('password1')}}
                         </div>
                     @endif
                 </div>
-                <div class="form-group bo4 of-hidden size15 m-b-10">
+                <div class="form-group bo4">
                     <label class="sr-only" for="password2">Confirme Palavra-passe</label>
-                    <input type="password" class="form-control {{$errors->has('password2') ? 'is-invalid' : ''}}" id="password2" placeholder="Confirme Palavra-passe" aria-describedby="termos" required="">
+                    <input type="password" class="form-control {{$errors->has('password2') ? 'is-invalid' : ''}}" name="password2" id="password2" placeholder="Confirme Palavra-passe" aria-describedby="termos">
                     @if($errors->has('password2'))
                         <div class="invalid-feedback">
                             {{$errors->first('password2')}}

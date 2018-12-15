@@ -6,15 +6,17 @@
             </div>
             <div class="col-md-6">
                 <h2 class="p-b-20">Perfil do utilizador</h2>
-                $utilizadores = Utilizador::all;
+
 
                     <strong>Nome</strong><div class="p-b-20"><span>Zé Utilizador</span></div>
-                    <strong>Email</strong><div class="p-b-20"><span>utilizador@mail.com</span></div>
+
+                @auth
+                    <strong>Email</strong><div class="p-b-20"><span>{{Auth::utilizador()->nome}}utilizador@mail.com</span></div>
                     <strong>Número de Contribuinte</strong><div class="p-b-20"><span>1234567890</span></div>
                     <strong>Morada</strong><div class="p-b-20"><span>Avenida de algures, nº82 1º Dir</span></div>
                     <strong>Código Postal</strong><div class="p-b-20"><span>3800-000</span></div>
                     <strong>Localidade</strong><div class="p-b-20"><span>Aveiro</span></div>
-
+                @endauth
 
                 <div class="w-size25 p-t-20">
                     <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="{{URL("perfil/editar")}}">Editar perfil</a>
