@@ -2,11 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\Botija;
+use App\Carrinho;
 use Illuminate\Http\Request;
+use Session;
 
-class ProductController extends Controller
+class BotijaController extends Controller
 {
+
+    public function getIndex()
+    {
+        $botija = Botija::all();
+        return view( "botija/botija",['botija' => $botija])-> with("page", "botija");
+    }
+
+    public function GetAddToCart( Request $request, $id) {
+        $botija = Botija::find($id);
+        $oldCarrinho = Session::has('carrinho') ? Session::get('carrinho') : null;
+        $carrinho = new Carrinho($oldCarrinho);
+        $carrinho->add($botija, $botija->$id);
+
+        $request->session()->put('carrinho', $carrinho);
+        return redirect()->route('HomeController@index');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +44,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -41,10 +61,10 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Botija  $botija
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(Botija $botija)
     {
         //
     }
@@ -52,10 +72,10 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Botija  $botija
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Botija $botija)
     {
         //
     }
@@ -64,10 +84,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param  \App\Botija  $botija
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, Botija $botija)
     {
         //
     }
@@ -75,10 +95,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Botija  $botija
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Botija $botija)
     {
         //
     }
