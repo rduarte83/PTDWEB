@@ -47,7 +47,7 @@
                                 <label class="form-check-label" style="font-size: medium;" for="naogarrafa">Não (+ 2€)</label>
                             </div>
                             <span class="m-l-20">Quantidade a entregar</span>
-                            <div class="form-group flex-w bo5 of-hidden w-size17 m-l-20">
+                            <div class="form-group flex-w bo5 of-hidden w-size17 m-l-20 m-b--8">
                                 <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
                                     <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
                                 </button>

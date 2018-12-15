@@ -13,6 +13,7 @@
                 <h2 class="m-text26 p-b-36 p-t-15">Registo de Cliente</h2>
             </div>
             <form action="/clienteregisto" method="post">
+                <!-- Token -->
                 @csrf
                 <div class="form-group bo4 of-hidden size15 m-b-20">
                     <label class="sr-only" for="nome">Nome</label>

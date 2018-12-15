@@ -14,7 +14,8 @@ class UtilizadorControlador extends Controller
      */
     public function index()
     {
-        //
+        $utilizadores = Utilizador::all();
+        return view('info', compact('utilizadores'));
     }
 
     /**
@@ -24,7 +25,7 @@ class UtilizadorControlador extends Controller
      */
     public function create()
     {
-        //
+        return view('register');
     }
 
     /**

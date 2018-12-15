@@ -39,6 +39,7 @@ Route::get("/carrinho/{page}", "HomeController@carrinhoPage");
 Route::get('/login-cliente', 'HomeController@logincliente' );
 Route::get('/registo-cliente', 'HomeController@registocliente' );
 Route::get('/home-carrinho', 'HomeController@homecarrinho' );
+Route::get('infoTeste', 'UtilizadorControlador@index');
 
 
 // User
