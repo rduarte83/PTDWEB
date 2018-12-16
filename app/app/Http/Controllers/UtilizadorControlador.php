@@ -23,8 +23,8 @@ class UtilizadorControlador extends Controller
         $utilizadores = Utilizador::all();
         //$users = Utilizador::all();
         $page = Utilizador::all();
-        //return view('profile.info', compact('utilizadores'), compact('page'));
-        return view('profile.info', array('utilizadores' => $utilizadores), array('page' => $page));
+        return view('profile.info', compact('utilizadores'), compact('page'));
+        //return view('profile.info', array('utilizadores' => $utilizadores), array('page' => $page));
         //return view('profile.info', array('users' => $users), array('page' => $page));
 
 
@@ -46,11 +46,11 @@ class UtilizadorControlador extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, UtilizadorControlador $model)
     {
 
         $regras = [
-            'nome' => "required | min:3 | max:20",
+            'nome' => "required | min:3 | max:100",
             'email' => "required | email | unique:utilizadores",
             'password1' => "min:8 | max:20 | required_with:password2 | same:password2",
             'password2'  => "min:8 | max:20 |",
@@ -58,7 +58,7 @@ class UtilizadorControlador extends Controller
         $mensagens = [
             'required' => 'O Campo ":attribute" é de preenchimento obrigatório!',
             'nome.min' => 'Mínimo 3 caracteres no nome!',
-            'nome.max' => 'Máximo 20 caracteres no nome!',
+            'nome.max' => 'Máximo 100 caracteres no nome!',
             'email.unique' => 'O email ' . $request->input('email') . ', já se encontra registado!',
             'email.email' => 'Insira um endereço de email válido!',
             'password1.min' => 'Mínimo 8 caracteres na password!',
@@ -66,7 +66,6 @@ class UtilizadorControlador extends Controller
             'password1.same' => 'A ":attribute" e a "password2" devem corresponder',
             'password2.min' => 'Mínimo 8 caracteres na password de confirmação!',
             'password2.max' => 'Máximo 20 caracteres na password!'
-
 
         ];
 
@@ -78,6 +77,15 @@ class UtilizadorControlador extends Controller
         $reg->password = $request->input('password1');
         $reg->save();
 
+
+        if ($model->create($request->all())) {
+            $request->session()->flash('success', 'Sucesso!');
+
+            //return redirect()->route('route.infoTeste');
+                //->route('profile.info');
+            return redirect('/info');
+        }
+
     }
 
     /**
@@ -88,7 +96,10 @@ class UtilizadorControlador extends Controller
      */
     public function show($id)
     {
-        //
+        $utilizador = Utilizador::find($id);
+        if(isset($utilizador)){
+            return view('/info', compact('utilizador'));
+        }
     }
 
     /**
@@ -99,7 +110,13 @@ class UtilizadorControlador extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $utilizador = Utilizador::find($id);
+        $page = Utilizador::all();
+        if(isset($utilizador)){
+            return view('/profile/edit', compact('utilizador'), compact('page'));
+        }
+        return redirect('/registar');
     }
 
     /**
@@ -111,7 +128,43 @@ class UtilizadorControlador extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //regras de validação formulári
+        $regras = [
+            'nome' => "min:3 | max:100",
+            //'email' => "email | unique:utilizadores",
+            //'password1' => "min:8 | max:20 | required_with:password2 | same:password2",
+            //'password2'  => "min:8 | max:20 |",
+        ];
+        $mensagens = [
+            'nome.min' => 'Mínimo 3 caracteres no nome!',
+            'nome.max' => 'Máximo 100 caracteres no nome!',
+            //'email.unique' => 'O email ' . $request->input('email') . ', já se encontra registado!',
+            'email.email' => 'Insira um endereço de email válido!',
+            //'password1.min' => 'Mínimo 8 caracteres na password!',
+            //'password1.max' => 'Máximo 20 caracteres na password!',
+            //'password1.same' => 'A ":attribute" e a "password2" devem corresponder',
+            //'password2.min' => 'Mínimo 8 caracteres na password de confirmação!',
+            //'password2.max' => 'Máximo 20 caracteres na password!'
+
+        ];
+
+        $utilizador = Utilizador::find($id);
+        $page = Utilizador::all();
+        if(isset($utilizador)){
+            $request->validate($regras, $mensagens);
+
+            $utilizador->nome = $request->input('nome');
+            $utilizador->email = $request->input('email');
+            //$utilizador->password = $request->input('password1');
+            $utilizador->nif = $request->input('nif');
+            $utilizador->morada = $request->input('morada');
+            $utilizador->codigo_postal = $request->input('codigo_postal');
+            $utilizador->localidade = $request->input('localidade');
+            $utilizador->save();
+            return redirect('/info');
+
+        }
+        return redirect('/registar');
     }
 
     /**
@@ -122,6 +175,16 @@ class UtilizadorControlador extends Controller
      */
     public function destroy($id)
     {
-        //
+        $utilizador = Utilizador::find($id);
+        if(isset($utilizador)){
+            $utilizador->delete();
+            //Session::flush(); // remove toda a session do utilizador
+        }
+        return redirect('/registar');
     }
+
+
+
+
+
 }

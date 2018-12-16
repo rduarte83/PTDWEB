@@ -40,7 +40,14 @@ Route::get("/carrinho/{page}", "HomeController@carrinhoPage");
 Route::get('/login-cliente', 'HomeController@logincliente' );
 Route::get('/registo-cliente', 'HomeController@registocliente' );
 Route::get('/home-carrinho', 'HomeController@homecarrinho' );
-Route::get('infoTeste', 'UtilizadorControlador@index');
+//Route::get('/infoTeste', 'UtilizadorControlador@index');
+Route::get('/info', 'UtilizadorControlador@index');
+//Route::post('/register', "UtilizadorControlador@store");
+//Route::post('/register/{id}', "UtilizadorControlador@update");
+//Route::get('/info', 'UtilizadorControlador@index')->middleware('auth.basic');
+Route::get('/register/eliminarUtilzador/{id}', "UtilizadorControlador@destroy");
+Route::get('/register/editarUtilzador/{id}', "UtilizadorControlador@edit");
+//Route::get('/perfil/{page}', "HomeController@profilePage");
 
 
 // User
@@ -55,6 +62,7 @@ Route::get('/products/add/{id}', "ProductController@addToCart");
 // User Autentication
 //Route::post('/register', "UserController@create");
 Route::post('/register', "UtilizadorControlador@store");
+Route::post('/register/{id}', "UtilizadorControlador@update");
 Route::post('/login', "HomeController@login");
 
 
