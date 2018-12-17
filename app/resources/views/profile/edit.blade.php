@@ -57,7 +57,8 @@
                 Número de Contribuinte
                 <div class="form-group bo4">
                     <label class="sr-only" for="nif">Número de Contribuinte</label>
-                    <input type="number" name="nif" id="nif" class="form-control {{$errors->has('nif') ? 'is-invalid' : ''}}" placeholder="Número de Contribuinte" value="{{$utilizador->nif}}">
+                    <input type="number" name="nif" id="nif" class="form-control {{$errors->has('nif') ? 'is-invalid' : ''}}"
+                           placeholder="Número de Contribuinte" value="{{$utilizador->nif}}">
                     @if($errors->has('nif'))
                         <div class="invalid-feedback">
                             {{$errors->first('nif')}}
@@ -68,35 +69,39 @@
                 Morada
                 <div class="form-group bo4">
                     <label class="sr-only" for="morada">Morada</label>
-                    <input type="text" name="morada" id="morada" class="form-control {{$errors->has('morada') ? 'is-invalid' : ''}}" placeholder="Morada" value="{{$utilizador->morada}}">
+                    <input type="text" name="morada" id="passar_mouse_morada" class="form-control {{$errors->has('morada') ? 'is-invalid' : ''}}" placeholder="Morada" value="{{$utilizador->morada}}">
                     @if($errors->has('morada'))
                         <div class="invalid-feedback">
                             {{$errors->first('morada')}}
                         </div>
                     @endif
                 </div>
+                <samll class="m-b-5 text-muted" id="mostrar1">Este campo não é obrigatório, porém o seu preenchimento permite uma pesquisa/máquina mais refinada.</samll>
 
                 Código Postal
                 <div class="form-group bo4">
                     <label class="sr-only" for="codigo_postal">Código Postal</label>
-                    <input type="text" name="codigo_postal" id="codigo_postal" class="form-control {{$errors->has('codigo_postal') ? 'is-invalid' : ''}}" placeholder="Código Postal" value="{{$utilizador->codigo_postal}}">
+                    <input type="text" name="codigo_postal" id="passar_mouse_cod_postal" class="form-control {{$errors->has('codigo_postal') ? 'is-invalid' : ''}}" placeholder="Código Postal" value="{{$utilizador->codigo_postal}}">
                     @if($errors->has('codigo_postal'))
                         <div class="invalid-feedback">
                             {{$errors->first('codigo_postal')}}
                         </div>
                     @endif
                 </div>
+                <samll class="m-b-5 text-muted" id="mostrar2">Este campo não é obrigatório, porém o seu preenchimento permite uma pesquisa/máquina mais refinada.</samll>
+
 
                 Localidade
                 <div class="form-group bo4">
                     <label class="sr-only" for="localidade">Localidade</label>
-                    <input type="text" name="localidade" id="localidade" class="form-control {{$errors->has('localidade') ? 'is-invalid' : ''}}" placeholder="Localidade" value="{{$utilizador->localidade}}">
+                    <input type="text" name="localidade" id="passar_mouse_localidade" class="form-control {{$errors->has('localidade') ? 'is-invalid' : ''}}" placeholder="Localidade" value="{{$utilizador->localidade}}">
                     @if($errors->has('localidade'))
                         <div class="invalid-feedback">
                             {{$errors->first('localidade')}}
                         </div>
                     @endif
                 </div>
+                <samll class="m-b-5 text-muted" id="mostrar3">Este campo não é obrigatório, porém o seu preenchimento permite uma pesquisa/máquina mais refinada.</samll>
 
                 <div class="text-center  flex-w flex-sb-m p-t-25 p-b-25  p-l-35 p-r-60 p-lr-15-sm">
                     <div class="w-size25">
@@ -109,4 +114,42 @@
             </form>
         </div>
     </div>
+@endsection
+
+@section('javascript')
+    <script type="text/javascript">
+       // alert("olá");
+
+        //$('#example').popover(options)
+       /*$('#element').popover('show')
+
+        $(function () {
+            $('.nif').popover({
+                container: 'body'
+            });
+        });*/
+
+       $('#passar_mouse_morada').mouseover(function(){
+           $('#mostrar1').css('display', 'block');
+       });
+
+       $('#passar_mouse_morada').mouseout(function(){
+           $('#mostrar1').css('display', 'none');
+       });
+       $('#passar_mouse_cod_postal').mouseover(function(){
+           $('#mostrar2').css('display', 'block');
+       });
+
+       $('#passar_mouse_cod_postal').mouseout(function(){
+           $('#mostrar2').css('display', 'none');
+       });
+       $('#passar_mouse_localidade').mouseover(function(){
+           $('#mostrar3').css('display', 'block');
+       });
+
+       $('#passar_mouse_localidade').mouseout(function(){
+           $('#mostrar3').css('display', 'none');
+       });
+
+    </script>
 @endsection

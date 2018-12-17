@@ -21,5 +21,8 @@
             @yield("footer")
 
              @include("ui.script-includes")
+    @hasSection('javascript')
+        @yield('javascript')
+    @endif
     </body>
 </html>

@@ -2393,13 +2393,25 @@ input.num-product::-webkit-inner-spin-button {
     color:white!important;
 }
 
-/* class esta a ser usada na página gegisto AP */
+/* class esta a ser usada na página registo AP */
 main.largura_1 {
     max-width: 600px;
     margin: auto;
-
+}
+#mostrar1{
+    display:none;
+    font-size:  10px;
+}
+#mostrar2{
+    display:none;
+    font-size:  10px;
+}
+#mostrar3{
+    display:none;
+    font-size:  10px;
 }
 
+/*-------------------------------------------*/
 .block2-img > img {
     object-fit: cover;
 }
