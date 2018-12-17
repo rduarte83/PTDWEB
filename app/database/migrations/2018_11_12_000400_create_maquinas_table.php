@@ -17,6 +17,8 @@ class CreateMaquinasTable extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->boolean('online');
+            $table->string('lat');
+            $table->string('long');
             $table->timestamps();
         });
     }
