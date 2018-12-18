@@ -17,15 +17,13 @@ Route::get('/template/product-detail', "HomeController@productDetailTemplate");
 Route::get('/', "HomeController@index");
 Route::get('/index', "HomeController@index");
 Route::get('/mapa', "HomeController@mapa");
-Route::get('/loja', "HomeController@loja");
+Route::get('/loja', "ProductController@index");
 Route::get('/about', "HomeController@about");
 Route::get('/blog', "HomeController@blog");
 Route::get('/blog-detail', "HomeController@blogDetail");
 Route::get('/cart', "HomeController@cart");
 Route::get('/contact', "HomeController@contact");
-Route::get('/product', "HomeController@product");
-Route::get('/products', "HomeController@product");
-Route::get('/product-detail', "HomeController@productDetail");
+Route::get('/product', "ProductController@product_detail");
 Route::get('/perfil', "HomeController@profile");
 Route::get('/perfil/{page}', "HomeController@profilePage");
 
@@ -55,9 +53,9 @@ Route::get('/registar', "HomeController@register");
 Route::get('/login', "UserController@loginView");
 
 // Products
-//Route::get('/products/', "ProductController@showAll");
+Route::get('/products', "ProductController@index");
 //Route::get('/products/{id}', "ProductController@show");
-Route::get('/products/add/{id}', "ProductController@addToCart");
+//Route::get('/products/add/{id}', "ProductController@addToCart");
 
 // User Autentication
 //Route::post('/register', "UserController@create");
@@ -74,6 +72,3 @@ Route::get('/ui/footer', "HomeController@uiFooter");
 
 // StyleGuide
 Route::get('/styleGuide', "HomeController@StyleGuide");
-
-
-

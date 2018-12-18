@@ -14,7 +14,12 @@ class ProductController extends Controller
      */
     public function index()
     {
+        return view("products")->with("title", "Loja");
+    }
 
+    public function product_detail()
+    {
+        return view( "about");
     }
 
     /**

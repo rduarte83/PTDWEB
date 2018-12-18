@@ -1,6 +1,6 @@
 @extends("layouts.default")
 @section("title")
-    Products
+    {{$title}}
 @endsection
 @section("content")
     <!-- Title Page -->
@@ -10,6 +10,13 @@
         </h2>
     </section>
 
+    <!--
+    @foreach($utilizadores as $utilizador)
+        <p>{{$utilizador->id}}</p>
+        <p>{{$utilizador->nome}}</p>
+        <p>{{$utilizador->email}}</p>
+    @endforeach
+    -->
 
     <!-- Content page -->
     <section class="bgwhite p-t-55 p-b-65">
