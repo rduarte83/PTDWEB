@@ -6,7 +6,7 @@
     <!-- Title Page -->
     <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(/images/home-bg-sml-dark.jpg);">
         <h2 class="l-text2 t-center">
-            Loja
+            {{$title}}
         </h2>
     </section>
 
@@ -23,28 +23,18 @@
 
                         <ul class="p-b-54">
                             <li class="p-t-4">
-                                <a href="#" class="s-text13 active1">
+                                <a href="/loja" class="s-text13">
                                     Todas
                                 </a>
                             </li>
 
+                            @foreach($categorias as $c)
                             <li class="p-t-4">
-                                <a href="#" class="s-text13">
-                                    Propano
+                                <a href="/loja/{{$c->tipo}}" class="s-text13">
+                                    {{$c->tipo}}
                                 </a>
                             </li>
-
-                            <li class="p-t-4">
-                                <a href="#" class="s-text13">
-                                    Butano
-                                </a>
-                            </li>
-
-                            <li class="p-t-4">
-                                <a href="#" class="s-text13">
-                                    Acessórios
-                                </a>
-                            </li>
+                            @endforeach
                         </ul>
 
                         <h4 class="m-text14 p-b-7">
@@ -53,22 +43,18 @@
 
                         <ul class="p-b-54">
                             <li class="p-t-4">
-                                <a href="/loja" class="s-text13 active1">
+                                <a href="/loja" class="s-text13">
                                     Todas
                                 </a>
                             </li>
 
+                            @foreach($marcas as $m)
                             <li class="p-t-4">
-                                <a href="/loja/Galp" class="s-text13">
-                                    Galp
+                                <a href="/loja/{{$m->marca}}" class="s-text13">
+                                    {{$m->marca}}
                                 </a>
                             </li>
-
-                            <li class="p-t-4">
-                                <a href="#" class="s-text13">
-                                    Prio
-                                </a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -128,6 +114,12 @@
                             </div>
                         </div>
                     @endforeach
+                    @else
+                    <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m">
+                        <h3 class="t-center">
+                            Nenhum produto encontrado.
+                        </h3>
+                    </section>
                     @endif
 
                     <!-- Pagination

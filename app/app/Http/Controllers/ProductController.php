@@ -13,12 +13,6 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $botijas = Botija::all();
-        $n_res = count($botijas);
-        return view("products", compact("n_res"), compact('botijas'))->with("title", "Loja");
-    }
 
     public function product_detail($id)
     {
@@ -27,11 +21,26 @@ class ProductController extends Controller
         return view("product", compact("title"), compact("botija"));
     }
 
-    public function search_marca($marca)
+    public function index()
     {
         $botijas = Botija::all();
         $n_res = count($botijas);
-        return view("products", compact("n_res"), compact('botijas'))->with("title", "Loja - " . $marca);
+
+        $marcas = Botija::distinct()->get(['marca']);
+        $categorias = Botija::distinct()->get(['tipo']);
+
+        return view("products", compact('botijas'), compact("marcas"))->with("categorias", $categorias)->with("title", "Loja")->with("n_res", $n_res);
+    }
+
+    public function search_marca($marca)
+    {
+        $botijas = Botija::where('marca', 'ilike', $marca)->get();
+        $n_res = count($botijas);
+        
+        $marcas = Botija::distinct()->get(['marca']);
+        $categorias = Botija::distinct()->get(['tipo']);
+
+        return view("products", compact('botijas'), compact("marcas"))->with("categorias", $categorias)->with("title", "Produtos " . $marca)->with("n_res", $n_res);
     }
 
     /**
