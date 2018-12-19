@@ -18,7 +18,7 @@
                     <div class="leftbar p-r-20 p-r-0-sm">
                         <!--  -->
                         <h4 class="m-text14 p-b-7">
-                            Categorias
+                            Categoria
                         </h4>
 
                         <ul class="p-b-54">
