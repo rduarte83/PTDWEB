@@ -10,14 +10,6 @@
         </h2>
     </section>
 
-    <!--
-    @foreach($utilizadores as $utilizador)
-        <p>{{$utilizador->id}}</p>
-        <p>{{$utilizador->nome}}</p>
-        <p>{{$utilizador->email}}</p>
-    @endforeach
-    -->
-
     <!-- Content page -->
     <section class="bgwhite p-t-55 p-b-65">
         <div class="container">
@@ -47,25 +39,37 @@
                                     Butano
                                 </a>
                             </li>
+
+                            <li class="p-t-4">
+                                <a href="#" class="s-text13">
+                                    Acessórios
+                                </a>
+                            </li>
                         </ul>
 
-                        <!--  -->
-                        <h4 class="m-text14 p-b-32">
-                            Filtros
+                        <h4 class="m-text14 p-b-7">
+                            Marca
                         </h4>
 
-                        <div class="filter-color p-t-22 p-b-50 bo3">
-                            <div class="m-text15 p-b-12">
-                                Marcas
-                            </div>
+                        <ul class="p-b-54">
+                            <li class="p-t-4">
+                                <a href="/loja" class="s-text13 active1">
+                                    Todas
+                                </a>
+                            </li>
 
-                            <ul class="">
+                            <li class="p-t-4">
+                                <a href="/loja/Galp" class="s-text13">
+                                    Galp
+                                </a>
+                            </li>
 
-                                <li class="m-r-10">
-                                    <a href="{{URL("loja/galp")}}"> GALP </a>
-                                </li>
-                            </ul>
-                        </div>
+                            <li class="p-t-4">
+                                <a href="#" class="s-text13">
+                                    Prio
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -76,40 +80,29 @@
                             <div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
                                 <select class="selection-1" name="sorting">
                                     <option>Ordenar por</option>
-                                    <option>Popularidade</option>
                                     <option>Preço: mais baixo primeiro</option>
                                     <option>Price: mais alto primeiro</option>
-                                </select>
-                            </div>
-
-                            <div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
-                                <select class="selection-1" name="sorting">
-                                    <option>Preço</option>
-                                    <option>0.00€ - 50.00€</option>
-                                    <option>50.00€ - 100.00€</option>
-                                    <option>100.00€ - 150.00€</option>
-                                    <option>150.00€ - 200.00€</option>
-                                    <option>200.00€+</option>
-
                                 </select>
                             </div>
                         </div>
 
                         <span class="s-text8 p-t-5 p-b-5">
-							Mostrar 1–6 de 12 resultados
+							A mostrar {{$n_res}} resultados
 						</span>
                     </div>
 
-                    <!-- Product -->
+                    <!-- Products -->
+                    @if($n_res > 0)
                     <div class="row">
+                    @foreach($botijas as $botija)
                         <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
                             <!-- Block2 -->
                             <div class="block2">
                                 <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                    <img class="img-fit" src="{{URL::asset("images/garrafas/butano-13kg.png")}}" alt="IMG-PRODUCT">
+                                    <img class="img-fit" src="{{URL::asset($botija->imagem)}}" alt="IMG-PRODUCT">
 
                                     <div class="block2-overlay trans-0-4">
-                                        <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                        <a href="{{URL('product')}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
                                             <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
                                             <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                         </a>
@@ -124,188 +117,25 @@
                                 </div>
 
                                 <div class="block2-txt p-t-20">
-                                    <a href="{{URL("product")}}" class="block2-name dis-block s-text3 p-b-5">
-                                        Botija de gás Butano (Pequena) - GALP
+                                    <a href="{{URL('produto/' . $botija->id)}}" class="block2-name dis-block s-text3 p-b-5">
+                                        {{$botija->nome}}
                                     </a>
 
                                     <span class="block2-price m-text6 p-r-5">
-										15.00€
+										{{$botija->preco}}€
 									</span>
                                 </div>
                             </div>
                         </div>
+                    @endforeach
+                    @endif
 
-                        <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
-                            <!-- Block2 -->
-                            <div class="block2">
-                                <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                    <img class="img-fit" src="{{URL::asset("images/garrafas/propano-11kg.png")}}" alt="IMG-PRODUCT">
-
-                                    <div class="block2-overlay trans-0-4">
-                                        <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
-                                            <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-                                            <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                                        </a>
-
-                                        <div class="block2-btn-addcart w-size1 trans-0-4">
-                                            <!-- Button -->
-                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Adicionar ao Carrinho
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="block2-txt p-t-20">
-                                    <a href="{{URL("product")}}" class="block2-name dis-block s-text3 p-b-5">
-                                        Botija de gás Propano (Pequena) - GALP
-                                    </a>
-
-                                    <span class="block2-price m-text6 p-r-5">
-										10.50€
-									</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
-                            <!-- Block2 -->
-                            <div class="block2">
-                                <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                    <img class="img-fit" src="{{URL::asset("images/garrafas/Gas_11K.carburante.png")}}" alt="IMG-PRODUCT">
-
-                                    <div class="block2-overlay trans-0-4">
-                                        <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
-                                            <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-                                            <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                                        </a>
-
-                                        <div class="block2-btn-addcart w-size1 trans-0-4">
-                                            <!-- Button -->
-                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Adicionar ao Carrinho
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="block2-txt p-t-20">
-                                    <a href="{{URL("product")}}" class="block2-name dis-block s-text3 p-b-5">
-                                        Botija de gás Carburante (Pequena) - Oz
-                                    </a>
-
-                                    <span class="block2-price m-text6 p-r-5">
-										5.90€
-									</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
-                            <!-- Block2 -->
-                            <div class="block2">
-                                <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                    <img class="img-fit" src="{{URL::asset("images/garrafas/rubis_propano_ft.png")}}" alt="IMG-PRODUCT">
-
-                                    <div class="block2-overlay trans-0-4">
-                                        <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
-                                            <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-                                            <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                                        </a>
-
-                                        <div class="block2-btn-addcart w-size1 trans-0-4">
-                                            <!-- Button -->
-                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Adicionar ao Carrinho
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="block2-txt p-t-20">
-                                    <a href="{{URL("product")}}" class="block2-name dis-block s-text3 p-b-5">
-                                        Botija de gás Propano (Pequena) - Rubis Gás
-                                    </a>
-
-                                    <span class="block2-price m-text6 p-r-5">
-										15.90€
-									</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
-                            <!-- Block2 -->
-                            <div class="block2">
-                                <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                    <img class="img-fit" src="{{URL::asset("images/garrafas/propano_galo_verde_s.png")}}" alt="IMG-PRODUCT">
-
-                                    <div class="block2-overlay trans-0-4">
-                                        <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
-                                            <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-                                            <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                                        </a>
-
-                                        <div class="block2-btn-addcart w-size1 trans-0-4">
-                                            <!-- Button -->
-                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Adicionar ao Carrinho
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="block2-txt p-t-20">
-                                    <a href="{{URL("product")}}" class="block2-name dis-block s-text3 p-b-5">
-                                        Botija de gás Propano (Pequena) - Oz
-                                    </a>
-
-                                    <span class="block2-price m-text6 p-r-5">
-										15.00€
-									</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
-                            <!-- Block2 -->
-                            <div class="block2">
-                                <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                    <img class="img-fit" src="{{URL::asset("images/garrafas/propano_45kg_verde_s.png")}}" alt="IMG-PRODUCT">
-
-                                    <div class="block2-overlay trans-0-4">
-                                        <a href="{{URL("product")}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
-                                            <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-                                            <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                                        </a>
-
-                                        <div class="block2-btn-addcart w-size1 trans-0-4">
-                                            <!-- Button -->
-                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                Adicionar ao Carrinho
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="block2-txt p-t-20">
-                                    <a href="{{URL("product")}}" class="block2-name dis-block s-text3 p-b-5">
-                                        Botija de gás Propano (Grande) - Oz
-                                    </a>
-
-                                    <span class="block2-price m-text6 p-r-5">
-										30.50€
-									</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    <!-- Pagination -->
+                    <!-- Pagination
                     <div class="pagination flex-m flex-w p-t-26">
                         <a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
                         <a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
                     </div>
+                    -->
                 </div>
             </div>
         </div>

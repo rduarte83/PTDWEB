@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Botija;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -14,12 +15,23 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view("products")->with("title", "Loja");
+        $botijas = Botija::all();
+        $n_res = count($botijas);
+        return view("products", compact("n_res"), compact('botijas'))->with("title", "Loja");
     }
 
-    public function product_detail()
+    public function product_detail($id)
     {
-        return view( "about");
+        $botija = Botija::whereid($id)->first();
+        $title = $botija->nome;
+        return view("product", compact("title"), compact("botija"));
+    }
+
+    public function search_marca($marca)
+    {
+        $botijas = Botija::all();
+        $n_res = count($botijas);
+        return view("products", compact("n_res"), compact('botijas'))->with("title", "Loja - " . $marca);
     }
 
     /**

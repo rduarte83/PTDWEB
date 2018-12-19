@@ -16,7 +16,7 @@ class CreateBotijasTable extends Migration
         Schema::create('botijas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->integer('tipo');
+            $table->string('tipo');
             $table->string('marca');
             $table->string('descricao')->nullable();
             $table->decimal('preco');
