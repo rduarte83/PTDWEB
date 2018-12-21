@@ -89,12 +89,11 @@
                 </div>
                 <div class="p-b-45">
                     <!--<span class="s-text8 m-r-35">SKU: GALP-01</span>-->
-                    <span class="s-text8">Categoria: <a href="/loja/{{$botija->marca}}">{{$botija->marca}}</a>, <a href="/loja/{{$botija->tipo}}">{{$botija->tipo}}</a></span>
+                    <span class="s-text8">Categoria: {{$botija->marca}}, {{$botija->tipo}}</span>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- Relate Product -->
     <section class="relateproduct bgwhite p-t-45 p-b-138">

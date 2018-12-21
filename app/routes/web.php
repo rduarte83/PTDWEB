@@ -18,7 +18,6 @@ Route::get('/', "HomeController@index");
 Route::get('/index', "HomeController@index");
 Route::get('/mapa', "HomeController@mapa");
 Route::get('/loja', "ProductController@index");
-Route::get('/loja/{marca}', "ProductController@search_marca");
 Route::get('/about', "HomeController@about");
 Route::get('/blog', "HomeController@blog");
 Route::get('/blog-detail', "HomeController@blogDetail");

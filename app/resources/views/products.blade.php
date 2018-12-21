@@ -17,45 +17,41 @@
                 <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
                     <div class="leftbar p-r-20 p-r-0-sm">
                         <!--  -->
-                        <h4 class="m-text14 p-b-7">
-                            Categoria
-                        </h4>
+                        <form action="{{URL::current()}}" method="GET" id="search"></form>
+                            <label for="categoria" class="m-text14 p-b-7">
+                                Categoria
+                            </label>
 
-                        <ul class="p-b-54">
-                            <li class="p-t-4">
-                                <a href="/loja" class="s-text13">
-                                    Todas
-                                </a>
-                            </li>
+                            <ul class="p-b-54">
+                                <li class="p-t-4">
+                                    <input class="s-text13" type="radio" name="categoria" value="todas"> Todas
+                                </li>
 
-                            @foreach($categorias as $c)
-                            <li class="p-t-4">
-                                <a href="/loja/{{$c->tipo}}" class="s-text13">
-                                    {{$c->tipo}}
-                                </a>
-                            </li>
-                            @endforeach
-                        </ul>
+                                @foreach($categorias as $c)
+                                <li class="p-t-4">
+                                    <input class="s-text13" type="radio" name="categoria" value="{{$c->tipo}}"> {{$c->tipo}}
+                                </li>
+                                @endforeach
+                            </ul>
 
-                        <h4 class="m-text14 p-b-7">
-                            Marca
-                        </h4>
+                            <label for="marca" class="m-text14 p-b-7">
+                                Marca
+                            </label>
 
-                        <ul class="p-b-54">
-                            <li class="p-t-4">
-                                <a href="/loja" class="s-text13">
-                                    Todas
-                                </a>
-                            </li>
+                            <ul class="p-b-54">
+                                <li class="p-t-4">
+                                    <input class="s-text13" type="radio" name="marca" value="todas"> Todas
+                                </li>
 
-                            @foreach($marcas as $m)
-                            <li class="p-t-4">
-                                <a href="/loja/{{$m->marca}}" class="s-text13">
-                                    {{$m->marca}}
-                                </a>
-                            </li>
-                            @endforeach
-                        </ul>
+                                @foreach($marcas as $m)
+                                <li class="p-t-4">
+                                    <input class="s-text13" type="radio" name="marca" value="{{$m->marca}}"> {{$m->marca}}
+                                </li>
+                                @endforeach
+                            </ul>
+
+                            <input type="submit" form="search" value="Procurar" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                        </form>
                     </div>
                 </div>
 
