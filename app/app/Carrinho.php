@@ -30,4 +30,5 @@ class Carrinho
         $this->total++;
         $this->total += $item->preco;
     }
+
 }

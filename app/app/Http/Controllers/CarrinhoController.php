@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Carrinho;
 use Illuminate\Http\Request;
 
+
 class CarrinhoController extends Controller
 {
     /**
@@ -16,6 +17,7 @@ class CarrinhoController extends Controller
     {
         $carrinho = Carrinho::all();
         return view( "carrinho/carrinho",['carrinho' => $carrinho])-> with("page", "carrinho");
+        
     }
 
     /**
