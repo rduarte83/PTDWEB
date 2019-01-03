@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUtilizadoresBotijasTable extends Migration
+class CreateBotijasCarrinhosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateUtilizadoresBotijasTable extends Migration
      */
     public function up()
     {
-        Schema::create('utilizadores_botijas', function (Blueprint $table) {
-            $table->unsignedInteger('utilizadoresid');
+        Schema::create('botijas_carrinhos', function (Blueprint $table) {
             $table->unsignedInteger('botijasid');
-            $table->boolean('favorito');
-            $table->primary(['utilizadoresid', 'botijasid']);
-            $table->foreign('utilizadoresid')->references('id')->on('utilizadores');
+            $table->unsignedInteger('carrinhosid');
+            $table->integer('quantidade');
+            $table->primary(['botijasid','carrinhosid']);
             $table->foreign('botijasid')->references('id')->on('botijas');
+            $table->foreign('carrinhosid')->references('id')->on('carrinhos');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateUtilizadoresBotijasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('utilizadores_botijas');
+        Schema::dropIfExists('botijas_carrinhos');
     }
 }

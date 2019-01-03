@@ -16,6 +16,9 @@ class Inserts extends Migration
         DB::unprepared("
             INSERT INTO roles (id, role) VALUES (1, 'Administrador'), (2, 'Utilizador');
             INSERT INTO pagamentos (id, meio) VALUES (1, 'Paypal'), (2, 'MBWay'), (3, 'Cartão Pré-pago');
+            INSERT INTO utilizadores (nome,email,password)  VALUES ('Rui','rui@gmail.com','rui');
+            INSERT INTO utilizadores (nome,email,password)  VALUES ('Joao','joao@gmail.com','joao');
+            INSERT INTO Botijas VALUES (DEFAULT,'Botija X','propano','Galp','Uma botija X',50.00,5.00,'a');
         
         ");
     }
