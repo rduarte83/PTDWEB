@@ -16,6 +16,5 @@ class Product extends Model
         'imagem'
     ];
 
-
     protected $table = "botijas";
 }

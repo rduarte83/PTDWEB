@@ -19,6 +19,7 @@ class CreateBotijasTable extends Migration
             $table->string('tipo');
             $table->string('marca');
             $table->string('descricao')->nullable();
+            $table->decimal('peso');
             $table->decimal('preco');
             $table->decimal('preco_tara');
             $table->string('imagem');
