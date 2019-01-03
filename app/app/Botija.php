@@ -15,6 +15,4 @@ class Botija extends Model
         'preco_tara',
         'imagem'
     ];
-
-    protected $table = 'botijas';
 }

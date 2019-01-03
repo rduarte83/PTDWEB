@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Compra;
 use App\Favorito;
 use Illuminate\Http\Request;
 use App\Utilizador;
@@ -41,6 +42,7 @@ class UtilizadorController extends Controller
                 return view( "profile/favourites")->with($data);
                 break;
             case "historico":
+                $data["compras"] = Compra::all()->where('utilizador', $user->id);
                 return view( "profile/history")->with($data);
                 break;
             case "perfil":
