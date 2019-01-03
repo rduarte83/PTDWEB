@@ -15,7 +15,11 @@ class CarrinhoController extends Controller
     public function index()
     {
         $carrinho = Carrinho::all();
-        return view( "carrinho/carrinho",['carrinho' => $carrinho])-> with("page", "carrinho");
+        $data = [
+            'page' => 'carrinho',
+            'objetosCarrinho' => $carrinho
+        ];
+        return view( "carrinho/carrinho")-> with($data);
     }
 
     /**

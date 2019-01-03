@@ -30,4 +30,8 @@ class Carrinho
         $this->total++;
         $this->total += $item->preco;
     }
+
+    public static function all() : String {
+        return "Coisas do carrinho";
+    }
 }

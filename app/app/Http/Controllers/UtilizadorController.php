@@ -4,19 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Utilizador;
-use Illuminate\Support\Facades\Auth;
 
-class UtilizadorControlador extends Controller
+class UtilizadorController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
 
-    /*public function __construct(){
-        $this->middleware('auth');
-    }*/
     public function index()
     {
 
@@ -46,7 +43,7 @@ class UtilizadorControlador extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, UtilizadorControlador $model)
+    public function store(Request $request, UtilizadorController $model)
     {
 
         $regras = [
@@ -161,7 +158,8 @@ class UtilizadorControlador extends Controller
             $utilizador->codigo_postal = $request->input('codigo_postal');
             $utilizador->localidade = $request->input('localidade');
             $utilizador->save();
-            return redirect('/info');
+
+            return redirect('/');
 
         }
         return redirect('/registar');
@@ -183,8 +181,7 @@ class UtilizadorControlador extends Controller
         return redirect('/registar');
     }
 
-
-
-
-
+    public function redirectTo(){
+        return '/home';
+    }
 }

@@ -29,40 +29,52 @@ Route::get('/perfil/{page}', "HomeController@profilePage");
 
 
 // Carrinho
-//Route::get("/carrinho", "HomeController@carrinhoDetalhes");
 Route::get("/carrinho", "CarrinhoController@index");
 Route::get("/carrinho/{page}", "HomeController@carrinhoPage");
+
+
+// User Authentication
+Route::get('/registar', 'HomeController@register');
+Route::post('/login', 'Auth\LoginController@login')->name('login');
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+//Route::get('/login', 'UtilizadorController@login')->name('login');
+Route::post('/register', "UtilizadorController@store");
+Route::post('/register/{id}', "UtilizadorController@update");
+Route::get('/info', 'UtilizadorController@index');
+
+// Só usar quando é Preciso ter login efectuado!
+Route::get('/user', "HomeController@index")->middleware('auth');
+
+
+
+
+
+
+/*
+
+
 
 
 // teste AP
 Route::get('/login-cliente', 'HomeController@logincliente' );
 Route::get('/registo-cliente', 'HomeController@registocliente' );
 Route::get('/home-carrinho', 'HomeController@homecarrinho' );
-//Route::get('/infoTeste', 'UtilizadorControlador@index');
-Route::get('/info', 'UtilizadorControlador@index');
-//Route::post('/register', "UtilizadorControlador@store");
-//Route::post('/register/{id}', "UtilizadorControlador@update");
-//Route::get('/info', 'UtilizadorControlador@index')->middleware('auth.basic');
-Route::get('/register/eliminarUtilzador/{id}', "UtilizadorControlador@destroy");
-Route::get('/register/editarUtilzador/{id}', "UtilizadorControlador@edit");
+//Route::get('/infoTeste', 'UtilizadorController@index');
+Route::get('/info', 'UtilizadorController@index');
+//Route::post('/register', "UtilizadorController@store");
+//Route::post('/register/{id}', "UtilizadorController@update");
+//Route::get('/info', 'UtilizadorController@index')->middleware('auth.basic');
+Route::get('/register/eliminarUtilzador/{id}', "UtilizadorController@destroy");
+Route::get('/register/editarUtilzador/{id}', "UtilizadorController@edit");
 //Route::get('/perfil/{page}', "HomeController@profilePage");
 
 
-// User
-Route::get('/registar', "HomeController@register");
-Route::get('/login', "UserController@loginView");
+
 
 // Products
 Route::get('/products', "ProductController@index");
 //Route::get('/products/{id}', "ProductController@show");
 //Route::get('/products/add/{id}', "ProductController@addToCart");
-
-// User Autentication
-//Route::post('/register', "UserController@create");
-Route::post('/register', "UtilizadorControlador@store");
-Route::post('/register/{id}', "UtilizadorControlador@update");
-Route::post('/login', "HomeController@login");
-
 
 // UI
 Route::get('/ui', "HomeController@ui");
@@ -71,4 +83,4 @@ Route::get('/ui/header', "HomeController@uiHeader");
 Route::get('/ui/footer', "HomeController@uiFooter");
 
 // StyleGuide
-Route::get('/styleGuide', "HomeController@StyleGuide");
+Route::get('/styleGuide', "HomeController@StyleGuide");*/

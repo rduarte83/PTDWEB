@@ -28,6 +28,7 @@ class CreateUtilizadoresTable extends Migration
             $table->dateTime('data_login')->nullable();
             $table->integer('num_cartao')->unique()->nullable();
             $table->foreign('role')->references('id')->on('roles');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

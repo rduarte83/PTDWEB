@@ -3,7 +3,6 @@
     Carrinho
 @endsection
 @section("content")
-
     <!-- Fazer Menu de escolha ... -->
     <!-- Menu -->
     <div class="bg5">

@@ -22,6 +22,7 @@
                             <th class="column-5"><span style="vertical-align: inherit;">Total</span></th>
                         </tr>
 
+
                         <tr class="table-row">
                             <td class="column-1">
                                 <div class="cart-img-product b-rad-4 o-f-hidden">
