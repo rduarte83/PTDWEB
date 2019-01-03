@@ -4,7 +4,7 @@
         <div class="modal-body row">
             <form class="col-md-2">
             </form>
-            <form class="col-md-6" action="/register/{{$user->id}}" method="POST">
+            <form class="col-md-6" action="/perfil/edit" method="POST">
                 <!-- Token -->
                 @csrf
                 <h2>Editar Perfil</h2>

@@ -123,7 +123,7 @@ class HomeController extends Controller
      */
     public function carrinhoPage($page){
         switch ($page){
-            case "detalhes":
+        case "detalhes":
                 return view( "carrinho/detalhes")->with("page", "detalhes");
                 break;
             case "resumo":

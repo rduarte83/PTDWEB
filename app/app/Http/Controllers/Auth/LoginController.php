@@ -30,6 +30,8 @@ class LoginController extends Controller
      *
      * @var string
      */
+    protected $loginPath = '/';
+
     protected $redirectTo = '/';
 
     public function loggedOut(Request $request)

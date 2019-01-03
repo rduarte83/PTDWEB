@@ -23,13 +23,13 @@ Route::get('/blog', "HomeController@blog");
 Route::get('/blog-detail', "HomeController@blogDetail");
 Route::get('/cart', "HomeController@cart");
 Route::get('/contact', "HomeController@contact");
-Route::get('/produto/{id}', "ProductController@product_detail");
+
 
 // Perfil
 Route::get('/perfil', "UtilizadorController@index")->middleware('auth');
 Route::get('/perfil/{page}', "UtilizadorController@profilePage")->middleware('auth');
-Route::get('/perfil/editar/{id}', "UtilizadorController@edit")->middleware('auth');
-
+Route::get('/perfil/editar', "UtilizadorController@edit")->middleware('auth');
+Route::post('/perfil/edit', "UtilizadorController@update")->middleware('auth');
 
 // Carrinho
 Route::get("/carrinho", "CarrinhoController@index");
@@ -40,8 +40,11 @@ Route::get('/registar', 'HomeController@register');
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::post('/register', "UtilizadorController@store");
-Route::post('/register/{id}', "UtilizadorController@update");
 Route::get('/info', 'UtilizadorController@index');
+
+// Produtos
+Route::get('/produto/{id}', "ProductController@product_detail");
+
 
 // Só usar quando é Preciso ter login efectuado!
 Route::get('/user', "HomeController@index")->middleware('auth');
@@ -52,10 +55,6 @@ Route::get('/user', "HomeController@index")->middleware('auth');
 
 
 /*
-
-
-
-
 // teste AP
 Route::get('/login-cliente', 'HomeController@logincliente' );
 Route::get('/registo-cliente', 'HomeController@registocliente' );
@@ -68,8 +67,6 @@ Route::get('/info', 'UtilizadorController@index');
 Route::get('/register/eliminarUtilzador/{id}', "UtilizadorController@destroy");
 Route::get('/register/editarUtilzador/{id}', "UtilizadorController@edit");
 //Route::get('/perfil/{page}', "HomeController@profilePage");
-
-
 
 
 // Products

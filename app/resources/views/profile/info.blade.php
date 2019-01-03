@@ -15,7 +15,7 @@
                     <strong>Localidade</strong><div class="p-b-20"><span>{{$user->localidade}}</span></div>
                 @endauth
                 <div class="w-size25 p-t-20">
-                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="{{URL("perfil/editar/{$user->id}")}}">Editar perfil</a>
+                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="{{URL("perfil/editar")}}">Editar perfil</a>
                     <!--<a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="{{URL("/register/editarUtilzador/{_utilizador->id}")}}">Editar perfil</a> -->
                 </div>
             </div>

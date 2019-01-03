@@ -136,10 +136,10 @@ class UtilizadorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
         $user = Auth::user();
-        $utilizador = Utilizador::find($id);
+        $utilizador = Utilizador::find($user->id);
 
         if ( $utilizador->nome == $user->nome ){
             $data = [
@@ -182,8 +182,9 @@ class UtilizadorController extends Controller
         ];
 
         $utilizador = Utilizador::find($id);
-        $page = Utilizador::all();
-        if(isset($utilizador)){
+        $user = Auth::user();
+
+        if(isset($utilizador) && $utilizador->id == $user->id){
             $request->validate($regras, $mensagens);
 
             $utilizador->nome = $request->input('nome');
@@ -218,6 +219,8 @@ class UtilizadorController extends Controller
     }
 
     public function redirectTo(){
-        return '/home';
+        return '/';
     }
+
+    protected $redirectTo = "/";
 }
