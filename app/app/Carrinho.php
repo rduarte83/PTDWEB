@@ -2,7 +2,9 @@
 
 namespace App;
 
-class Carrinho
+use Illuminate\Database\Eloquent\Model;
+
+class Carrinho extends Model
 {
     public $items = null;
     public $qtd = 0;

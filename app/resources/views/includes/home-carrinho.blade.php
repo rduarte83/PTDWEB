@@ -23,7 +23,7 @@
         </div>
 
 
-        @include('includes.lista-favoritos-users')
+        @include('profile.favourites')
 
 
   </div>

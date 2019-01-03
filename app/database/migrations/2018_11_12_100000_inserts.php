@@ -18,7 +18,11 @@ class Inserts extends Migration
             INSERT INTO pagamentos (id, meio) VALUES (1, 'Paypal'), (2, 'MBWay'), (3, 'Cartão Pré-pago');
             INSERT INTO utilizadores (nome,email,password)  VALUES ('Rui','rui@gmail.com','rui');
             INSERT INTO utilizadores (nome,email,password)  VALUES ('Joao','joao@gmail.com','joao');
-            INSERT INTO Botijas VALUES (DEFAULT,'Botija X','propano','Galp','Uma botija X',50.00,5.00,'a');
+            INSERT INTO botijas VALUES (DEFAULT,'Botija X','propano','Galp','Uma botija X',50.00,5.00,'a');
+            INSERT INTO botijas VALUES (DEFAULT,'Botija Z','butano','BP','Uma botija Z',100.00,10.00,'b');
+            
+            INSERT INTO utilizadores_botijas(utilizadoresid, botijasid, favorito) VALUES (1, 1, true);
+            INSERT INTO utilizadores_botijas(utilizadoresid, botijasid, favorito) VALUES (1, 2, true);
         
         ");
     }

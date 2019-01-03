@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Favorito;
 use Illuminate\Http\Request;
 use App\Utilizador;
 use Illuminate\Support\Facades\Auth;
@@ -36,6 +37,7 @@ class UtilizadorController extends Controller
 
         switch ($page){
             case "favoritos":
+                $data["favs"] = Favorito::all()->where('utilizadoresid', $user->id);
                 return view( "profile/favourites")->with($data);
                 break;
             case "historico":
