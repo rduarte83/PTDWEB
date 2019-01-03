@@ -1,6 +1,5 @@
 <!-- Componente que vai conter a descrição do item, referente ao favorito/user -->
-<?php
-$botija = \App\Product::all()->where('id',$fav->botijasid)->first();?>
+<?php $botija = \App\Product::all()->where('id',$fav->botijasid)->first();?>
 
 <div class="col-md-4">
     <div class="card mb-4 shadow-sm">
