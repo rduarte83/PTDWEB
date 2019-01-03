@@ -54,6 +54,17 @@ class CreateTrigger extends Migration
             CREATE TRIGGER logs_migrations BEFORE INSERT OR UPDATE OR DELETE ON migrations FOR EACH ROW EXECUTE PROCEDURE f_logs();
             CREATE TRIGGER logs_users BEFORE INSERT OR UPDATE OR DELETE ON users FOR EACH ROW EXECUTE PROCEDURE f_logs();
             CREATE TRIGGER logs_password_resets BEFORE INSERT OR UPDATE OR DELETE ON password_resets FOR EACH ROW EXECUTE PROCEDURE f_logs();
+            CREATE TRIGGER logs_admin_role_menu BEFORE INSERT OR UPDATE OR DELETE ON admin_role_menu FOR EACH ROW EXECUTE PROCEDURE f_logs();
+            CREATE TRIGGER logs_admin_operation_log BEFORE INSERT OR UPDATE OR DELETE ON admin_operation_log FOR EACH ROW EXECUTE PROCEDURE f_logs();
+            CREATE TRIGGER logs_products BEFORE INSERT OR UPDATE OR DELETE ON products FOR EACH ROW EXECUTE PROCEDURE f_logs();
+            CREATE TRIGGER logs_roles BEFORE INSERT OR UPDATE OR DELETE ON roles FOR EACH ROW EXECUTE PROCEDURE f_logs();
+            CREATE TRIGGER logs_utilizadores BEFORE INSERT OR UPDATE OR DELETE ON utilizadores FOR EACH ROW EXECUTE PROCEDURE f_logs();
+            CREATE TRIGGER logs_compras BEFORE INSERT OR UPDATE OR DELETE ON compras FOR EACH ROW EXECUTE PROCEDURE f_logs();
+            CREATE TRIGGER logs_botijas_compras BEFORE INSERT OR UPDATE OR DELETE ON botijas_compras FOR EACH ROW EXECUTE PROCEDURE f_logs();
+            CREATE TRIGGER logs_botijas_maquinas BEFORE INSERT OR UPDATE OR DELETE ON botijas_maquinas FOR EACH ROW EXECUTE PROCEDURE f_logs();
+            CREATE TRIGGER logs_carrinhos BEFORE INSERT OR UPDATE OR DELETE ON carrinhos FOR EACH ROW EXECUTE PROCEDURE f_logs();
+            CREATE TRIGGER logs_botijas_carrinhos BEFORE INSERT OR UPDATE OR DELETE ON botijas_carrinhos FOR EACH ROW EXECUTE PROCEDURE f_logs();
+            CREATE TRIGGER logs_notificacoes BEFORE INSERT OR UPDATE OR DELETE ON notificacoes FOR EACH ROW EXECUTE PROCEDURE f_logs();
             CREATE TRIGGER logs_admin_users BEFORE INSERT OR UPDATE OR DELETE ON admin_users FOR EACH ROW EXECUTE PROCEDURE f_logs();
             CREATE TRIGGER logs_admin_roles BEFORE INSERT OR UPDATE OR DELETE ON admin_roles FOR EACH ROW EXECUTE PROCEDURE f_logs();
             CREATE TRIGGER logs_admin_permissions BEFORE INSERT OR UPDATE OR DELETE ON admin_permissions FOR EACH ROW EXECUTE PROCEDURE f_logs();
@@ -61,18 +72,10 @@ class CreateTrigger extends Migration
             CREATE TRIGGER logs_admin_role_users BEFORE INSERT OR UPDATE OR DELETE ON admin_role_users FOR EACH ROW EXECUTE PROCEDURE f_logs();
             CREATE TRIGGER logs_admin_role_permissions BEFORE INSERT OR UPDATE OR DELETE ON admin_role_permissions FOR EACH ROW EXECUTE PROCEDURE f_logs();
             CREATE TRIGGER logs_admin_user_permissions BEFORE INSERT OR UPDATE OR DELETE ON admin_user_permissions FOR EACH ROW EXECUTE PROCEDURE f_logs();
-            CREATE TRIGGER logs_admin_role_menu BEFORE INSERT OR UPDATE OR DELETE ON admin_role_menu FOR EACH ROW EXECUTE PROCEDURE f_logs();
-            CREATE TRIGGER logs_admin_operation_log BEFORE INSERT OR UPDATE OR DELETE ON admin_operation_log FOR EACH ROW EXECUTE PROCEDURE f_logs();
-            CREATE TRIGGER logs_products BEFORE INSERT OR UPDATE OR DELETE ON products FOR EACH ROW EXECUTE PROCEDURE f_logs();
-            CREATE TRIGGER logs_roles BEFORE INSERT OR UPDATE OR DELETE ON roles FOR EACH ROW EXECUTE PROCEDURE f_logs();
-            CREATE TRIGGER logs_utilizadores BEFORE INSERT OR UPDATE OR DELETE ON utilizadores FOR EACH ROW EXECUTE PROCEDURE f_logs();
             CREATE TRIGGER logs_botijas BEFORE INSERT OR UPDATE OR DELETE ON botijas FOR EACH ROW EXECUTE PROCEDURE f_logs();
             CREATE TRIGGER logs_utilizadores_botijas BEFORE INSERT OR UPDATE OR DELETE ON utilizadores_botijas FOR EACH ROW EXECUTE PROCEDURE f_logs();
             CREATE TRIGGER logs_pagamentos BEFORE INSERT OR UPDATE OR DELETE ON pagamentos FOR EACH ROW EXECUTE PROCEDURE f_logs();
-            CREATE TRIGGER logs_compras BEFORE INSERT OR UPDATE OR DELETE ON compras FOR EACH ROW EXECUTE PROCEDURE f_logs();
             CREATE TRIGGER logs_maquinas BEFORE INSERT OR UPDATE OR DELETE ON maquinas FOR EACH ROW EXECUTE PROCEDURE f_logs();
-            CREATE TRIGGER logs_botijas_compras BEFORE INSERT OR UPDATE OR DELETE ON botijas_compras FOR EACH ROW EXECUTE PROCEDURE f_logs();
-            CREATE TRIGGER logs_botijas_maquinas BEFORE INSERT OR UPDATE OR DELETE ON botijas_maquinas FOR EACH ROW EXECUTE PROCEDURE f_logs();
         ');
 
         DB::unprepared('
