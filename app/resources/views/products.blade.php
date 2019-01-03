@@ -89,7 +89,7 @@
                                             <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                         </a>
 
-                                        <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        <div data-product-id="{{$botija->id}}" class="block2-btn-addcart w-size1 trans-0-4">
                                             <!-- Button -->
                                             <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
                                                 Adicionar ao Carrinho

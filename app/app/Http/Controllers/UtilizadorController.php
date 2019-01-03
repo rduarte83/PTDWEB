@@ -159,7 +159,7 @@ class UtilizadorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //regras de validação formulári
         $regras = [
@@ -180,9 +180,9 @@ class UtilizadorController extends Controller
             //'password2.max' => 'Máximo 20 caracteres na password!'
 
         ];
-
-        $utilizador = Utilizador::find($id);
         $user = Auth::user();
+        $utilizador = Utilizador::find($user->id);
+
 
         if(isset($utilizador) && $utilizador->id == $user->id){
             $request->validate($regras, $mensagens);
@@ -196,10 +196,10 @@ class UtilizadorController extends Controller
             $utilizador->localidade = $request->input('localidade');
             $utilizador->save();
 
-            return redirect('/');
+            return redirect('/perfil/info');
 
         }
-        return redirect('/registar');
+        return redirect('/perfil/info');
     }
 
     /**

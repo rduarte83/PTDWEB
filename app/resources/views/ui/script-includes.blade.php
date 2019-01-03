@@ -33,8 +33,18 @@
 <script type="text/javascript" src="{{URL::asset("vendor/sweetalert/sweetalert.min.js")}}"></script>
 <script type="text/javascript">
     $('.block2-btn-addcart').each(function(){
+
         var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
         $(this).on('click', function(){
+            var idProduct = $(this).data("product-id");
+            // TODO: Add to carrinho...
+
+            // Mandar em ajax para o servidor com o produto
+
+            // Receber resposta
+            
+            // Atualizar carrinho.
+            console.log(idProduct);
             swal(nameProduct, "foi adicionado ao carrinho!", "success");
         });
     });
