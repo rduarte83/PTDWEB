@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Utilizador;
+use Illuminate\Support\Facades\Auth;
 
 class UtilizadorController extends Controller
 {
@@ -16,16 +17,43 @@ class UtilizadorController extends Controller
 
     public function index()
     {
-
-        $utilizadores = Utilizador::all();
-        //$users = Utilizador::all();
-        $page = Utilizador::all();
-        return view('profile.info', compact('utilizadores'), compact('page'));
-        //return view('profile.info', array('utilizadores' => $utilizadores), array('page' => $page));
-        //return view('profile.info', array('users' => $users), array('page' => $page));
-
-
+        $user = Auth::user();
+        $page = "info";
+        $data = [
+            'page' => $page,
+            'user' => $user
+        ];
+        return view("profile.info")->with($data);
     }
+
+    public function profilePage($page){
+        $user = Auth::user();
+        //$page = "info";
+        $data = [
+            'page' => $page,
+            'user' => $user
+        ];
+
+        switch ($page){
+            case "favoritos":
+                return view( "profile/favourites")->with($data);
+                break;
+            case "historico":
+                return view( "profile/history")->with($data);
+                break;
+            case "perfil":
+                return view( "profile/info")->with($data);
+                break;
+            case "editar":
+                return view( "profile/edit")->with($data);
+                break;
+            default:
+                return view( "profile/info")->with($data);
+                break;
+        }
+    }
+
+
 
     /**
      * Show the form for creating a new resource.

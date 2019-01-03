@@ -42,7 +42,7 @@ class LoginController extends Controller
     {
         $request->session()->setExists(true);
         $request->session()->put("isLogged",true);
-        return view("/")->with("logged", false);
+        Auth::setUser($user);
     }
 
     /**

@@ -1,5 +1,6 @@
 
 <header class="header1 fixed-header">
+
     <!-- Header desktop -->
     <div class="container-menu-header">
       <div class="wrap_header">
@@ -36,13 +37,12 @@
             </ul>
           </nav> 
         </div>
-
         <!-- Header Icon -->
         <div class="header-icons">
 			<!-- USER DROPDOWN -->
 			<div class="header-wrapicon2">
                 <img src="{{URL("images/icons/icon-header-01.png")}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
-                @if(session()->has('isLogged'))
+                @if(Session::has('isLogged'))
                     {{ session("name") }}
                 @endif
               <div class="card-body">
@@ -59,7 +59,7 @@
                       @if(!Session::get('isLogged'))
                         @include('includes.login-cliente')
                       @else
-                          Gosto de Maracas
+                          @include('includes.logged-cliente')
                       @endif
                   </ul>
                 </div>

@@ -24,20 +24,20 @@ Route::get('/blog-detail', "HomeController@blogDetail");
 Route::get('/cart', "HomeController@cart");
 Route::get('/contact', "HomeController@contact");
 Route::get('/produto/{id}', "ProductController@product_detail");
-Route::get('/perfil', "HomeController@profile");
-Route::get('/perfil/{page}', "HomeController@profilePage");
+
+// Perfil
+Route::get('/perfil', "UtilizadorController@index")->middleware('auth');
+Route::get('/perfil/{page}', "UtilizadorController@profilePage")->middleware('auth');
 
 
 // Carrinho
 Route::get("/carrinho", "CarrinhoController@index");
 Route::get("/carrinho/{page}", "HomeController@carrinhoPage");
 
-
 // User Authentication
 Route::get('/registar', 'HomeController@register');
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
-//Route::get('/login', 'UtilizadorController@login')->name('login');
 Route::post('/register', "UtilizadorController@store");
 Route::post('/register/{id}', "UtilizadorController@update");
 Route::get('/info', 'UtilizadorController@index');
