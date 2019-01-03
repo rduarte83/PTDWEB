@@ -121,6 +121,7 @@ class UtilizadorController extends Controller
      */
     public function show($id)
     {
+        $user = Auth::user();
         $utilizador = Utilizador::find($id);
         if(isset($utilizador)){
             return view('/info', compact('utilizador'));
@@ -135,13 +136,18 @@ class UtilizadorController extends Controller
      */
     public function edit($id)
     {
-
+        $user = Auth::user();
         $utilizador = Utilizador::find($id);
-        $page = Utilizador::all();
-        if(isset($utilizador)){
-            return view('/profile/edit', compact('utilizador'), compact('page'));
+
+        if ( $utilizador->nome == $user->nome ){
+            $data = [
+                'page' => 'info',
+                'user' => $utilizador
+            ];
+            return view('/profile/edit')->with($data);
         }
-        return redirect('/registar');
+
+        return redirect('/');
     }
 
     /**

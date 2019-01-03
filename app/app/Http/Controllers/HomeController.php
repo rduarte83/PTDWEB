@@ -121,7 +121,6 @@ class HomeController extends Controller
     /**
      * Carrinho
      */
-
     public function carrinhoPage($page){
         switch ($page){
             case "detalhes":

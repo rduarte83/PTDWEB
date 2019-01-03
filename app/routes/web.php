@@ -28,6 +28,7 @@ Route::get('/produto/{id}', "ProductController@product_detail");
 // Perfil
 Route::get('/perfil', "UtilizadorController@index")->middleware('auth');
 Route::get('/perfil/{page}', "UtilizadorController@profilePage")->middleware('auth');
+Route::get('/perfil/editar/{id}', "UtilizadorController@edit")->middleware('auth');
 
 
 // Carrinho

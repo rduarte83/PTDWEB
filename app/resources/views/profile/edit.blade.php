@@ -4,7 +4,7 @@
         <div class="modal-body row">
             <form class="col-md-2">
             </form>
-            <form class="col-md-6" action="/register/{{$utilizador->id}}" method="POST">
+            <form class="col-md-6" action="/register/{{$user->id}}" method="POST">
                 <!-- Token -->
                 @csrf
                 <h2>Editar Perfil</h2>
@@ -12,7 +12,7 @@
                 Nome
                 <div class="form-group bo4">
                     <label class="sr-only" for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" class="form-control {{$errors->has('nome') ? 'is-invalid' : ''}}" placeholder="Nome" value="{{$utilizador->nome}}">
+                    <input type="text" name="nome" id="nome" class="form-control {{$errors->has('nome') ? 'is-invalid' : ''}}" placeholder="Nome" value="{{$user->nome}}">
                     @if($errors->has('nome'))
                         <div class="invalid-feedback">
                             {{$errors->first('nome')}}
@@ -23,7 +23,7 @@
                 Email
                 <div class="form-group bo4">
                     <label class="sr-only" for="email">Email Cliente</label>
-                    <input type="email" name="email" id="email" class="form-control {{$errors->has('email') ? 'is-invalid' : ''}}" placeholder="E-mail" value="{{$utilizador->email}}">
+                    <input type="email" name="email" id="email" class="form-control {{$errors->has('email') ? 'is-invalid' : ''}}" placeholder="E-mail" value="{{$user->email}}">
                     <small id="emailHelp" class="form-text text-muted"></small>
                     @if($errors->has('email'))
                         <div class="invalid-feedback">
@@ -58,7 +58,7 @@
                 <div class="form-group bo4">
                     <label class="sr-only" for="nif">Número de Contribuinte</label>
                     <input type="number" name="nif" id="nif" class="form-control {{$errors->has('nif') ? 'is-invalid' : ''}}"
-                           placeholder="Número de Contribuinte" value="{{$utilizador->nif}}">
+                           placeholder="Número de Contribuinte" value="{{$user->nif}}">
                     @if($errors->has('nif'))
                         <div class="invalid-feedback">
                             {{$errors->first('nif')}}
@@ -69,7 +69,7 @@
                 Morada
                 <div class="form-group bo4">
                     <label class="sr-only" for="morada">Morada</label>
-                    <input type="text" name="morada" id="passar_mouse_morada" class="form-control {{$errors->has('morada') ? 'is-invalid' : ''}}" placeholder="Morada" value="{{$utilizador->morada}}">
+                    <input type="text" name="morada" id="passar_mouse_morada" class="form-control {{$errors->has('morada') ? 'is-invalid' : ''}}" placeholder="Morada" value="{{$user->morada}}">
                     @if($errors->has('morada'))
                         <div class="invalid-feedback">
                             {{$errors->first('morada')}}
@@ -81,7 +81,7 @@
                 Código Postal
                 <div class="form-group bo4">
                     <label class="sr-only" for="codigo_postal">Código Postal</label>
-                    <input type="text" name="codigo_postal" id="passar_mouse_cod_postal" class="form-control {{$errors->has('codigo_postal') ? 'is-invalid' : ''}}" placeholder="Código Postal" value="{{$utilizador->codigo_postal}}">
+                    <input type="text" name="codigo_postal" id="passar_mouse_cod_postal" class="form-control {{$errors->has('codigo_postal') ? 'is-invalid' : ''}}" placeholder="Código Postal" value="{{$user->codigo_postal}}">
                     @if($errors->has('codigo_postal'))
                         <div class="invalid-feedback">
                             {{$errors->first('codigo_postal')}}
@@ -94,7 +94,7 @@
                 Localidade
                 <div class="form-group bo4">
                     <label class="sr-only" for="localidade">Localidade</label>
-                    <input type="text" name="localidade" id="passar_mouse_localidade" class="form-control {{$errors->has('localidade') ? 'is-invalid' : ''}}" placeholder="Localidade" value="{{$utilizador->localidade}}">
+                    <input type="text" name="localidade" id="passar_mouse_localidade" class="form-control {{$errors->has('localidade') ? 'is-invalid' : ''}}" placeholder="Localidade" value="{{$user->localidade}}">
                     @if($errors->has('localidade'))
                         <div class="invalid-feedback">
                             {{$errors->first('localidade')}}
