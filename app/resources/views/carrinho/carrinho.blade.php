@@ -4,11 +4,6 @@
 @endsection
 @section("content-carrinho")
     <div class="container col-md-12 offset-md-2 shadow-lg p-3 mb-5 bg-white rounded">
-        <!--<div class="card-header">
-        <div class="card title text-lg-center">
-            <h2>Lista Carrinho</h2>
-        </div>
-        </div>-->
         <div class="card-body">
             <div class="container-table-cart pos-relative">
                 <div class="wrap-table-shopping-cart bgwhite">
@@ -16,37 +11,40 @@
                         <tbody>
                         <tr class="table-head">
                             <th class="column-1"></th>
-                            <th class="column-2"><span style="vertical-align: inherit;">produtos</span></th>
+                            <th class="column-2"><span style="vertical-align: inherit;">Produtos</span></th>
                             <th class="column-3"><span style="vertical-align: inherit;">Preço</span></th>
                             <th class="column-3"><span style="vertical-align: inherit;">Quantidade</span></th>
                             <th class="column-5"><span style="vertical-align: inherit;">Total</span></th>
                         </tr>
+                        <?php $botijasCarrinhos = \App\BotijaCarrinho::all()->where('carrinhosid',$carrinho->id);?>
+                        @foreach ($botijasCarrinhos as $botijasCarrinho)
+                            <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);?>
+                            @foreach ($botijas as $botija)
+                                <tr class="table-row">
+                                    <td class="column-1">
+                                        <div class="cart-img-product b-rad-4 o-f-hidden">
+                                            <img src="{{URL::asset($botija->imagem)}}" alt="IMG-PRODUCT">
+                                        </div>
+                                    </td>
+                                    <td class="column-2"><span style="vertical-align: inherit;">{{$botija->marca}} - {{$botija->nome}}</span></td>
+                                    <td class="column-3"><span style="vertical-align: inherit;">{{$botija->preco}} €</span></td>
+                                    <td class="column-3"><span style="vertical-align: inherit;"></span></th>
+                                        <div class="flex-w bo5 of-hidden w-size17">
+                                            <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
+                                                <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
+                                            </button>
 
+                                            <input class="size8 m-text18 t-center num-product" type="number" name="num-product1" value="{{$botijasCarrinho->quantidade}}">
 
-                        <tr class="table-row">
-                            <td class="column-1">
-                                <div class="cart-img-product b-rad-4 o-f-hidden">
-                                    <img src="{{URL::asset("images/garrafas/butano-13kg.png")}}" alt="IMG-PRODUCT">
-                                </div>
-                            </td>
-                            <td class="column-2"><span style="vertical-align: inherit;">Botija de gás Propano - GALP</span></td>
-                            <td class="column-3"><span style="vertical-align: inherit;">19,00€</span></td>
-                            <td class="column-3"><span style="vertical-align: inherit;"></span></th>
-                                <div class="flex-w bo5 of-hidden w-size17">
-                                    <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
-                                        <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
-                                    </button>
-
-                                    <input class="size8 m-text18 t-center num-product" type="number" name="num-product1" value="1">
-
-                                    <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
-                                        <i class="fs-12 fa fa-plus" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                            </td>
-                            <td class="column-5"><span style="vertical-align: inherit;">36,00€</span></td>
-                        </tr>
-
+                                            <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
+                                                <i class="fs-12 fa fa-plus" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="column-5"><span style="vertical-align: inherit;">{{ number_format($botija->preco * $botijasCarrinho->quantidade, 2)}} €</span></td>
+                                </tr>
+                            @endforeach
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

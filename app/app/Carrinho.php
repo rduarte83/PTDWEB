@@ -10,14 +10,10 @@ class Carrinho extends Model
     public $qtd = 0;
     public $total = 0;
 
-    public function __construct($oldCart)
-    {
-        if ($oldCart) {
-            $this->items = $oldCart->items;
-            $this->qtd = $oldCart->qtd;
-            $this->total = $oldCart->total;
-        }
-    }
+    protected $fillable = [
+        'id',
+        'utilizador',
+    ];
 
     public function add ($item, $id) {
         $storedItem = ['qtd' => 0, 'preco' => $item->preco, 'item' => $item];
@@ -31,9 +27,5 @@ class Carrinho extends Model
         $this->items[$id] = $storedItem;
         $this->total++;
         $this->total += $item->preco;
-    }
-
-    public static function all() : String {
-        return "Coisas do carrinho";
     }
 }

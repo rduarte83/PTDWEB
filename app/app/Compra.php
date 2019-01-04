@@ -17,6 +17,4 @@ class Compra extends Model
         'local_recolha',
         'data_recolha'
     ];
-
-    protected $table = 'compras';
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Carrinho;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -98,42 +99,29 @@ class HomeController extends Controller
         return view( "profile/info")->with("page", "perfil");
     }
 
-    public function profilePage($page){
-        switch ($page){
-            case "favoritos":
-                return view( "profile/favourites")->with("page", "favoritos");
-                break;
-            case "historico":
-                return view( "profile/history")->with("page", "historico");
-                break;
-            case "perfil":
-                return view( "profile/info")->with("page", "perfil");
-                break;
-            case "editar":
-                return view( "profile/edit")->with("page", "editar");
-                break;
-            default:
-                return view( "profile/info")->with("page", "perfil");
-                break;
-        }
-    }
-
     /**
      * Carrinho
      */
     public function carrinhoPage($page){
+        $user = 1;//ESTATICO REMOVER!!!!!!
+        $data["carrinho"] = Carrinho::all()->where('utilizador', $user)->first();
+
         switch ($page){
-        case "detalhes":
-                return view( "carrinho/detalhes")->with("page", "detalhes");
+            case "detalhes":
+                $data["page"]="detalhes";
+                return view( "carrinho/detalhes")->with($data);
                 break;
             case "resumo":
-                return view( "carrinho/resumo")->with("page", "resumo");
+                $data["page"]="resumo";
+                return view( "carrinho/resumo")->with($data);
                 break;
             case "final":
-                return view( "carrinho/final")->with("page", "final");
+                $data["page"]="final";
+                return view( "carrinho/final")->with($data);
                 break;
             default:
-                return view( "carrinho/carrinho")->with("page", "carrinho");
+                $data["page"]="carrinho";
+                return view( "carrinho")->with($data);
                 break;
         }
     }

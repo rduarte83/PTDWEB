@@ -21,6 +21,9 @@ class CarrinhoController extends Controller
             'page' => 'carrinho'
             //'objetosCarrinho' => $carrinho
         ];
+
+        $user = 1;//ESTATICO REMOVER!!!!!!
+        $data["carrinho"] = Carrinho::all()->where('utilizador', $user)->first();
         return view( "carrinho/carrinho")-> with($data);
     }
 

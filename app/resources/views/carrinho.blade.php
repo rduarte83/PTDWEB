@@ -14,8 +14,8 @@
                     <nav class="menu">
                         <ul class="main_menu">
                             <li>
-                                <a href="{{URL("carrinho/carrinho")}}"
-                                @if($page ==  "carrinho/carrinho")
+                                <a href="{{URL("carrinho")}}"
+                                @if($page ==  "carrinho")
                                     class="font-weight-bold"
                                 @endif
                                 >Carrinho
