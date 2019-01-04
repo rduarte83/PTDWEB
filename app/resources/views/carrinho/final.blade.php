@@ -5,7 +5,7 @@
 @section("content-carrinho")
 
     <div class="container col-md-12 offset-md-2 shadow-lg p-3 mb-5 bg-white rounded">
-        <form method="post" action="{{URL}}">
+        <form method="post" action="{{URL("carrinho/final")}}">
         <div class="card-body">
             <div class="card">
                 <blockquote class="blockquote mb-0">
@@ -30,17 +30,17 @@
                                         <div class="container row">
                                             <div class="col-lg-8 col-md-8">
                                                 <div class=form-check">
-                                                    <input class="form-check-input" type="radio" name="recolha" id="simrecolha" value="simRecolha">
+                                                    <input class="form-check-input" type="radio" name="recolha" id="simrecolha" value="1">
                                                     <label class="form-check-label" style="font-size: medium;" for="simrecolha">Sim (Escolha na lista ao lado)</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="recolha" id="naorecolha" value="naoRecolha">
+                                                    <input class="form-check-input" type="radio" name="recolha" id="naorecolha" value="0">
                                                     <label class="form-check-label" style="font-size: medium;" for="naorecolha">Não (Pode levantar em qualquer ponto de recolha)</label>
                                                 </div>
                                             </div>
                                             <div class="col-lg-4 col-md-4 form-group" style="margin-top: -2px">
                                                 <label for="sel1" style="font-size: medium;">Lista de pontos de recolha:</label>
-                                                <select class="form-control" id="sel1">
+                                                <select class="form-control" id="sel1" name="local">
                                                     <option>Aveiro</option>
                                                     <option>Guarda</option>
                                                     <option>Vila Nova de Gaia</option>
@@ -84,9 +84,10 @@
                 </div>
                 <div class="w-size25">
                     <!-- Button -->
-                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" type="submit">
+                    @csrf
+                    <button class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" type="submit">
                         Submeter
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>

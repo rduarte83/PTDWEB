@@ -18,7 +18,7 @@ class CreateBotijasComprasTable extends Migration
             $table->unsignedInteger('comprasid');
             $table->decimal('preco_compra');
             $table->integer('quantidade');
-            $table->boolean('tem_tara');
+            $table->boolean('qtd_tara')->default(0);
             $table->primary(['botijasid','comprasid']);
             $table->foreign('botijasid')->references('id')->on('botijas');
             $table->foreign('comprasid')->references('id')->on('compras');

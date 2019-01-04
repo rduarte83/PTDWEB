@@ -47,9 +47,15 @@ class CarrinhoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function final(Request $request)
     {
+        $user = Auth::user();
+        $recolha = Compra::all()->where('utilizador' , $user->id)->last();
 
+        if ($request->input('recolha') == 1) Compra::where('id', $recolha->id)->update(['local_recolha' => $request->input('local')]);
+            //else Compra::where('id', $recolha->id)->update(['local_recolha' => ""]);
+
+        return redirect('/perfil/historico');
     }
 
     /**

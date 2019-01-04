@@ -33,16 +33,16 @@ class Inserts extends Migration
             INSERT INTO compras (id, utilizador, data, valor, meio_pagamento, qr, pin, local_recolha,data_recolha) VALUES (DEFAULT, 1, '2019-01-03 20:58:12', 800.00, 1, 'images/qrcodes/qrcode.png', 11111111, 'Aveiro', '2019-01-03 20:58:47');
             INSERT INTO compras (id, utilizador, data, valor, meio_pagamento, qr, pin, local_recolha,data_recolha) VALUES (DEFAULT, 2, '2019-01-03 20:58:12', 1000.00, 1, '1', 1, 'Aveiro', '2019-01-03 20:58:47');
             
-            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade, tem_tara) VALUES (1, 1, 200.00, 2, false);
-            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade, tem_tara) VALUES (2, 1, 150.00, 1, false);
-            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade, tem_tara) VALUES (1, 2, 150.00, 3, true);
-            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade, tem_tara) VALUES (2, 2, 100.00, 2, true);
-            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade, tem_tara) VALUES (1, 3, 500.00, 1, false);
+            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (1, 1, 200.00, 2);
+            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (2, 1, 150.00, 1);
+            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (1, 2, 150.00, 3);
+            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (2, 2, 100.00, 2);
+            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (1, 3, 500.00, 1);
             
             INSERT INTO carrinhos VALUES (DEFAULT,1);
             
-            INSERT INTO botijas_carrinhos VALUES (1, 1, 1, true );
-            INSERT INTO botijas_carrinhos VALUES (2, 1, 4, true );
+            INSERT INTO botijas_carrinhos VALUES (1, 1, 1);
+            INSERT INTO botijas_carrinhos VALUES (2, 1, 4);
         ");
     }
 
