@@ -34,7 +34,7 @@ class CarrinhoController extends Controller
      */
     public function create()
     {
-
+        
     }
 
     /**

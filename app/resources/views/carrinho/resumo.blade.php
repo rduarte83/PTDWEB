@@ -21,7 +21,7 @@
                             <th scope="col">Quantidade</th>
                             <th scope="col">Marca</th>
                             <th scope="col">Tipo</th>
-                            <th scope="col">Qt. Vasilhame</th>
+                            <th scope="col">Qtd. Vasilhame</th>
                             <th scope="col">Preço Vasilhame</th>
                             <th scope="col">Preço s/IVA</th>
                             <th scope="col">Preço c/IVA</th>
