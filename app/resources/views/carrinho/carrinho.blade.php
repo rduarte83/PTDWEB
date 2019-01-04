@@ -16,9 +16,22 @@
                             <th class="column-3"><span style="vertical-align: inherit;">Quantidade</span></th>
                             <th class="column-5"><span style="vertical-align: inherit;">Total</span></th>
                         </tr>
-                        <?php $botijasCarrinhos = \App\BotijaCarrinho::all()->where('carrinhosid',$carrinho->id);?>
+                        <?php
+                        use Illuminate\Support\Facades\Auth;
+                            if(Auth::check()){
+                                 $botijasCarrinhos = \App\BotijaCarrinho::all()->where('carrinhosid',$carrinho->id);
+                            }else{
+                                $botijasCarrinhos = $carrinho;
+                            }
+                        ?>
+
                         @foreach ($botijasCarrinhos as $botijasCarrinho)
-                            <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);?>
+                            <?php
+                            if(Auth::check())
+                                $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);
+                            else
+                                $botijas = \App\Product::all()->where('id',$botijasCarrinho["botijasid"]);
+                            ?>
                             @foreach ($botijas as $botija)
                                 <tr class="table-row">
                                     <td class="column-1">
@@ -34,14 +47,24 @@
                                                 <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
                                             </button>
 
-                                            <input data-product-id="{{$botija->id}}" class="size8 m-text18 t-center num-product" type="number" name="num-product1" value="{{$botijasCarrinho->quantidade}}">
+                                            <?php if(Auth::check()): ?>
+                                                <input data-product-id="{{$botija->id}}" class="size8 m-text18 t-center num-product" type="number" name="num-product1" value="{{ $botijasCarrinho->quantidade }}" />
+                                            <?php else: ?>
+                                                <input data-product-id="{{$botija->id}}" class="size8 m-text18 t-center num-product" type="number" name="num-product1" value="{{ $botijasCarrinho["quantidade"] }}" />
+                                            <?php endif; ?>
 
                                             <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
                                                 <i class="fs-12 fa fa-plus" aria-hidden="true"></i>
                                             </button>
                                         </div>
                                     </td>
-                                    <td class="column-5"><span style="vertical-align: inherit;" data-product-id-total="{{$botija->id}}" data-preco="{{$botija->preco}}">{{ number_format($botija->preco * $botijasCarrinho->quantidade, 2)}} €</span></td>
+
+                                    <?php if(Auth::check()): ?>
+                                        <td class="column-5"><span style="vertical-align: inherit;" data-product-id-total="{{$botija->id}}" data-preco="{{$botija->preco}}">{{ number_format($botija->preco * $botijasCarrinho->quantidade, 2)}} €</span></td>
+                                    <?php else: ?>
+                                        <td class="column-5"><span style="vertical-align: inherit;" data-product-id-total="{{$botija->id}}" data-preco="{{$botija->preco}}">{{ number_format($botija->preco * $botijasCarrinho["quantidade"], 2)}} €</span></td>
+                                    <?php endif; ?>
+
                                 </tr>
                             @endforeach
                         @endforeach

@@ -32,8 +32,7 @@ class CarrinhoController extends Controller
             //'objetosCarrinho' => $carrinho
         ];
         if ( !Auth::check() ){
-            // TODO: contruir com sessões um carrinho :D
-            $data["carrinho"];
+            $data["carrinho"]=Session::get("carrinho");
         }else{
             $user = Auth::user();
             $data["carrinho"] = Carrinho::all()->where('utilizador', $user->id)->first();
@@ -72,14 +71,14 @@ class CarrinhoController extends Controller
 
             $alterado = false;
             foreach ($carrinho as $key=>$atual){
-                if($atual["productID"] == $productID) {
+                if($atual["botijasid"] == $productID) {
                     $carrinho[$key]["quantidade"]+=1;
                     $alterado = true;
                     break;
                 }
             }
 
-            if(!$alterado) array_push($carrinho, array('productID' => $productID, "quantidade" =>$quantidade) );
+            if(!$alterado) array_push($carrinho, array('botijasid' => $productID, "quantidade" =>$quantidade) );
 
 
             Session::put("carrinho", $carrinho);
@@ -162,11 +161,21 @@ class CarrinhoController extends Controller
         $quantidade = $request->input("quantidade");
 
         if ( !Auth::check() ){
+            $carrinho = Session::get("carrinho");
+            foreach ($carrinho as $key=>$atual){
+                if($atual["botijasid"] == $productID) {
+                    $carrinho[$key]["quantidade"]= $quantidade ;
+                    break;
+                }
+            }
+            Session::put("carrinho", $carrinho);
+            $this->response["carrinho"]=$carrinho;
 
+            return Response::json($this->response);
         }
         $user = Auth::user();
         $carrinho = Carrinho::all()->where("utilizador", $user->id )->first();
-        
+
         $matchThese = ['botijasid' => intval($productID), 'carrinhosid' =>  $carrinho->id];
         BotijaCarrinho::where($matchThese)
             ->update(['quantidade' => $quantidade]);

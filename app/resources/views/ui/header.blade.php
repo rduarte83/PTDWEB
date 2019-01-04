@@ -72,49 +72,7 @@
           <div class="header-wrapicon2">
             <img src="{{URL::asset("images/icons/icon-header-02.png")}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
             <span class="header-icons-noti">1</span>
-
-            <!-- Header cart noti -->
-            <div class="header-cart header-dropdown">
-              <ul class="header-cart-wrapitem">
-
-                <!-- Card Item Example-->
-
-                <li class="header-cart-item">
-                  <div class="header-cart-item-img">
-                    <img src="{{URL::asset("images/garrafas/butano-13kg.png")}}" alt="IMG">
-                  </div>
-                  <div class="header-cart-item-txt">
-                    <a href="#" class="header-cart-item-name">
-                      Botija de gás Propano - GALP
-                    </a>
-
-                    <span class="header-cart-item-info">
-                      1 x 19.00€
-                    </span>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="header-cart-total">
-                Total: 500€
-              </div>
-
-              <div class="header-cart-buttons">
-                <div class="header-cart-wrapbtn">
-                  <!-- Button -->
-                  <a href="{{URL("carrinho")}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                      Carrinho
-                  </a>
-                </div>
-
-                <div class="header-cart-wrapbtn">
-                  <!-- Button -->
-                  <a href="{{URL("carrinho/resumo")}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                    Checkout
-                  </a>
-                </div>
-              </div>
-            </div>
+              @include("carrinho.carrinho-header")
           </div>
         </div>
       </div>
