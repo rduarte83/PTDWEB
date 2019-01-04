@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Carrinho;
+use App\Compra;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -116,6 +117,7 @@ class HomeController extends Controller
                 return view( "carrinho/resumo")->with($data);
                 break;
             case "final":
+                $data["compra"] = Compra::all()->where('utilizador', $user)->last();
                 $data["page"]="final";
                 return view( "carrinho/final")->with($data);
                 break;

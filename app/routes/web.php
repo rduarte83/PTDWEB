@@ -1,5 +1,4 @@
 <?php
-
 // Template Routes
 Route::get('/template/', "HomeController@indexTemplate");
 Route::get('/template/index', "HomeController@indexTemplate");
@@ -36,6 +35,7 @@ Route::get("/carrinho", "CarrinhoController@index");
 Route::post("/carrinho/add", "CarrinhoController@store");
 Route::post("/carrinho/destroy", "CarrinhoController@destroy");
 Route::get("/carrinho/{page}", "HomeController@carrinhoPage");
+Route::post('/carrinho/final', 'CarrinhoController@final')->middleware('auth');
 
 // User Authentication
 Route::get('/registar', 'HomeController@register');

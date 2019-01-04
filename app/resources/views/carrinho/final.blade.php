@@ -5,11 +5,7 @@
 @section("content-carrinho")
 
     <div class="container col-md-12 offset-md-2 shadow-lg p-3 mb-5 bg-white rounded">
-        <!-- <div class="card-header">
-             <div class="card title text-lg-center">
-                 <h2>Detalhes de compra</h2>
-             </div>
-         </div>-->
+        <form method="post" action="{{URL}}">
         <div class="card-body">
             <div class="card">
                 <blockquote class="blockquote mb-0">
@@ -61,7 +57,7 @@
                                 <div class="card">
                                     <div class="card-body text-center">
                                         <h5 class="card-title">QR code</h5>
-                                        <img src="{{URL::asset("images/qrcodes/qrcode.png")}}" alt="Código de barras">
+                                        <img src="{{URL::asset($compra->qr)}}" alt="Código de barras">
                                     </div>
                                     <div class="card-footer text-center">
                                         <a href="#" class="card-link">Imprimir</a>  |<a href="#" class="card-link">Guardar</a>
@@ -70,7 +66,7 @@
                                 <div class="card m-t-10">
                                     <div class="card-body text-center">
                                         <h5 class="card-title">Código Numérico</h5>
-                                        <p class="card-text">1234567890</p>
+                                        <p class="card-text">{{$compra->pin}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -88,13 +84,13 @@
                 </div>
                 <div class="w-size25">
                     <!-- Button -->
-                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="#">
+                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" type="submit">
                         Submeter
                     </a>
                 </div>
             </div>
         </div>
-
+        </form>
     </div>
 
 @endsection

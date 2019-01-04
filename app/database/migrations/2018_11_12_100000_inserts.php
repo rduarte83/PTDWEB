@@ -29,8 +29,8 @@ class Inserts extends Migration
             INSERT INTO utilizadores_botijas(utilizadoresid, botijasid, favorito) VALUES (1, 2, true);
             INSERT INTO utilizadores_botijas(utilizadoresid, botijasid, favorito) VALUES (2, 1, true);
             
-            INSERT INTO compras (id, utilizador, data, valor, meio_pagamento, qr, pin, local_recolha, data_recolha) VALUES (DEFAULT, 1, '2019-01-03 20:58:12', 1000.00, 1, '1', 1, 'Aveiro', '2019-01-03 20:58:47');
-            INSERT INTO compras (id, utilizador, data, valor, meio_pagamento, qr, pin, local_recolha,data_recolha) VALUES (DEFAULT, 1, '2019-01-03 20:58:12', 800.00, 1, '1', 1, 'Aveiro', '2019-01-03 20:58:47');
+            INSERT INTO compras (id, utilizador, data, valor, meio_pagamento, qr, pin, local_recolha, data_recolha) VALUES (DEFAULT, 1, '2019-01-03 20:58:12', 1000.00, 1, 'images/qrcodes/qrcode.png', 00000000, 'Aveiro', '2019-01-03 20:58:47');
+            INSERT INTO compras (id, utilizador, data, valor, meio_pagamento, qr, pin, local_recolha,data_recolha) VALUES (DEFAULT, 1, '2019-01-03 20:58:12', 800.00, 1, 'images/qrcodes/qrcode.png', 11111111, 'Aveiro', '2019-01-03 20:58:47');
             INSERT INTO compras (id, utilizador, data, valor, meio_pagamento, qr, pin, local_recolha,data_recolha) VALUES (DEFAULT, 2, '2019-01-03 20:58:12', 1000.00, 1, '1', 1, 'Aveiro', '2019-01-03 20:58:47');
             
             INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade, tem_tara) VALUES (1, 1, 200.00, 2, false);
