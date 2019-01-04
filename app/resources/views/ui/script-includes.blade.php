@@ -15,6 +15,7 @@
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{URL::asset("vendor/select2/select2.min.js")}}"></script>
 <script type="text/javascript">
+    var urlUpdate = "{{URL("carrinho/update")}}";
     $(".selection-1").select2({
         minimumResultsForSearch: 20,
         dropdownParent: $('#dropDownSelect1')
@@ -34,6 +35,7 @@
 <script type="text/javascript" src="{{URL::asset("js/carrinho.js")}}"></script>
 
 <script type="text/javascript">
+
     $('.block2-btn-addcart').each(function(){
 
         var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();

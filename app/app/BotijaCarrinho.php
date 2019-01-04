@@ -7,10 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class BotijaCarrinho extends Model
 {
     protected $fillable = [
-        'botijaid',
-        'carrinhoid',
-        'quantidade'
+        'botijasid',
+        'carrinhosid',
+        'quantidade',
+        'tem_tara'
     ];
+
+    protected $primaryKey = "botijasid";
 
     protected $table = "botijas_carrinhos";
 }

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\BotijaCarrinho;
 use App\Carrinho;
+use App\Compra;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
@@ -29,9 +31,14 @@ class CarrinhoController extends Controller
             'page' => 'carrinho'
             //'objetosCarrinho' => $carrinho
         ];
+        if ( !Auth::check() ){
+            // TODO: contruir com sessões um carrinho :D
+            $data["carrinho"];
+        }else{
+            $user = Auth::user();
+            $data["carrinho"] = Carrinho::all()->where('utilizador', $user->id)->first();
+        }
 
-        $user = 1;//ESTATICO REMOVER!!!!!!
-        $data["carrinho"] = Carrinho::all()->where('utilizador', $user)->first();
         return view( "carrinho/carrinho")-> with($data);
     }
 
@@ -42,7 +49,7 @@ class CarrinhoController extends Controller
      */
     public function create()
     {
-        
+
     }
 
     /**
@@ -53,14 +60,16 @@ class CarrinhoController extends Controller
      */
     public function store(Request $request)
     {
+        $productID = $request->input("productID");
+        $quantidade = $request->input("quantidade");
+
         if(!Auth::check()) {
             // Work with sessions
             $carrinho = [];
             if (Session::has("carrinho")){
                 $carrinho = Session::get("carrinho");
             }
-            $productID = $request->input("productID");
-            $quantidade = $request->input("quantidade");
+
             $alterado = false;
             foreach ($carrinho as $key=>$atual){
                 if($atual["productID"] == $productID) {
@@ -80,31 +89,40 @@ class CarrinhoController extends Controller
 
         $user = Auth::user();
 
+        $carrinho = Carrinho::all()->where("utilizador", $user->id )->first();
 
+        if($carrinho == null)
+        {
+            $carrinho = new Carrinho();
+            $carrinho->utilizador = $user->id;
+            $carrinho->save();
+        }
 
-       /* $regras = [
+        $regras = [
             'productID' => "required",
+            'quantidade' => "required",
         ];
         $mensagens = [
             'required' => 'O Campo ":attribute" é de preenchimento obrigatório!',
-        ];*/
+        ];
 
-        /*$request->validate($regras, $mensagens);
+        $request->validate($regras, $mensagens);
 
-        $reg = new Carrinho();
-        $reg->nome = $request->input('nome');
-        $reg->email = $request->input('email');
-        $reg->password = $request->input('password1');
-        $reg->save();
+        $matchThese = ['botijasid' => intval($productID), 'carrinhosid' =>  $carrinho->id];
+        $botijaCarrinho = BotijaCarrinho::where($matchThese)->first();
 
+        if ( $botijaCarrinho == null  ){
+            $botijaCarrinho = new BotijaCarrinho();
+            $botijaCarrinho->botijasid = intval($productID);
+            $botijaCarrinho->carrinhosid = $carrinho->id;
+            $botijaCarrinho->quantidade =  intval($quantidade);
+            $botijaCarrinho->tem_tara =  false;
+            $botijaCarrinho->save();
+        }else {
+            BotijaCarrinho::where($matchThese)
+                ->update(['quantidade' => $botijaCarrinho->quantidade+1]);
+        }
 
-        if ($model->create($request->all())) {
-            $request->session()->flash('success', 'Sucesso!');
-
-            //return redirect()->route('route.infoTeste');
-            //->route('profile.info');
-            return redirect('/info');
-        }*/
         return Response::json($this->response);  // <<<<<<<<< see this line
 
     }
@@ -138,9 +156,23 @@ class CarrinhoController extends Controller
      * @param  \App\Carrinho  $carrinho
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Carrinho $carrinho)
+    public function update(Request $request)
     {
+        $productID = $request->input("productID");
+        $quantidade = $request->input("quantidade");
 
+        if ( !Auth::check() ){
+
+        }
+        $user = Auth::user();
+        $carrinho = Carrinho::all()->where("utilizador", $user->id )->first();
+        
+        $matchThese = ['botijasid' => intval($productID), 'carrinhosid' =>  $carrinho->id];
+        BotijaCarrinho::where($matchThese)
+            ->update(['quantidade' => $quantidade]);
+
+        $this->response["message"] = "Produto atualizado.";
+        return Response::json($this->response);
     }
 
     /**
