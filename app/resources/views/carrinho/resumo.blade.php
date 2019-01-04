@@ -22,7 +22,6 @@
                             <th scope="col">Marca</th>
                             <th scope="col">Tipo</th>
                             <th scope="col">Qtd. Vasilhame</th>
-                            <th scope="col">Preço Vasilhame</th>
                             <th scope="col">Preço s/IVA</th>
                             <th scope="col">Preço c/IVA</th>
 
@@ -33,16 +32,11 @@
                         @foreach ($botijasCarrinhos as $botijasCarrinho)
                             <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);?>
                             @foreach ($botijas as $botija)
-                                <?php
-                                    $taraQtd = 0;
-                                    if ($botijasCarrinho->tem_tara == 'true') $taraQtd++;
-                                ?>
                                 <tr>
                                     <th scope="row">{{$botijasCarrinho->quantidade}}</th>
                                     <td>{{$botija->marca}}</td>
                                     <td>{{$botija->tipo}}</td>
-                                    <td>{{$taraQtd*$botijasCarrinho->quantidade}}</td>
-                                    <td>{{$botija->preco_tara}} €</td>
+                                    <td>{{$botijasCarrinho->qtd_tara}}</td>
                                     <td>{{number_format($botija->preco/1.23, 2)}} €</td>
                                     <td>{{number_format($botija->preco, 2)}} €</td>
                                 </tr>
@@ -60,19 +54,11 @@
                                     <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);?>
                                     @foreach ($botijas as $botija)
                                         <p class="text-left m-l-10">+</p>
-                                            <p class="text-left m-l-10">+</p>
                                     @endforeach
                                 @endforeach
                             </div>
                             <div class="col-lg-6">
                                 <?php $total = 0; ?>
-                                @foreach ($botijasCarrinhos as $botijasCarrinho)
-                                    <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);?>
-                                    @foreach ($botijas as $botija)
-                                            <?php $total += $botijasCarrinho->quantidade * $botija->preco_tara;?>
-                                            <p class="text-right m-r-10">{{$botijasCarrinho->quantidade * $botija->preco_tara}} €</p>
-                                    @endforeach
-                                @endforeach
                                 @foreach ($botijasCarrinhos as $botijasCarrinho)
                                     <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);?>
                                     @foreach ($botijas as $botija)

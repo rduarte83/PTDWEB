@@ -17,7 +17,7 @@ class CreateBotijasCarrinhosTable extends Migration
             $table->unsignedInteger('botijasid');
             $table->unsignedInteger('carrinhosid');
             $table->integer('quantidade');
-            $table->boolean('tem_tara')->default(false);
+            $table->integer('qtd_tara')->default(0);
             $table->primary(['botijasid','carrinhosid']);
             $table->foreign('botijasid')->references('id')->on('botijas');
             $table->foreign('carrinhosid')->references('id')->on('carrinhos');
