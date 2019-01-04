@@ -7,9 +7,12 @@
 
             <!-- Card Item Example-->
             <?php
-                $numItems = 0;
-                $precoFinal = 0;
-                use Illuminate\Support\Facades\Auth;
+            use Illuminate\Support\Facades\Auth;
+            $numItems = 0;
+            $precoFinal = 0;
+            if (Session::has("carrinho") ||  Auth::check()):
+
+
                 if(Auth::check()){
                     $carrinho = \App\Carrinho::all()->where("utilizador", Auth::user()->id)->first();
                     $botijasCarrinhos = \App\BotijaCarrinho::all()->where('carrinhosid',$carrinho->id);
@@ -54,6 +57,7 @@
                 </li>
                 @endforeach
             @endforeach
+            <?php endif; ?>
 
 
         </ul>
