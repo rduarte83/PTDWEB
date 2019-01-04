@@ -69,9 +69,7 @@
 			<!-- END USER DROPDOWN -->
           <span class="linedivide1"></span>
 
-          <div class="header-wrapicon2">
-            <img src="{{URL::asset("images/icons/icon-header-02.png")}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
-            <span class="header-icons-noti">1</span>
+
               @include("carrinho.carrinho-header")
           </div>
         </div>
