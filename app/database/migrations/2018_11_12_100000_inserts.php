@@ -38,6 +38,11 @@ class Inserts extends Migration
             INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade, tem_tara) VALUES (1, 2, 150.00, 3, true);
             INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade, tem_tara) VALUES (2, 2, 100.00, 2, true);
             INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade, tem_tara) VALUES (1, 3, 500.00, 1, false);
+            
+            INSERT INTO carrinhos VALUES (DEFAULT,1);
+            
+            INSERT INTO botijas_carrinhos VALUES (1, 1, 1, true );
+            INSERT INTO botijas_carrinhos VALUES (2, 1, 4, true );
         ");
     }
 

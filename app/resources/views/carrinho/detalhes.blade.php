@@ -16,15 +16,15 @@
                     <div class="container">
                         <div class="row">
                             <div class="form-check form-check-inline">
-                                <input class="" type="radio" name="metodoPagaemento" id="paypal" value="paypal">
+                                <input class="" type="radio" name="metodoPagamento" id="paypal" value="paypal">
                                 <label class="form-check-label" style="font-size: medium;" for="paypal">Paypal</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="" type="radio" name="metodoPagaemento" id="mbway" value="mbway">
+                                <input class="" type="radio" name="metodoPagamento" id="mbway" value="mbway">
                                 <label class="form-check-label" style="font-size: medium;" for="mbway">MBWay</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="" type="radio" name="metodoPagaemento" id="cartprepago" value="cartaoprepago">
+                                <input class="" type="radio" name="metodoPagamento" id="cartprepago" value="cartaoprepago">
                                 <label class="form-check-label" style="font-size: medium;" for="cartprepago">Cartão Pré-pago</label>
                             </div>
                         </div>

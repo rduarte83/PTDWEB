@@ -21,29 +21,33 @@
                             <th scope="col">Quantidade</th>
                             <th scope="col">Marca</th>
                             <th scope="col">Tipo</th>
-                            <th scope="col">Qt. vasilhame</th>
+                            <th scope="col">Qt. Vasilhame</th>
+                            <th scope="col">Preço Vasilhame</th>
                             <th scope="col">Preço s/IVA</th>
                             <th scope="col">Preço c/IVA</th>
 
                         </tr>
                         </thead>
                         <tbody class="text-center">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Galp</td>
-                            <td>Botija 10Kg</td>
-                            <td>1</td>
-                            <td>20 €</td>
-                            <td>24,60 €</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>BP</td>
-                            <td>Botija 10Kg</td>
-                            <td>1</td>
-                            <td>20 €</td>
-                            <td>24,60 €</td>
-                        </tr>
+                        <?php $botijasCarrinhos = \App\BotijaCarrinho::all()->where('carrinhosid',$carrinho->id);?>
+                        @foreach ($botijasCarrinhos as $botijasCarrinho)
+                            <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);?>
+                            @foreach ($botijas as $botija)
+                                <?php
+                                    $taraQtd = 0;
+                                    if ($botijasCarrinho->tem_tara == 'true') $taraQtd++;
+                                ?>
+                                <tr>
+                                    <th scope="row">{{$botijasCarrinho->quantidade}}</th>
+                                    <td>{{$botija->marca}}</td>
+                                    <td>{{$botija->tipo}}</td>
+                                    <td>{{$taraQtd*$botijasCarrinho->quantidade}}</td>
+                                    <td>{{$botija->preco_tara}} €</td>
+                                    <td>{{number_format($botija->preco/1.23, 2)}} €</td>
+                                    <td>{{number_format($botija->preco, 2)}} €</td>
+                                </tr>
+                            @endforeach
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -52,15 +56,30 @@
                         <div class="card-header font-weight-bold text-center">Totais</div>
                         <div class="row">
                             <div class="col-lg-6">
-                                <p class="text-left m-l-10">+</p>
-                                <p class="text-left m-l-10">+</p>
-                                <p class="text-left m-l-10">+</p>
+                                @foreach ($botijasCarrinhos as $botijasCarrinho)
+                                    <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);?>
+                                    @foreach ($botijas as $botija)
+                                        <p class="text-left m-l-10">+</p>
+                                            <p class="text-left m-l-10">+</p>
+                                    @endforeach
+                                @endforeach
                             </div>
                             <div class="col-lg-6">
-                                <p class="text-right m-r-10">2,00 €</p>
-                                <p class="text-right m-r-10">2,00 €</p>
-                                <p class="text-right  m-r-10">24,60 €</p>
-                                <p class="text-right  m-r-10">24,60 €</p>
+                                <?php $total = 0; ?>
+                                @foreach ($botijasCarrinhos as $botijasCarrinho)
+                                    <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);?>
+                                    @foreach ($botijas as $botija)
+                                            <?php $total += $botijasCarrinho->quantidade * $botija->preco_tara;?>
+                                            <p class="text-right m-r-10">{{$botijasCarrinho->quantidade * $botija->preco_tara}} €</p>
+                                    @endforeach
+                                @endforeach
+                                @foreach ($botijasCarrinhos as $botijasCarrinho)
+                                    <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);?>
+                                    @foreach ($botijas as $botija)
+                                            <?php $total += $botijasCarrinho->quantidade * $botija->preco;?>
+                                        <p class="text-right m-r-10">{{$botijasCarrinho->quantidade * $botija->preco}} €</p>
+                                    @endforeach
+                                @endforeach
                             </div>
                         </div>
                         <hr>
@@ -71,9 +90,9 @@
                                 <p class="text-right font-weight-bold">Total c/IVA:</p>
                             </div>
                             <div class="col-lg-6">
-                                <p class="text-right m-r-10">44,00 €</p>
-                                <p class="text-right m-r-10">9,20 €</p>
-                                <p class="text-right font-weight-bold m-r-10">53,20 €</p>
+                                <p class="text-right m-r-10">{{number_format($total/1.23, 2)}} €</p>
+                                <p class="text-right m-r-10">{{number_format($total-$total/1.23, 2)}} €</p>
+                                <p class="text-right font-weight-bold m-r-10">{{number_format($total, 2)}} €</p>
                             </div>
                         </div>
                     </div>
