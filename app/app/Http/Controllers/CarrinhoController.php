@@ -4,11 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Carrinho;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Session;
 use function Sodium\add;
 
 
 class CarrinhoController extends Controller
 {
+
+    private $response = array(
+                'status' => 'success',
+                'message' => 'Produto adicionado ao carrinho.',
+            );
     /**
      * Display a listing of the resource.
      *
@@ -34,40 +42,56 @@ class CarrinhoController extends Controller
      */
     public function create()
     {
-
+        
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(Request $request)
     {
-        $regras = [
-            'nome' => "required | min:3 | max:100",
-            'email' => "required | email | unique:utilizadores",
-            'password1' => "min:8 | max:20 | required_with:password2 | same:password2",
-            'password2'  => "min:8 | max:20 |",
+        if(!Auth::check()) {
+            // Work with sessions
+            $carrinho = [];
+            if (Session::has("carrinho")){
+                $carrinho = Session::get("carrinho");
+            }
+            $productID = $request->input("productID");
+            $quantidade = $request->input("quantidade");
+            $alterado = false;
+            foreach ($carrinho as $key=>$atual){
+                if($atual["productID"] == $productID) {
+                    $carrinho[$key]["quantidade"]+=1;
+                    $alterado = true;
+                    break;
+                }
+            }
+
+            if(!$alterado) array_push($carrinho, array('productID' => $productID, "quantidade" =>$quantidade) );
+
+
+            Session::put("carrinho", $carrinho);
+            $this->response["carrinho"]=$carrinho;
+            return Response::json($this->response);
+        }
+
+        $user = Auth::user();
+
+
+
+       /* $regras = [
+            'productID' => "required",
         ];
         $mensagens = [
             'required' => 'O Campo ":attribute" é de preenchimento obrigatório!',
-            'nome.min' => 'Mínimo 3 caracteres no nome!',
-            'nome.max' => 'Máximo 100 caracteres no nome!',
-            'email.unique' => 'O email ' . $request->input('email') . ', já se encontra registado!',
-            'email.email' => 'Insira um endereço de email válido!',
-            'password1.min' => 'Mínimo 8 caracteres na password!',
-            'password1.max' => 'Máximo 20 caracteres na password!',
-            'password1.same' => 'A ":attribute" e a "password2" devem corresponder',
-            'password2.min' => 'Mínimo 8 caracteres na password de confirmação!',
-            'password2.max' => 'Máximo 20 caracteres na password!'
+        ];*/
 
-        ];
+        /*$request->validate($regras, $mensagens);
 
-        $request->validate($regras, $mensagens);
-
-        $reg = new Utilizador();
+        $reg = new Carrinho();
         $reg->nome = $request->input('nome');
         $reg->email = $request->input('email');
         $reg->password = $request->input('password1');
@@ -80,7 +104,8 @@ class CarrinhoController extends Controller
             //return redirect()->route('route.infoTeste');
             //->route('profile.info');
             return redirect('/info');
-        }
+        }*/
+        return Response::json($this->response);  // <<<<<<<<< see this line
 
     }
 
@@ -115,7 +140,7 @@ class CarrinhoController extends Controller
      */
     public function update(Request $request, Carrinho $carrinho)
     {
-        //
+
     }
 
     /**
@@ -126,6 +151,15 @@ class CarrinhoController extends Controller
      */
     public function destroy(Carrinho $carrinho)
     {
-        //
+        if(!Auth::check()) {
+            // Work with sessions
+            $carrinho = [];
+            if (Session::has("carrinho")) {
+                Session::remove("carrinho");
+            }
+            $this->response["message"]="Carrinho foi limpo";
+            return Response::json($this->response);
+        }
+
     }
 }

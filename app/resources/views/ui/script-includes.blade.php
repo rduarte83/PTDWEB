@@ -31,6 +31,8 @@
 
 <!--===============================================================================================-->
 <script type="text/javascript" src="{{URL::asset("vendor/sweetalert/sweetalert.min.js")}}"></script>
+<script type="text/javascript" src="{{URL::asset("js/carrinho.js")}}"></script>
+
 <script type="text/javascript">
     $('.block2-btn-addcart').each(function(){
 
@@ -38,8 +40,10 @@
         $(this).on('click', function(){
             var idProduct = $(this).data("product-id");
             // TODO: Add to carrinho...
-
+            var url = "{{URL("carrinho/add")}}";
+            console.log(url);
             // Mandar em ajax para o servidor com o produto
+            addItemToCart(idProduct, 1, url);
 
             // Receber resposta
             

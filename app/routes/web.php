@@ -33,6 +33,8 @@ Route::post('/perfil/edit', "UtilizadorController@update")->middleware('auth');
 
 // Carrinho
 Route::get("/carrinho", "CarrinhoController@index");
+Route::post("/carrinho/add", "CarrinhoController@store");
+Route::post("/carrinho/destroy", "CarrinhoController@destroy");
 Route::get("/carrinho/{page}", "HomeController@carrinhoPage");
 
 // User Authentication
