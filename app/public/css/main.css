@@ -828,7 +828,7 @@ li.sale-noti > a {
 /*[ Header cart ]
 -----------------------------------------------------------
 */
-.header-cart {
+.header-cart, .header-user {
   position: absolute;
   z-index: 1100;
   width: 339px;
@@ -865,7 +865,7 @@ li.sale-noti > a {
   transform: scale(1);
 }
 
-.fixed-header .header-cart {
+.fixed-header .header-cart, .header-user {
   top: 160%;
 }
 
@@ -1049,7 +1049,7 @@ li.sale-noti > a {
   margin-top: 5px;
 }
 
-.header-icons-mobile .header-cart {
+.header-icons-mobile .header-cart, .header-icons-mobile .header-user{
   width: 300px;
   top: 190%;
   right: -80px;  
@@ -1215,7 +1215,7 @@ li.sale-noti > a {
   -ms-box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2); 
 }
 
-.fixed-header2 .header-cart {
+.fixed-header2 .header-cart , .fixed-header2 .header-user{
   top: 160%;
 }
 

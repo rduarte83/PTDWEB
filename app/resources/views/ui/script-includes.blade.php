@@ -16,6 +16,7 @@
 <script type="text/javascript" src="{{URL::asset("vendor/select2/select2.min.js")}}"></script>
 <script type="text/javascript">
     var urlUpdate = "{{URL("carrinho/update")}}";
+    var urlCarrinhoHeader = "{{URL("carrinho-header/atualiza")}}";
     $(".selection-1").select2({
         minimumResultsForSearch: 20,
         dropdownParent: $('#dropDownSelect1')
@@ -41,16 +42,8 @@
         var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
         $(this).on('click', function(){
             var idProduct = $(this).data("product-id");
-            // TODO: Add to carrinho...
             var url = "{{URL("carrinho/add")}}";
-            console.log(url);
-            // Mandar em ajax para o servidor com o produto
             addItemToCart(idProduct, 1, url);
-
-            // Receber resposta
-            
-            // Atualizar carrinho.
-            console.log(idProduct);
             swal(nameProduct, "foi adicionado ao carrinho!", "success");
         });
     });

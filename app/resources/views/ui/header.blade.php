@@ -41,7 +41,7 @@
         <div class="header-icons">
 			<!-- USER DROPDOWN -->
 			<div class="header-wrapicon2">
-                <img src="{{URL("images/icons/icon-header-01.png")}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                <img src="{{URL("images/icons/icon-header-01.png")}}" class="header-icon1  js-show-user" alt="ICON">
                 @if(Session::has('isLogged'))
                     {{ session("name") }}
                 @endif
@@ -54,7 +54,7 @@
               </div>
             <!--  -->
                 <!-- Header cart noti -->
-                <div class="header-cart header-dropdown">
+                <div class="header-cart header-dropdown header-dropdown-user">
                   <ul class="header-cart-wrapitem">
                       @if(!Session::get('isLogged'))
                         @include('includes.login-cliente')
@@ -68,9 +68,9 @@
 
 			<!-- END USER DROPDOWN -->
           <span class="linedivide1"></span>
-
-
-              @include("carrinho.carrinho-header")
+            <div id="carrinhoAtuliza">
+                @include("carrinho.carrinho-header")
+            </div>
           </div>
         </div>
       </div>

@@ -23,12 +23,14 @@ Route::get('/blog-detail', "HomeController@blogDetail");
 Route::get('/cart', "HomeController@cart");
 Route::get('/contact', "HomeController@contact");
 
-
 // Perfil
 Route::get('/perfil', "UtilizadorController@index")->middleware('auth');
 Route::get('/perfil/{page}', "UtilizadorController@profilePage")->middleware('auth');
 Route::get('/perfil/editar', "UtilizadorController@edit")->middleware('auth');
 Route::post('/perfil/edit', "UtilizadorController@update")->middleware('auth');
+
+// Header - Atualiza Carrinho
+Route::get("/carrinho-header/atualiza", "CarrinhoController@atualizaCarrinho");
 
 // Carrinho
 Route::get("/carrinho", "CarrinhoController@index");

@@ -190,6 +190,10 @@ class CarrinhoController extends Controller
         return Response::json($this->response);
     }
 
+    public function atualizaCarrinho () {
+        return view("carrinho.carrinho-header");
+    }
+
     /**
      * Remove the specified resource from storage.
      *

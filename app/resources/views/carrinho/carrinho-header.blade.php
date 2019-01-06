@@ -1,8 +1,8 @@
 <div class="header-wrapicon2">
-    <img src="{{URL::asset("images/icons/icon-header-02.png")}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
+    <img src="{{URL::asset("images/icons/icon-header-02.png")}}" class="header-icon1 js-show-cart" alt="ICON">
     <span  class="header-icons-noti itens-carrinho">1</span>
     <!-- Header cart noti -->
-    <div class="header-cart header-dropdown">
+    <div class="header-cart header-dropdown header-dropdown-cart">
         <ul class="header-cart-wrapitem">
 
             <!-- Card Item Example-->

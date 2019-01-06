@@ -7,23 +7,23 @@ function addItemToCart(id, quantidade, url){
 
     $.ajax({
         type:"post",
-        //dataType:"json",
+        dataType:"json",
         url: url,
         data: {
             productID: id,
             quantidade: quantidade
         },
         success: function(data) {
-            console.log("Success");
-            console.log(data);
-            /*successmessage = 'Data was succesfully captured';
-            $("label#successmessage").text(successmessage);*/
+            console.log(data.status);
+            if ( data.status === "success" ){
+                atualizaCarrinho();
+            }
+            /*console.log("Success");
+            console.log(data);*/
         },
         error: function(data) {
             console.log("Error");
             console.log(data);
-            /*successmessage = 'Error';
-            $("label#successmessage").text(successmessage);*/
         },
     });
 }
@@ -58,7 +58,6 @@ function updateItemToCart(id, quantidade, url){
 
     $.ajax({
         type:"post",
-        //dataType:"json",
         url: url,
         data: {
             productID: id,
@@ -67,6 +66,21 @@ function updateItemToCart(id, quantidade, url){
         success: function(data) {
             console.log("Success");
             console.log(data);
+        },
+        error: function(data) {
+            console.log("Error");
+            console.log(data);
+        },
+    });
+}
+
+function atualizaCarrinho (){
+    $.ajax({
+        type:"get",
+        url: urlCarrinhoHeader,
+        success: function(data) {
+            console.log(data);
+            $("#carrinhoAtuliza").html(data);
         },
         error: function(data) {
             console.log("Error");
@@ -93,4 +107,19 @@ $(document).ready(function(){
     $(".btn-num-product-up").click(function(){
         $("input[name='num-product1']").change();
     })
+
+    /*$(".js-show-cart").on("click", function(){
+        $(".header-dropdown-user").removeClass("show-header-dropdown");
+        $('.header-dropdown-cart').toggleClass("show-header-dropdown");
+    });*/
+
+    $(".js-show-user").on("click", function(){
+        $(".header-dropdown-user").toggleClass("show-header-dropdown");
+        $(".header-dropdown-cart").removeClass("show-header-dropdown");
+    });
+});
+
+$(document).on("click", '.js-show-cart', function(){
+    $(".header-dropdown-user").removeClass("show-header-dropdown");
+    $('.header-dropdown-cart').toggleClass("show-header-dropdown");
 });

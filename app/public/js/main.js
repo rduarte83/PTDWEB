@@ -43,7 +43,7 @@
 
     /*[ Show header dropdown ]
     ===========================================================*/
-    $('.js-show-header-dropdown').on('click', function(){
+    /*$('.js-show-header-dropdown').on('click', function(){
         $(this).parent().find('.header-dropdown')
     });
 
@@ -77,7 +77,7 @@
             $(menu[i]).parent().find('.header-dropdown').removeClass("show-header-dropdown");
         }
         sub_menu_is_showed = -1;
-    });
+    });*/
 
 
      /*[ Fixed Header ]

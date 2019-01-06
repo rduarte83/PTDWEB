@@ -28,6 +28,12 @@ class UtilizadorController extends Controller
         return view("profile.info")->with($data);
     }
 
+    /**
+     * Recebe a pagina que quer ver.
+     * @param $page
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     *
+     */
     public function profilePage($page){
         $user = Auth::user();
         //$page = "info";
@@ -70,7 +76,7 @@ class UtilizadorController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Guardar o utilizador na base de dados
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
