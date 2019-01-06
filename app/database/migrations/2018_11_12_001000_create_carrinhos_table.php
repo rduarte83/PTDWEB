@@ -16,7 +16,7 @@ class CreateCarrinhosTable extends Migration
         Schema::create('carrinhos', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('utilizador');
-            $table->string('local_recolha');
+            $table->string('local_recolha')->nullable();
             $table->foreign('utilizador')->references('id')->on('utilizadores');
             $table->timestamps();
         });
