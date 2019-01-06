@@ -41,10 +41,14 @@
         <div class="header-icons">
 			<!-- USER DROPDOWN -->
 			<div class="header-wrapicon2">
-                <img src="{{URL("images/icons/icon-header-01.png")}}" class="header-icon1  js-show-user" alt="ICON">
-                @if(Session::has('isLogged'))
-                    {{ session("name") }}
-                @endif
+                <div class="cs-pointer js-show-user" style="line-height: 27px;">
+                    <img src="{{URL("images/icons/icon-header-01.png")}}" class="header-icon1 " alt="ICON">
+                    &nbsp;
+
+                    @auth
+                        <span>{{ Auth::user()->nome }}</span>
+                    @endauth
+                </div>
               <div class="card-body">
                 @if (session('status'))
                   <div class="alert alert-success" role="alert">
@@ -68,7 +72,7 @@
 
 			<!-- END USER DROPDOWN -->
           <span class="linedivide1"></span>
-            <div id="carrinhoAtuliza">
+            <div class="carrinhoAtuliza">
                 @include("carrinho.carrinho-header")
             </div>
           </div>
@@ -89,12 +93,16 @@
         <div class="header-icons-mobile">
 			<!-- USER DROPDOWN -->
 			<div class="header-wrapicon2">
-                <img src="{{URL::asset("images/icons/icon-header-01.png")}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                <img src="{{URL::asset("images/icons/icon-header-01.png")}}" class="header-icon1 js-show-user" alt="ICON">
 
                 <!-- Header cart noti -->
-                <div class="header-cart header-dropdown">
-                  <ul class="header-cart-wrapitem">
-                    @include('includes.login-cliente')
+                <div class="header-cart header-dropdown header-dropdown-user">
+                    <ul class="header-cart-wrapitem">
+                        @if(!Session::get('isLogged'))
+                            @include('includes.login-cliente')
+                        @else
+                            @include('includes.logged-cliente')
+                        @endif
                     </ul>
                 </div>
           </div>
@@ -102,50 +110,8 @@
 			<!-- END USER DROPDOWN -->
 
           <span class="linedivide2"></span>
-
-          <div class="header-wrapicon2">
-            <img src="{{URL::asset("images/icons/icon-header-02.png")}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
-            <span class="header-icons-noti">1</span>
-
-            <!-- Header cart noti -->
-            <div class="header-cart header-dropdown">
-              <ul class="header-cart-wrapitem">
-                <li class="header-cart-item">
-                  <div class="header-cart-item-img">
-                    <img src="{{URL::asset("images/garrafas/butano-13kg.png")}}" alt="IMG">
-                  </div>
-
-                  <div class="header-cart-item-txt">
-                    <a href="#" class="header-cart-item-name">
-                        Botija de gás Propano - GALP
-                    </a>
-
-                    <span class="header-cart-item-info">
-                      1 x 19.00€
-                    </span>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="header-cart-total">
-                Total: $75.00
-              </div>
-
-              <div class="header-cart-buttons">
-                <div class="header-cart-wrapbtn">
-                  <!-- Button -->
-                  <a href="{{URL("perfil/carrinho")}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                    Carrinho
-                  </a>
-                </div>
-
-                <div class="header-cart-wrapbtn">
-                  <!-- Button -->
-                  <a href="{{URL("carrinho/resumo")}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                    Checkout
-                  </a>
-                </div>
-              </div>
+            <div class="carrinhoAtuliza-mobile">
+                @include("carrinho.carrinho-header")
             </div>
           </div>
         </div>

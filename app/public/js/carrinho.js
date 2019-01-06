@@ -75,8 +75,8 @@ function atualizaCarrinho (){
         type:"get",
         url: urlCarrinhoHeader,
         success: function(data) {
-            console.log(data);
-            $("#carrinhoAtuliza").html(data);
+            $(".carrinhoAtuliza").html(data);
+            $(".carrinhoAtuliza-mobile").html(data);
         },
         error: function(data) {
             console.log("Error");
