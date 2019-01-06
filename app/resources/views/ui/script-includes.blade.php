@@ -17,6 +17,7 @@
 <script type="text/javascript">
     var urlUpdate = "{{URL("carrinho/update")}}";
     var urlCarrinhoHeader = "{{URL("carrinho-header/atualiza")}}";
+    var urlCarrinhoAdd = "{{URL("carrinho/add")}}";
     $(".selection-1").select2({
         minimumResultsForSearch: 20,
         dropdownParent: $('#dropDownSelect1')
@@ -39,10 +40,10 @@
 
     $('.block2-btn-addcart').each(function(){
 
-        var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+        let nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
         $(this).on('click', function(){
-            var idProduct = $(this).data("product-id");
-            var url = "{{URL("carrinho/add")}}";
+            let idProduct = $(this).data("product-id");
+            let url = urlCarrinhoAdd;
             addItemToCart(idProduct, 1, url);
             swal(nameProduct, "foi adicionado ao carrinho!", "success");
         });

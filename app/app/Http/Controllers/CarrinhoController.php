@@ -78,7 +78,7 @@ class CarrinhoController extends Controller
             $alterado = false;
             foreach ($carrinho as $key=>$atual){
                 if($atual["botijasid"] == $productID) {
-                    $carrinho[$key]["quantidade"]+=1;
+                    $carrinho[$key]["quantidade"]+=$quantidade;
                     $alterado = true;
                     break;
                 }
@@ -125,7 +125,7 @@ class CarrinhoController extends Controller
             $botijaCarrinho->save();
         }else {
             BotijaCarrinho::where($matchThese)
-                ->update(['quantidade' => $botijaCarrinho->quantidade+1]);
+                ->update(['quantidade' => $botijaCarrinho->quantidade+$quantidade]);
         }
 
         return Response::json($this->response);  // <<<<<<<<< see this line

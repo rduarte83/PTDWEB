@@ -14,12 +14,9 @@ function addItemToCart(id, quantidade, url){
             quantidade: quantidade
         },
         success: function(data) {
-            console.log(data.status);
             if ( data.status === "success" ){
                 atualizaCarrinho();
             }
-            /*console.log("Success");
-            console.log(data);*/
         },
         error: function(data) {
             console.log("Error");
@@ -64,8 +61,7 @@ function updateItemToCart(id, quantidade, url){
             quantidade: quantidade
         },
         success: function(data) {
-            console.log("Success");
-            console.log(data);
+
         },
         error: function(data) {
             console.log("Error");
@@ -91,6 +87,7 @@ function atualizaCarrinho (){
 
 
 $(document).ready(function(){
+
     $("input[name='num-product1']").on('change', function () {
         var product = $(this).data("product-id");
         var quantidade = $(this).val();
@@ -106,7 +103,18 @@ $(document).ready(function(){
 
     $(".btn-num-product-up").click(function(){
         $("input[name='num-product1']").change();
-    })
+    });
+
+    $("#btn-add-cart").click(function () {
+        let numProduct = $("#num-product").val();
+        console.log(numProduct);
+        let id = $(this).data("id");
+        let name = $(".product-detail-name").html();
+
+
+        addItemToCart(id,numProduct,urlCarrinhoAdd)
+        swal(name, "foi adicionado ao carrinho!", "success");
+    });
 
     /*$(".js-show-cart").on("click", function(){
         $(".header-dropdown-user").removeClass("show-header-dropdown");
