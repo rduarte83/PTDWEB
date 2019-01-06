@@ -15,7 +15,13 @@
 
                 if(Auth::check()){
                     $carrinho = \App\Carrinho::all()->where("utilizador", Auth::user()->id)->first();
-                    $botijasCarrinhos = \App\BotijaCarrinho::all()->where('carrinhosid',$carrinho->id);
+                    if ($carrinho == null)
+                    {
+                        $botijasCarrinhos = [];
+                    }else {
+                        $botijasCarrinhos = \App\BotijaCarrinho::all()->where('carrinhosid',$carrinho->id);
+                    }
+
                 }else{
                     $botijasCarrinhos = Session::get("carrinho");
                 }

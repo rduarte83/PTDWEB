@@ -45,6 +45,8 @@ class LoginController extends Controller
         $request->session()->setExists(true);
         $request->session()->put("isLogged",true);
         Auth::setUser($user);
+        // TODO: Load carrinho session para BD
+
     }
 
     /**

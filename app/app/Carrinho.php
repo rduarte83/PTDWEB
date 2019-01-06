@@ -13,6 +13,7 @@ class Carrinho extends Model
     protected $fillable = [
         'id',
         'utilizador',
+        'local_recolha'
     ];
 
     public function add ($item, $id) {

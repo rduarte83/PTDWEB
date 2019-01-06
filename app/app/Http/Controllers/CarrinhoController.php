@@ -121,7 +121,7 @@ class CarrinhoController extends Controller
             $botijaCarrinho->botijasid = intval($productID);
             $botijaCarrinho->carrinhosid = $carrinho->id;
             $botijaCarrinho->quantidade =  intval($quantidade);
-            $botijaCarrinho->tem_tara =  false;
+            //$botijaCarrinho->tem_tara =  false;
             $botijaCarrinho->save();
         }else {
             BotijaCarrinho::where($matchThese)
