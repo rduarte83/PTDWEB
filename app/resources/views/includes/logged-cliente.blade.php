@@ -5,6 +5,12 @@
         <div class="m-auto ">
             <a class="align-content-center" href="{{URL("perfil")}}">Perfil</a>
         </div>
+        <div class="m-auto ">
+            <a class="align-content-center" href="{{URL("perfil/favoritos")}}">Favoritos</a>
+        </div>
+        <div class="m-auto ">
+            <a class="align-content-center" href="{{URL("perfil/historico")}}">Histórico</a>
+        </div>
     </div>
     <div class="form-group">
         <div class="header-cart-wrapbtn m-auto">
