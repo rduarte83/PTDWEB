@@ -14,7 +14,7 @@
         <div class="wrap_menu">
           <nav class="menu">
             <ul class="main_menu">
-                <form method="get" action="{{URL("search")}}">
+                <form method="post" action="{{URL("search")}}">
                     @csrf
                     <div class="pos-relative bo11 of-hidden">
                     <input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-product" placeholder="Procurar produtos...">

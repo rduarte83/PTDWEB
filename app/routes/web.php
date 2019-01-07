@@ -33,7 +33,7 @@ Route::post('/perfil/edit', "UtilizadorController@update")->middleware('auth');
 Route::get("/carrinho-header/atualiza", "CarrinhoController@atualizaCarrinho");
 
 //Pesquisa
-Route::get('/search', "ProductController@search");
+Route::post('/search', "ProductController@search");
 
 // Carrinho
 Route::get("/carrinho", "CarrinhoController@index");

@@ -16,15 +16,28 @@ class ProductController extends Controller
         return view("product", compact("title"), compact("botija"));
     }
 
-    public function search()
+    public function search(Request $request)
     {
-        $search = Input::get('search-product');
+        $search =  $request->input('search-product');
         $res = Botija::query()
-            ->where('tipo', 'ILIKE', $search)
-            ->orWhere('marca', 'ILIKE', $search)->get();
-        var_dump($res);
-        
-        //return view("products");
+            ->where('tipo', 'ILIKE', "%".$search."%")
+            ->orWhere('marca', 'ILIKE', "%".$search."%")
+            ->orWhere('nome', 'ILIKE', "%".$search."%")->get();
+
+        $n_res = count($res);
+        //$n_res = $marca . $categoria;
+
+        $marcas = Botija::distinct()->get(['marca']);
+        $categorias = Botija::distinct()->get(['tipo']);
+
+        $response = [
+            "title" => "Search -" . $search,
+            "botijas" => $res,
+            "n_res" => $n_res,
+            "marcas" => $marcas,
+            "categorias" => $categorias,
+        ];
+        return view("products")->with($response);
     }
 
     public function index()

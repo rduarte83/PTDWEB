@@ -18,7 +18,8 @@
                 <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
                     <div class="leftbar p-r-20 p-r-0-sm">
                         <!--  -->
-                        <form action="{{URL::current()}}" method="GET" id="search"></form>
+                        <form action="{{URL("loja")}}" method="post" id="search"></form>
+                            @csrf
                             <label for="categoria" class="m-text14 p-b-7">
                                 Categoria
                             </label>
