@@ -3,6 +3,7 @@
     {{$title}}
 @endsection
 @section("content")
+
     <!-- Title Page -->
     <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(/images/home-bg-sml-dark.jpg);">
         <h2 class="l-text2 t-center">
@@ -126,6 +127,7 @@
                     -->
                 </div>
             </div>
+        </div>
         </div>
     </section>
 @endsection
