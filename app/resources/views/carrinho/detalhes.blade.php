@@ -6,6 +6,7 @@
 
 <div class="container col-md-12 offset-md-2 shadow-lg p-3 mb-5 bg-white rounded">
     <form method="post" action="{{URL("carrinho/detalhes")}}">
+        @csrf
         <div class="card-body">
             <div class="card bo-rad-0-bottom">
                 <div class="card-header">
@@ -14,21 +15,25 @@
                 <div class="card-body">
                     <div class="container">
                         <div class="row">
-                            <div class="form-check form-check-inline">
-                                <input class="" type="radio" name="metodoPagamento" id="paypal" value="paypal">
-                                <label class="form-check-label" style="font-size: medium;" for="paypal">Paypal</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="" type="radio" name="metodoPagamento" id="mbway" value="mbway">
-                                <label class="form-check-label" style="font-size: medium;" for="mbway">MBWay</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="" type="radio" name="metodoPagamento" id="cartprepago" value="cartaoprepago">
-                                <label class="form-check-label" style="font-size: medium;" for="cartprepago">Cartão Pré-pago</label>
-                            </div>
+                            @foreach(App\Pagamento::all() as $metodo)
+                                <div class="form-check form-check-inline">
+                                    <input class="" type="radio" name="metodoPagamento" id="{{$metodo->meio}}" value="{{$metodo->id}}">
+                                    <label class="form-check-label" style="font-size: medium;" for="{{$metodo->meio}}">{{$metodo->meio}}</label>
+                                </div>
+
+
+                            @endforeach
+
                         </div>
+
                     </div>
+
                 </div>
+                @if($errors->has('metodoPagamento'))
+                    <div class="alart alert-danger error-message" >
+                        {{$errors->first('metodoPagamento')}}
+                    </div>
+                @endif
             </div>
             <div class="card bo-rad-0-top">
                 <div class="card-header">
@@ -45,12 +50,13 @@
                                 <input class="" type="radio" name="garrafa" id="naogarrafa" value="0">
                                 <label class="form-check-label" style="font-size: medium;" for="naogarrafa">Não (+5€)</label>
                             </div>
+
                             <span class="m-l-20">Quantidade a entregar</span>
                             <div class="form-group flex-w bo5 of-hidden w-size17 m-l-20 m-b--8">
                                 <button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
                                     <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
                                 </button>
-                                <input class="size8 m-text18 t-center num-product" type="number" name="num-product1" value="1">
+                                <input class="size8 m-text18 t-center num-product" type="number" name="tara" value="1">
                                 <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
                                     <i class="fs-12 fa fa-plus" aria-hidden="true"></i>
                                 </button>
@@ -58,6 +64,11 @@
                         </div>
                     </div>
                 </div>
+                @if($errors->has('garrafa'))
+                    <div class="alart alert-danger error-message" >
+                        {{$errors->first('garrafa')}}
+                    </div>
+                @endif
             </div>
             <div class="card bo-rad-0-top">
             </div>
@@ -70,9 +81,10 @@
                 </div>
                 <div class="w-size25">
                     <!-- Button -->
-                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="{{URL("carrinho/resumo")}}">
-                        Prosseguir com a compra
-                    </a>
+                    <button type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white">Prosseguir com a compra</button>
+                    <!--<a type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white">  {{--URL("carrinho/resumo")--}}
+
+                    </a>-->
                 </div>
             </div>
         </div>

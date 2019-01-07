@@ -19,9 +19,10 @@ class CreateComprasTable extends Migration
             $table->dateTime('data');
             $table->decimal('valor');
             $table->unsignedInteger('meio_pagamento');
-            $table->string('qr');
-            $table->integer('pin');
-            $table->string('local_recolha');
+            $table->string('qr')->nullable();
+            $table->string('pin');
+            $table->integer('qtd_tara')->default(0);
+            $table->string('local_recolha')->nullable();
             $table->dateTime('data_recolha')->nullable();
             $table->foreign('utilizador')->references('id')->on('utilizadores');
             $table->foreign('meio_pagamento')->references('id')->on('pagamentos');

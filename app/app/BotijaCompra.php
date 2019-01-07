@@ -14,5 +14,7 @@ class BotijaCompra extends Model
         'tem_tara',
     ];
 
+    protected $primaryKey = "botijasid";
+
     protected $table = 'botijas_compras';
 }

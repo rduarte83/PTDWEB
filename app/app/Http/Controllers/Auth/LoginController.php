@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\BotijaCarrinho;
+use App\Carrinho;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
@@ -45,8 +48,39 @@ class LoginController extends Controller
         $request->session()->setExists(true);
         $request->session()->put("isLogged",true);
         Auth::setUser($user);
-        // TODO: Load carrinho session para BD
 
+        if ( Session::has("carrinho") ){
+            $user = Auth::user();
+            $carrinho = Carrinho::all()->where("utilizador", $user->id )->first();
+            if($carrinho == null)
+            {
+                $carrinho = new Carrinho();
+                $carrinho->utilizador = $user->id;
+                $carrinho->save();
+            }
+
+            $this->loadCarrinhoToBD($carrinho, Session::get("carrinho"));
+        }
+
+    }
+
+    private function loadCarrinhoToBD ($carrinho, $carrinhoSessao) {
+        foreach( $carrinhoSessao as $item){
+            $matchThese = ['botijasid' => intval($item["botijasid"]), 'carrinhosid' =>  $carrinho->id];
+            $botijaCarrinho = BotijaCarrinho::where($matchThese)->first();
+
+            if ( $botijaCarrinho == null  ){
+                $botijaCarrinho = new BotijaCarrinho();
+                $botijaCarrinho->botijasid = intval($item["botijasid"]);
+                $botijaCarrinho->carrinhosid = $carrinho->id;
+                $botijaCarrinho->quantidade =  intval($item["quantidade"]);
+                //$botijaCarrinho->tem_tara =  false;
+                $botijaCarrinho->save();
+            }else {
+                BotijaCarrinho::where($matchThese)
+                    ->update(['quantidade' => $botijaCarrinho->quantidade+$item["quantidade"]]);
+            }
+        }
     }
 
     /**

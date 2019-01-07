@@ -13,8 +13,11 @@ class Carrinho extends Model
     protected $fillable = [
         'id',
         'utilizador',
-        'local_recolha'
+        'meio_pagamento',
+        'qtd_tara',
     ];
+
+
 
     public function add ($item, $id) {
         $storedItem = ['qtd' => 0, 'preco' => $item->preco, 'item' => $item];

@@ -37,8 +37,11 @@ Route::get("/carrinho", "CarrinhoController@index");
 Route::post("/carrinho/add", "CarrinhoController@store");
 Route::post("/carrinho/update", "CarrinhoController@update");
 Route::post("/carrinho/destroy", "CarrinhoController@destroy");
-Route::get("/carrinho/{page}", "HomeController@carrinhoPage");
-Route::post('/carrinho/final', 'CarrinhoController@final')->middleware('auth');
+Route::get("/carrinho/{page}", "HomeController@carrinhoPage"); // TODO: MUDAR ISTO PARA CONTROLLER Carrinho
+Route::post('/carrinho/detalhes', 'CarrinhoController@saveDetalhes')->middleware('auth');
+Route::post('/carrinho/compra', 'CompraController@store')->middleware('auth');
+Route::post('/carrinho/final', 'CompraController@final')->middleware('auth');
+
 
 // User Authentication
 Route::get('/registar', 'HomeController@register');

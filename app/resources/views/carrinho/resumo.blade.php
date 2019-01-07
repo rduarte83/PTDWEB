@@ -92,10 +92,13 @@
                     </a>
                 </div>
                 <div class="w-size25">
-                    <!-- Button -->
-                    <a class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" href="{{URL("carrinho/final")}}">
-                       Finalizar compra
-                    </a>
+                    <form method="post" action="{{URL("carrinho/compra")}}" >
+                        @csrf
+                        <!-- Button -->
+                        <button type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" >
+                           Finalizar compra
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

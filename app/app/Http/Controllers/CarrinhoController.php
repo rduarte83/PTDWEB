@@ -190,6 +190,33 @@ class CarrinhoController extends Controller
         return Response::json($this->response);
     }
 
+    public function saveDetalhes (Request $request){
+        $inputs = $request->all();
+        $user = Auth::user();
+
+        $regras = [
+            'metodoPagamento' => "required",
+            'garrafa' => "required",
+        ];
+        $mensagens = [
+            'required' => 'O Campo ":attribute" é de preenchimento obrigatório!',
+        ];
+        $request->validate($regras, $mensagens);
+        $matchThese = ['utilizador' => $user->id];
+        if ( $inputs["garrafa"] ){
+            Carrinho::where($matchThese)
+                ->update(['meio_pagamento' => $inputs["metodoPagamento"] , 'qtd_tara' => $inputs["tara"]]);
+        }else {
+            Carrinho::where($matchThese)
+                ->update(['meio_pagamento' => $inputs["metodoPagamento"] , 'qtd_tara' => 0]);
+        }
+
+        $carrinho = Carrinho::all()->where("utilizador", $user->id )->first();
+        $arrVars = ["carrinho" => $carrinho, "page" => "resumo"];
+        return view("carrinho.resumo")->with($arrVars);
+    }
+
+
     public function atualizaCarrinho () {
         return view("carrinho.carrinho-header");
     }
@@ -200,7 +227,7 @@ class CarrinhoController extends Controller
      * @param  \App\Carrinho  $carrinho
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Carrinho $carrinho)
+    public function destroy($carrinho)
     {
         if(!Auth::check()) {
             // Work with sessions
@@ -212,5 +239,9 @@ class CarrinhoController extends Controller
             return Response::json($this->response);
         }
 
+        BotijaCarrinho::where("carrinhosid", $carrinho->id)->delete();
+        Carrinho::where("id", $carrinho->id)->delete();
+        $this->response["message"]="Carrinho foi limpo";
+        return Response::json($this->response);
     }
 }

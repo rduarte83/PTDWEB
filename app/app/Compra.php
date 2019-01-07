@@ -13,8 +13,8 @@ class Compra extends Model
         'valor',
         'meio_pagamento',
         'qr',
+        'qtd_tara',
         'pin',
-        'local_recolha',
-        'data_recolha'
+        'local_recolha'
     ];
 }

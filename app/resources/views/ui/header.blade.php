@@ -58,7 +58,7 @@
               </div>
             <!--  -->
                 <!-- Header cart noti -->
-                <div class="header-cart header-dropdown header-dropdown-user">
+                <div class="header-cart header-dropdown header-dropdown-user" style="width: 200px; padding:4px">
                   <ul class="header-cart-wrapitem">
                       @if(!Session::get('isLogged'))
                         @include('includes.login-cliente')
