@@ -20,7 +20,6 @@
                                 @endif
                                 >Carrinho
                                 </a>
-
                             </li>
 
                             <span class="linedivide1"></span>
