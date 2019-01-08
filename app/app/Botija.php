@@ -12,7 +12,6 @@ class Botija extends Model
         'marca',
         'descricao',
         'preco',
-        'preco_tara',
         'imagem'
     ];
 }

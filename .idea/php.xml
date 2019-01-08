@@ -80,6 +80,8 @@
       <path value="$PROJECT_DIR$/app/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/app/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/app/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/app/vendor/werneckbh/laravel-qr-code" />
+      <path value="$PROJECT_DIR$/app/vendor/werneckbh/qr-code" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

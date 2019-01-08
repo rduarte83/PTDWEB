@@ -82,6 +82,8 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/werneckbh/laravel-qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/werneckbh/qr-code" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

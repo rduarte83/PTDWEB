@@ -50,22 +50,29 @@
                         <div class="card-header font-weight-bold text-center">Totais</div>
                         <div class="row">
                             <div class="col-lg-6">
+                                <?php $totalItems = 0; ?>
                                 @foreach ($botijasCarrinhos as $botijasCarrinho)
-                                    <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);?>
+                                    <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);
+                                    $totalItems += $botijasCarrinho->quantidade;
+                                    ?>
                                     @foreach ($botijas as $botija)
-                                        <p class="text-left m-l-10">+</p>
+                                        <p class="text-left m-l-10">{{$botijasCarrinho->quantidade}}x {{$botija->nome}}</p>
                                     @endforeach
                                 @endforeach
+                                    <p class="text-left m-l-10">{{$totalItems - $carrinho->qtd_tara}}x Tara</p>
                             </div>
                             <div class="col-lg-6">
-                                <?php $total = 0; ?>
+                                <?php $total = 0;
+                                ?>
                                 @foreach ($botijasCarrinhos as $botijasCarrinho)
                                     <?php $botijas = \App\Product::all()->where('id',$botijasCarrinho->botijasid);?>
                                     @foreach ($botijas as $botija)
                                             <?php $total += $botijasCarrinho->quantidade * $botija->preco;?>
-                                        <p class="text-right m-r-10">{{$botijasCarrinho->quantidade * $botija->preco}} €</p>
+                                        <p class="text-right m-r-10">{{number_format($botijasCarrinho->quantidade * $botija->preco, 2)}} €</p>
                                     @endforeach
                                 @endforeach
+                                    <?php $total += ($totalItems - $carrinho->qtd_tara) * 5; ?>
+                                    <p class="text-right m-r-10">{{number_format(($totalItems - $carrinho->qtd_tara) * 5, 2)}} €</p>
                             </div>
                         </div>
                         <hr>
@@ -95,7 +102,7 @@
                     <form method="post" action="{{URL("carrinho/compra")}}" >
                         @csrf
                         <!-- Button -->
-                        <button type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" >
+                        <button type="submit" class="flex-c-m size2 bg-sucess bo-rad-23 hov3 s-text3 trans-0-4 p-2 text-white" >
                            Finalizar compra
                         </button>
                     </form>

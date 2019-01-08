@@ -22,8 +22,8 @@ class Inserts extends Migration
             INSERT INTO utilizadores (nome,email,password)  VALUES ('João Novo','joao@gmail.com','joao');
             INSERT INTO utilizadores (nome,email,password)  VALUES ('António Pinho','antonio@gmail.com','antonio');
             
-            INSERT INTO botijas VALUES (DEFAULT,'Propano 11','Propano','Galp','Propano 11', 11, 50.00,5.00,'images/garrafas/propano-11kg.png');
-            INSERT INTO botijas VALUES (DEFAULT,'Butano 13','Butano','Galp','Butano 13', 13, 100.00,10.00,'images/garrafas/butano-13kg.png');
+            INSERT INTO botijas VALUES (DEFAULT,'Propano 11','Propano','Galp','Propano 11', 11, 24.90,'images/garrafas/propano-11kg.png');
+            INSERT INTO botijas VALUES (DEFAULT,'Butano 13','Butano','Galp','Butano 13', 13, 29.90,'images/garrafas/butano-13kg.png');
             
             INSERT INTO utilizadores_botijas(utilizadoresid, botijasid, favorito) VALUES (1, 1, true);
             INSERT INTO utilizadores_botijas(utilizadoresid, botijasid, favorito) VALUES (1, 2, true);
@@ -33,11 +33,11 @@ class Inserts extends Migration
             INSERT INTO compras (id, utilizador, data, valor, meio_pagamento, qr, pin, local_recolha,data_recolha) VALUES (DEFAULT, 1, '2019-01-03 20:58:12', 800.00, 1, 'images/qrcodes/qrcode.png', 11111111, 'Aveiro', '2019-01-03 20:58:47');
             INSERT INTO compras (id, utilizador, data, valor, meio_pagamento, qr, pin, local_recolha,data_recolha) VALUES (DEFAULT, 2, '2019-01-03 20:58:12', 1000.00, 1, '1', 1, 'Aveiro', '2019-01-03 20:58:47');
             
-            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (1, 1, 200.00, 2);
-            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (2, 1, 150.00, 1);
-            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (1, 2, 150.00, 3);
-            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (2, 2, 100.00, 2);
-            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (1, 3, 500.00, 1);
+            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (1, 1, 24.90, 2);
+            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (2, 1, 29.90, 1);
+            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (1, 2, 24.90, 3);
+            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (2, 2, 29.90, 2);
+            INSERT INTO botijas_compras (botijasid, comprasid, preco_compra, quantidade) VALUES (1, 3, 24.90, 1);
             
             INSERT INTO carrinhos VALUES (DEFAULT,1, 1, 1);
             
