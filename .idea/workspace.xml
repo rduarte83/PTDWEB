@@ -100,11 +100,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/resources/views/profile/history.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+            <state relative-caret-position="136">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/resources/views/products.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="85" column="81" selection-start-line="85" selection-start-column="81" selection-end-line="85" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/resources/views/profile/favourites.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+              <folding>
+                <element signature="e#873#924#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2018_11_12_100000_inserts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="30" column="90" lean-forward="true" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -164,7 +194,6 @@
         <option value="$PROJECT_DIR$/app/resources/views/profile/info.blade.php" />
         <option value="$PROJECT_DIR$/app/resources/views/includes/lista-favoritos-users.blade.php" />
         <option value="$PROJECT_DIR$/app/resources/views/includes/home-carrinho.blade.php" />
-        <option value="$PROJECT_DIR$/app/resources/views/profile/favourites.blade.php" />
         <option value="$PROJECT_DIR$/app/app/Product.php" />
         <option value="$PROJECT_DIR$/app/app/Historico.php" />
         <option value="$PROJECT_DIR$/app/app/Favorito.php" />
@@ -180,25 +209,26 @@
         <option value="$PROJECT_DIR$/app/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2018_11_12_000800_create_botijas_compras_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2018_11_12_001100_create_botijas_carrinhos_table.php" />
-        <option value="$PROJECT_DIR$/app/resources/views/includes/componente-favorito.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/app/resources/views/carrinho/final.blade.php" />
         <option value="$PROJECT_DIR$/app/app/Http/Controllers/CarrinhoController.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2018_11_12_001000_create_carrinhos_table.php" />
         <option value="$PROJECT_DIR$/app/resources/views/includes/logged-cliente.blade.php" />
-        <option value="$PROJECT_DIR$/app/resources/views/products.blade.php" />
         <option value="$PROJECT_DIR$/app/routes/web.php" />
         <option value="$PROJECT_DIR$/app/resources/views/carrinho/carrinho.blade.php" />
         <option value="$PROJECT_DIR$/app/resources/views/carrinho/detalhes.blade.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2018_11_12_000300_create_botijas_table.php" />
         <option value="$PROJECT_DIR$/app/app/Botija.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2018_11_12_100000_inserts.php" />
         <option value="$PROJECT_DIR$/app/resources/views/carrinho/resumo.blade.php" />
         <option value="$PROJECT_DIR$/app/resources/views/ui/header.blade.php" />
         <option value="$PROJECT_DIR$/app/app/Http/Controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/app/resources/views/ui/script-includes.blade.php" />
         <option value="$PROJECT_DIR$/app/resources/views/ui/head.blade.php" />
         <option value="$PROJECT_DIR$/app/resources/views/profile/history.blade.php" />
+        <option value="$PROJECT_DIR$/app/resources/views/includes/componente-favorito.blade.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2018_11_12_100000_inserts.php" />
+        <option value="$PROJECT_DIR$/app/resources/views/profile/favourites.blade.php" />
+        <option value="$PROJECT_DIR$/app/resources/views/products.blade.php" />
       </list>
     </option>
   </component>
@@ -314,7 +344,14 @@
               <item name="ptdw-gr2-2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="ptdw-gr2-2018" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ptdw-gr2-2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ptdw-gr2-2018" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ptdw-gr2-2018" type="b2602c69:ProjectViewProjectNode" />
@@ -328,14 +365,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ptdw-gr2-2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ptdw-gr2-2018" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -400,12 +429,12 @@
       <workItem from="1546957136511" duration="1140000" />
       <workItem from="1546961182305" duration="546000" />
       <workItem from="1546961742308" duration="4684000" />
-      <workItem from="1546972675126" duration="2687000" />
+      <workItem from="1546972675126" duration="5416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70017000" />
+    <option name="totallyTimeSpent" value="72746000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -447,10 +476,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/app/Historico.php" />
-    <entry file="file://$PROJECT_DIR$/app/app/Http/Middleware/Authenticate.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/app/Favorito.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -504,13 +529,6 @@
       </provider>
     </entry>
     <entry file="das://7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f/database/ptdweb/schema/public/table/compras" />
-    <entry file="file://$PROJECT_DIR$/app/resources/views/includes/componente-favorito.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="168" selection-start-line="5" selection-start-column="168" selection-end-line="5" selection-end-column="168" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2018_11_12_001100_create_botijas_carrinhos_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -582,13 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="65" selection-start-line="18" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/views/profile/favourites.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -667,13 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2018_11_12_100000_inserts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="39" column="107" selection-start-line="39" selection-start-column="107" selection-end-line="39" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/resources/views/carrinho/final.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
@@ -709,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/views/products.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/app/Http/Controllers/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -732,8 +729,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/resources/views/profile/history.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        <state relative-caret-position="136">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/resources/views/includes/componente-favorito.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="82" selection-start-column="82" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/resources/views/includes/_home-carrinho.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/resources/views/includes/carrinho-detalhes.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2018_11_12_100000_inserts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="30" column="90" lean-forward="true" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/resources/views/profile/favourites.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="e#873#924#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/resources/views/products.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="85" column="81" selection-start-line="85" selection-start-column="81" selection-end-line="85" selection-end-column="81" />
         </state>
       </provider>
     </entry>
