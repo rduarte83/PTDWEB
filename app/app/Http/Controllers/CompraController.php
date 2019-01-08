@@ -41,7 +41,7 @@ class CompraController extends Controller
 
         $total =  $total + 5 * ($numBotijas - $carrinho->qtd_tara);
 
-        $pin =  rand(0, 9999999999);
+        $pin =  rand(0, 999999999);
 
         $compra = new Compra();
         $compra->utilizador = $user->id;
