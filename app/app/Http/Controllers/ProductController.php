@@ -13,7 +13,12 @@ class ProductController extends Controller
     {
         $botija = Botija::whereid($id)->first();
         $title = $botija->nome;
-        return view("product", compact("title"), compact("botija"));
+
+        /* Carregar botijas relacionadas*/
+        $botijas = Product::where("tipo", "$botija->tipo")->get();
+
+
+        return view("product", compact("title"), compact("botija"))->with("botijasRelated",  $botijas);
     }
 
     public function search(Request $request)

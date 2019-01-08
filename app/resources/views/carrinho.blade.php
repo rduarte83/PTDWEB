@@ -35,7 +35,7 @@
                             <span class="linedivide1"></span>
 
                             <li>
-                                <a href="{{URL("carrinho/resumo")}}"
+                                <p
                                 @if($page ==  "resumo")
                                     class="font-weight-bold"
                                 @endif
@@ -45,11 +45,11 @@
                             <span class="linedivide1"></span>
 
                             <li>
-                                <a href="{{URL("carrinho/final")}}"
+                                <p
                                 @if($page ==  "final")
                                     class="font-weight-bold"
                                 @endif
-                                >Final</a>
+                                >Final</p>
                             </li>
                         </ul>
                     </nav>
