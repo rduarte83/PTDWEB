@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\BotijaCompra;
 use App\Carrinho;
 use App\Compra;
 use Illuminate\Http\Request;
@@ -49,12 +50,29 @@ class HomeController extends Controller
     public function  blogDetailTemplate(){
         return view( $this->dir ."blog-detail");
     }
-
     /**
      * End Template
      */
+
+    /**
+     *
+     * Homepage
+     *
+     */
     public function index(){
-        return view("home");
+        $botijas = BotijaCompra::orderBy("quantidade", "desc")->get();
+        $botijaTemplate = array(
+            "id" =>  0,
+            "count" => 0
+        );
+        $totalBotija = array();
+        foreach( $botijas as $botija ) {
+            $botijaTemplate["id"] = $botija->botijasid;
+            $botijaTemplate["count"] += $botija->quantidade;
+            $totalBotija[$botija->botijasid] = $botijaTemplate;
+        }
+
+        return view("home")->with('botijas', $totalBotija);
     }
 
     public function mapa(){
@@ -100,6 +118,9 @@ class HomeController extends Controller
         return view( "profile/info")->with("page", "perfil");
     }
 
+
+
+
     /**
      * Carrinho
      */
@@ -127,6 +148,7 @@ class HomeController extends Controller
                 break;
         }
     }
+
     public function carrinhoDetalhes(){
         return view("carrinho/carrinho")->with("page", "carrinho");
     }
@@ -153,6 +175,7 @@ class HomeController extends Controller
     public function historicoCompras(){
         return view($this->someDir . "historico-compras");
     }
+
     /**
      * UI
      */

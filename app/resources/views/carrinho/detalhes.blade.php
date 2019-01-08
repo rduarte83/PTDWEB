@@ -9,6 +9,11 @@
         @csrf
         <div class="card-body">
             <div class="card bo-rad-0-bottom">
+                @if($errors->has('notLogged'))
+                    <div class="alart alert-danger error-message" >
+                        {{$errors->first('notLogged')}}
+                    </div>
+                @endif
                 <div class="card-header">
                     <h5 class="font-weight-bold">Método de pagamento</h5>
                 </div>
@@ -20,8 +25,6 @@
                                     <input class="" type="radio" name="metodoPagamento" id="{{$metodo->meio}}" value="{{$metodo->id}}">
                                     <label class="form-check-label" style="font-size: medium;" for="{{$metodo->meio}}">{{$metodo->meio}}</label>
                                 </div>
-
-
                             @endforeach
 
                         </div>

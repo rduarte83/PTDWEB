@@ -192,7 +192,6 @@ class CarrinhoController extends Controller
 
     public function saveDetalhes (Request $request){
         $inputs = $request->all();
-        $user = Auth::user();
 
         $regras = [
             'metodoPagamento' => "required",
@@ -202,7 +201,16 @@ class CarrinhoController extends Controller
             'required' => 'O Campo ":attribute" é de preenchimento obrigatório!',
         ];
         $request->validate($regras, $mensagens);
+
+        if ( !Auth::check() ){
+            return view("carrinho.detalhes")->with("page","detalhes")->withErrors(['notLogged'=> 'Porfavor faça login.']);
+        }
+
+        $user = Auth::user();
         $matchThese = ['utilizador' => $user->id];
+
+
+
         if ( $inputs["garrafa"] ){
             Carrinho::where($matchThese)
                 ->update(['meio_pagamento' => $inputs["metodoPagamento"] , 'qtd_tara' => $inputs["tara"]]);

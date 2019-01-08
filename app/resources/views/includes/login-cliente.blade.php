@@ -1,7 +1,7 @@
 
 
 <div class="body">
-    <form class="form" role="form" method="POST" action="login" accept-charset="UTF-8" id="login-nav">
+    <form class="form" role="form" method="POST" action="{{URL("login")}}" accept-charset="UTF-8" id="login-nav">
         @csrf
         <div class="form-group">
             <label class="sr-only" for="email">Email</label>
