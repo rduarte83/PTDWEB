@@ -22,8 +22,15 @@ class Inserts extends Migration
             INSERT INTO utilizadores (nome,email,password)  VALUES ('João Novo','joao@gmail.com','joao');
             INSERT INTO utilizadores (nome,email,password)  VALUES ('António Pinho','antonio@gmail.com','antonio');
             
-            INSERT INTO botijas VALUES (DEFAULT,'Propano 11','Propano','Galp','Propano 11', 11, 24.90,'images/garrafas/propano-11kg.png');
-            INSERT INTO botijas VALUES (DEFAULT,'Butano 13','Butano','Galp','Butano 13', 13, 29.90,'images/garrafas/butano-13kg.png');
+            INSERT INTO botijas VALUES (DEFAULT,'Galp P 11Kg','Propano','Galp','Galp Propano 11Kg', 11, 24.90,'images/garrafas/galp-propano-11kg.png');
+            INSERT INTO botijas VALUES (DEFAULT,'Galp B 13Kg','Butano','Galp','Galp Butano 13Kg', 13, 29.90,'images/garrafas/galp-butano-13kg.png');
+            INSERT INTO botijas VALUES (DEFAULT,'OZ P 11Kg','Propano','OZ','OZ Propano 11Kg', 11, 22.90,'images/garrafas/oz_propano_galo_verde_s.png');
+            INSERT INTO botijas VALUES (DEFAULT,'OZ B 13Kg','Butano','OZ','OZ Butano 13Kg', 13, 29.90,'images/garrafas/oz_butano_coracao_azul_s.png');
+            INSERT INTO botijas VALUES (DEFAULT,'Repsol P 11Kg','Propano','Repsol','Repsol Propano 11Kg', 11, 22.90,'images/garrafas/repsol_propano_11.png');
+            INSERT INTO botijas VALUES (DEFAULT,'Repsol B 13Kg','Butano','Repsol','Repsol Butano 13Kg', 13, 31.90,'images/garrafas/repsol_butano_13kg.png');
+            INSERT INTO botijas VALUES (DEFAULT,'Rubis P 11Kg','Propano','Rubis','Rubis Propano 11Kg', 11, 26.90,'images/garrafas/rubis_propano_ft.png');
+            INSERT INTO botijas VALUES (DEFAULT,'Rubis B 13Kg','Butano','Rubis','Rubis Butano 13Kg', 13, 34.90,'images/garrafas/rubis_butano_ft.png');
+      
             
             INSERT INTO utilizadores_botijas(utilizadoresid, botijasid, favorito) VALUES (1, 1, true);
             INSERT INTO utilizadores_botijas(utilizadoresid, botijasid, favorito) VALUES (1, 2, true);
