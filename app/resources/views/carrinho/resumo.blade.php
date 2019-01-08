@@ -95,7 +95,7 @@
                     <form method="post" action="{{URL("carrinho/compra")}}" >
                         @csrf
                         <!-- Button -->
-                        <button type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white" >
+                        <button type="submit" class="flex-c-m size2 bg-sucess bo-rad-23 hov3 s-text3 trans-0-4 p-2 text-white" >
                            Finalizar compra
                         </button>
                     </form>
