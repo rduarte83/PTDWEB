@@ -84,7 +84,7 @@
                 </div>
                 <div class="w-size25">
                     <!-- Button -->
-                    <button type="submit" style="padding-top: 2px !important;" class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 text-white">Prosseguir com a compra</button>
+                    <button type="submit" style="padding-top: 2px !important;" class="flex-c-m size2 bg1 bo-rad-23 hov1 s-text3 trans-0-4 p-2 bg-sucess text-white">Prosseguir com a compra</button>
                 </div>
             </div>
         </div>

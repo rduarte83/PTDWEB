@@ -34,6 +34,7 @@ Route::get("/carrinho-header/atualiza", "CarrinhoController@atualizaCarrinho");
 
 //Pesquisa
 Route::post('/search', "ProductController@search");
+Route::post('/loja', "ProductController@index");
 
 // Carrinho
 Route::get("/carrinho", "CarrinhoController@index");

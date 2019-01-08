@@ -61,6 +61,11 @@
 <!--===============================================================================================-->
 <script src="{{URL::asset("js/main.js")}}"></script>
 
+<script type="text/javascript" src="{{URL::asset("js/loja.js")}}"></script>
+
+
 <!--===============================================================================================-->
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet'/>
+
+
