@@ -84,19 +84,22 @@
                                         <select id="selectSort" class="selection-1" name="sorting">
                                             <option value="-1">Ordenar por</option>
                                             <option value="0"
-                                                @if ( $sortedSelect == 0 )
-                                                    selected
+                                                @if (isset($sortedSelect))
+                                                    @if($sortedSelect == 0)
+                                                        selected
+                                                    @endif
                                                 @endif
                                             >Preço: mais baixo primeiro</option>
                                             <option value="1"
-                                                @if ( $sortedSelect == 1 )
-                                                    selected
+                                                @if (isset($sortedSelect))
+                                                    @if($sortedSelect == 1)
+                                                        selected
+                                                    @endif
                                                 @endif
                                             >Preço: mais alto primeiro</option>
                                         </select>
                                     </div>
                                 </div>
-
 
                                 <span class="s-text8 p-t-5 p-b-5">
                                     A mostrar {{$n_res}} resultados
@@ -190,8 +193,6 @@
                             -->
                         </div>
                 </div>
-
-
             </div>
         </div>
     </section>
