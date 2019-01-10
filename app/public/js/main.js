@@ -155,7 +155,12 @@
         e.preventDefault();
         $(this).addClass('block2-btn-towishlist');
         $(this).removeClass('block2-btn-addwishlist');
-        $(this).off('click');
+    });
+
+    $('.block2-btn-towishlist').on('click', function(e){
+        e.preventDefault();
+        $(this).addClass('block2-btn-addwishlist');
+        $(this).removeClass('block2-btn-towishlist');
     });
 
     /*[ +/- num product ]

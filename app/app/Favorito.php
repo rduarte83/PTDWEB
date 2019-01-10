@@ -12,5 +12,7 @@ class Favorito extends Model
         'favorito'
     ];
 
+    protected $primaryKey = "botijasid";
+
     protected $table = 'utilizadores_botijas';
 }

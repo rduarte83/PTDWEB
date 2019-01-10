@@ -1,4 +1,4 @@
-function addItemToCart(id, quantidade, url){
+function addItemToCart(id, nomeProduto, quantidade, url){
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN':  $('meta[name="_token"]').attr('content')
@@ -15,6 +15,7 @@ function addItemToCart(id, quantidade, url){
         },
         success: function(data) {
             if ( data.status === "success" ){
+                swal(nomeProduto, "foi adicionado ao carrinho!", "success");
                 atualizaCarrinho();
             }
         },
@@ -86,6 +87,7 @@ function atualizaCarrinho (){
 }
 
 
+
 $(document).ready(function(){
 
     $("input[name='num-product1']").on('change', function () {
@@ -120,6 +122,8 @@ $(document).ready(function(){
         $(".header-dropdown-user").removeClass("show-header-dropdown");
         $('.header-dropdown-cart').toggleClass("show-header-dropdown");
     });*/
+
+
 
     $(".js-show-user").on("click", function(){
         $(".header-dropdown-user").toggleClass("show-header-dropdown");

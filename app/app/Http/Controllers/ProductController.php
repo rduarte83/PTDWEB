@@ -2,13 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Favorito;
 use App\Product;
 use App\Botija;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Response;
 
 class ProductController extends Controller
 {
+
+    private $response = array(
+        'status' => 'success',
+        'message' => 'Produto adicionado ao carrinho.',
+    );
+
     public function product_detail($id)
     {
         $botija = Botija::whereid($id)->first();
@@ -114,49 +122,43 @@ class ProductController extends Controller
 
    public function filter(Request $request) {
 
-       /*$categoria =  $request->input('categoria');
-       $marca =  $request->input('marca');
+    }
 
-       if($marca != "todas" && $categoria != "todas")
-       {
-           if($marca != "todas" && $categoria == "todas")
-           {
-               $botijas = Botija::where("marca", $marca)->get();
-           }
-           elseif($marca == "todas" && $categoria != "todas")
-           {
-               $botijas = Botija::where("tipo", $categoria)->get();
-           }
-           else
-           {
-               $botijas = Botija::where("marca", $marca)->where("tipo", $categoria)->get();
-           }
-       }
-       else
-       {
-           $botijas = Botija::all();
-       }
+    /*
+     * Favourites!
+     */
 
-       $res = Botija::query()
-           ->where('tipo', 'ILIKE', "%".$categoria."%")
-           ->orWhere('marca', 'ILIKE', "%".$marca."%")->get();
+    public function AddRemfavoritos(Request $request) {
 
+        $user = $request->user();
 
-       $n_res = count($res);
-       //$n_res = $marca . $categoria;
+        $productId = $request->input("productID");
 
-       $marcas = Botija::distinct()->get(['marca']);
-       $categorias = Botija::distinct()->get(['tipo']);
+        $hasFavourite = Favorito::where('utilizadoresid', $user->id)
+                                ->where('botijasid',$productId)
+                                ->first();
 
-       $response = [
-           "title" => "Loja",
-           "botijas" => $res,
-           "n_res" => $n_res,
-           "marcas" => $marcas,
-           "categorias" => $categorias,
-           "categoriaSelected" => "$categoria",
-           "marcaSelected" => "$marca",
-       ];
-       return view("products")->with($response);*/
+        if($hasFavourite != null){
+            Favorito::where('utilizadoresid', $user->id)
+                ->where('botijasid',$productId)
+                ->update(['favorito' => !$hasFavourite->favorito]);
+
+            $this->response["status"] = true;
+            $this->response["message"] = $hasFavourite->favorito ? "Produto removido aos favoritos" : "Produto adiconado aos favoritos";
+            $this->response["favorito"] = !$hasFavourite->favorito;
+
+            return Response::json($this->response);
+        }
+
+        $favorito = new Favorito();
+        $favorito->utilizadoresid = $user->id;
+        $favorito->botijasid = $productId;
+        $favorito->favorito = true;
+        $favorito->save();
+
+        $this->response["status"] = true;
+        $this->response["message"] = "Produto adiconado aos favoritos";
+        $this->response["favorito"] = true;
+        return Response::json($this->response);
     }
 }

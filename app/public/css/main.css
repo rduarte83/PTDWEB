@@ -1769,6 +1769,7 @@ li.sale-noti > a {
   display: block;
 }
 
+
 /* ------------------------------------ */
 .block2-btn-towishlist .icon_heart_alt {
   display: none;
@@ -1778,6 +1779,25 @@ li.sale-noti > a {
   display: block;
   color: #007bff!important;
 }
+
+.block2-btn-towishlist:hover .icon_heart_alt {
+    display: block;
+    color: white!important;
+}
+
+.block2-btn-towishlist:hover .icon_heart {
+    display: none;
+}
+
+/*
+block2-btn-towishlist:hover .icon_heart_alt {
+    display: block;
+    color: white !important;
+}
+
+block2-btn-towishlist:hover .icon_heart {
+    display: none;
+}*/
 
 /* ------------------------------------ */
 .block2-overlay:hover {

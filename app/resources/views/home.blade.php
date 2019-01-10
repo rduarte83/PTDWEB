@@ -58,7 +58,7 @@ Homepage
                                         <img class="img-fit" src="{{URL::asset($botijaInfo->imagem)}}" alt="IMG-PRODUCT">
 
                                         <div class="block2-overlay trans-0-4">
-                                            <a href="{{URL('product')}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                            <a class="block2-btn-addwishlist hov-pointer trans-0-4">
                                                 <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
                                                 <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
                                             </a>

@@ -18,6 +18,9 @@
     var urlUpdate = "{{URL("carrinho/update")}}";
     var urlCarrinhoHeader = "{{URL("carrinho-header/atualiza")}}";
     var urlCarrinhoAdd = "{{URL("carrinho/add")}}";
+    var urlAddRemoveToFavourites = "{{URL("favoritos/addRemove")}}";
+    var urlProduct = "{{URL("produto/")}}";
+
     $(".selection-1").select2({
         minimumResultsForSearch: 20,
         dropdownParent: $('#dropDownSelect1')
@@ -41,20 +44,31 @@
     $('.block2-btn-addcart').each(function(){
 
         let nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+
         $(this).on('click', function(){
             let idProduct = $(this).data("product-id");
-            let url = urlCarrinhoAdd;
-            addItemToCart(idProduct, 1, url);
-            swal(nameProduct, "foi adicionado ao carrinho!", "success");
+            addItemToCart(idProduct, nameProduct, 1, urlCarrinhoAdd);
         });
     });
 
     $('.block2-btn-addwishlist').each(function(){
         var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
         $(this).on('click', function(){
-            swal(nameProduct, "foi adicionado aos favoritos!", "success");
+            let idProduct = $(this).data("product-id");
+            addOrRemoveFavourite(idProduct, nameProduct, urlAddRemoveToFavourites);
+
         });
     });
+
+    $('.block2-btn-towishlist').each(function(){
+        var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+        $(this).on('click', function(){
+            console.log("hey");
+            let idProduct = $(this).data("product-id");
+            addOrRemoveFavourite(idProduct, nameProduct, urlAddRemoveToFavourites);
+        });
+    });
+
 
 </script>
 

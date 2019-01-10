@@ -46,6 +46,9 @@ Route::post('/carrinho/detalhes', 'CarrinhoController@saveDetalhes');
 Route::post('/carrinho/compra', 'CompraController@store')->middleware('auth');
 Route::post('/carrinho/final', 'CompraController@final')->middleware('auth');
 
+// Favourits
+Route::post("/favoritos/addRemove" , 'ProductController@AddRemfavoritos');
+
 
 // User Authentication
 Route::get('/registar', 'HomeController@register');
