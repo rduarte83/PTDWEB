@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\BotijaCompra;
 use App\Carrinho;
 use App\Compra;
+use App\Maquina;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -75,8 +76,11 @@ class HomeController extends Controller
         return view("home")->with('botijas', $totalBotija);
     }
 
-    public function mapa(){
-        return view("mapa");
+    public function mapa()
+    {
+        $maquinas = Maquina::get();
+
+        return view("mapa")->with("maquinas", $maquinas);
     }
 
     public function  about(){

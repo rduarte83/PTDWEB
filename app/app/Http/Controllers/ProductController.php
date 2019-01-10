@@ -25,7 +25,6 @@ class ProductController extends Controller
         /* Carregar botijas relacionadas*/
         $botijas = Product::where("tipo", "$botija->tipo")->get();
 
-
         return view("product", compact("title"), compact("botija"))->with("botijasRelated",  $botijas);
     }
 

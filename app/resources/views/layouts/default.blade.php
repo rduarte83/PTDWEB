@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="pt">
     <head>
 
         @include('ui.head')
