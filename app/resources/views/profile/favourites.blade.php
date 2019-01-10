@@ -14,7 +14,7 @@
                         <?php $botija = \App\Product::all()->where('id',$fav->botijasid)->first();?>
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
-                                <img class="card-img-top" data-src="holder.js/250px250?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail" style="height: auto; width: 12em; display: block;" src="{{URL::asset($botija->imagem)}}" data-holder-rendered="true">
+                                <img class="card-img-top" alt="Thumbnail" style="max-width: 100%; height: auto" src="{{URL::asset($botija->imagem)}}">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <table class="table table-responsive">
                                         <thead>

@@ -1,9 +1,8 @@
-
-<link rel="stylesheet" href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 @extends("profile")
 @section("content-profile")
+
     <div class="container col-md-12 offset-md-2 shadow-lg p-3 mb-5 bg-white rounded">
-        <div class="card-header bg-transparent">
+        <div class="bg-transparent">
             <div class="card-title text-lg-left">
                 <h2 class="m-text26">Histórico de Compras</h2>
             </div>
@@ -28,9 +27,7 @@
                             @foreach ($botijas as $botija)
                                 <tr>
                                     <td>{{$botija->nome}}
-                                        <span class="float-lg-left img-small">
-                                            <img class="img-small" alt="ICON" src="{{URL::asset($botija->imagem)}}">
-                                        </span>
+                                        <img class="img-fluid float-left p-r-50" style="width: auto; max-height: 15%" alt="ICON" src="{{URL::asset($botija->imagem)}}">
                                     </td>
                                     <td>{{$botijacompra->quantidade}}</td>
                                     <td>{{$botijacompra->preco_compra}} €</td>
@@ -48,9 +45,30 @@
     <script>
     $(document).ready( function () {
         $('#tabela').DataTable({
-            "language": {
+            language: {
                 "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
-            }
+            },
+            autoFill: true,
+            keys: true,
+            responsive: true,
+            dom:
+                "<'row'<'col-sm-3'><'col-sm-3'>>" +
+                "<'row'<'col-sm-3'l><'col-sm-6 text-center'B><'col-sm-3'f>>" +
+                "<'row'<'col-sm-12'tr>>" +
+                "<'row'<'col-sm-3'i><'col-sm-6'><'col-sm-3'p>>",
+            buttons: [
+                {
+                    extend: 'print', className: 'flex-c-m size2 m-text1 bg-neutral hov69 trans-0-4 bo-rad-23',
+                    text: 'Imprimir'
+                },
+                {
+                extend: 'collection',
+                className: 'flex-c-m size2 m-text1 bg-neutral hov69 trans-0-4 bo-rad-23',
+                text: 'Exportar',
+                buttons: [
+                    'csv', 'excel', 'pdf',
+                ]
+            }]
         });
     });
     </script>

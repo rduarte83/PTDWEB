@@ -55,7 +55,7 @@ Homepage
                                 <!-- Block2 -->
                                 <div class="block2">
                                     <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                        <img class="img-fit" src="{{URL::asset($botijaInfo->imagem)}}" alt="IMG-PRODUCT">
+                                        <img class="img-fluid mx-auto d-block" style="width:auto; max-height:100%" src="{{URL::asset($botijaInfo->imagem)}}" alt="IMG-PRODUCT">
 
                                         <div class="block2-overlay trans-0-4">
                                             <a class="block2-btn-addwishlist hov-pointer trans-0-4">

@@ -69,7 +69,7 @@
                                     @endforeach
                                 </ul>
 
-                                <input type="submit" id="formFiltersSubmit" form="search" value="Procurar" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                <input type="submit" id="formFiltersSubmit" form="search" value="Pesquisar" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
                             </form>
                         </div>
                     </div>
@@ -121,8 +121,8 @@
                                 <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
                                     <!-- Block2 -->
                                     <div class="block2">
-                                        <div  class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                            <img class="img-fit" src="{{URL::asset($botija->imagem)}}" alt="IMG-PRODUCT">
+                                        <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
+                                            <img class="img-fluid mx-auto d-block" style="width:auto; max-height:100%" src="{{URL::asset($botija->imagem)}}" alt="IMG-PRODUCT">
 
                                             <div data-product-id="{{$botija->id}}" class="block2-overlay trans-0-4">
                                                 @auth
