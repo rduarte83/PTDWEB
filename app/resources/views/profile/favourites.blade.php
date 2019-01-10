@@ -11,10 +11,12 @@
 
                 <div class="row">
                     @foreach ($favs as $fav)
-                        <?php $botija = \App\Product::all()->where('id',$fav->botijasid)->first();?>
+                        <?php if (!$fav->favorito) continue;
+                         $botija = \App\Product::all()->where('id',$fav->botijasid)->first();
+                        ?>
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
-                                <img class="card-img-top" alt="Thumbnail" style="max-width: 100%; height: auto" src="{{URL::asset($botija->imagem)}}">
+                                <img class="img-fluid mx-auto d-block" alt="Thumbnail" style="width: auto; max-height: 100%" src="{{URL::asset($botija->imagem)}}">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <table class="table table-responsive">
                                         <thead>

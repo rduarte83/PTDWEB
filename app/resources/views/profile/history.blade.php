@@ -58,12 +58,12 @@
                 "<'row'<'col-sm-3'i><'col-sm-6'><'col-sm-3'p>>",
             buttons: [
                 {
-                    extend: 'print', className: 'flex-c-m size2 m-text1 bg-neutral hov69 trans-0-4 bo-rad-23',
+                    extend: 'print', className: 'bg-neutral bo-rad-23',
                     text: 'Imprimir'
                 },
                 {
                 extend: 'collection',
-                className: 'flex-c-m size2 m-text1 bg-neutral hov69 trans-0-4 bo-rad-23',
+                className: 'bg-neutral bo-rad-23',
                 text: 'Exportar',
                 buttons: [
                     'csv', 'excel', 'pdf',
