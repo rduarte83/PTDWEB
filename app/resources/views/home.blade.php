@@ -50,18 +50,48 @@ Homepage
                         <?php $numItems++; ?>
                         <?php
                         if ( $numItems > 5) break;
-                        $botijaInfo = \App\Product::where("id", $botija["id"])->first(); ?>
+                        $botijaInfo = \App\Product::where("id", $botija["id"])->first();
+
+                        if ( Auth::check() ){
+                            $user = Auth::user();
+                            $isInFavourite = \App\Favorito::where("botijasid", $botijaInfo->id)
+                                ->where("utilizadoresid", $user->id)
+                                ->first();
+                        }
+                        ?>
                             <div class="col-sm-12 col-md-12 col-lg-12 p-b-50">
                                 <!-- Block2 -->
                                 <div class="block2">
                                     <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
                                         <img class="img-fluid mx-auto d-block" style="width:auto; max-height:100%" src="{{URL::asset($botijaInfo->imagem)}}" alt="IMG-PRODUCT">
 
-                                        <div class="block2-overlay trans-0-4">
-                                            <a class="block2-btn-addwishlist hov-pointer trans-0-4">
-                                                <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-                                                <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                                            </a>
+                                        <div data-product-id="{{$botijaInfo->id}}" class="block2-overlay trans-0-4">
+                                                @auth
+                                                    @if ($isInFavourite != null )
+                                                        @if( !$isInFavourite->favorito )
+                                                            <a href="#"  data-product-id="{{$botijaInfo->id}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                                        @else
+                                                            <a href="#"  data-product-id="{{$botijaInfo->id}}" class="block2-btn-towishlist hov-pointer trans-0-4">
+                                                        @endif
+                                                    @else
+                                                        <a href="#"  data-product-id="{{$botijaInfo->id}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                                    @endif
+
+                                                    @if ($isInFavourite != null )
+                                                        @if( !$isInFavourite->favorito )
+                                                            <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                                            <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                                        @else
+                                                            <i class="icon-wishlist icon_heart" aria-hidden="true"></i>
+                                                            <i class="icon-wishlist icon_heart_alt dis-none" aria-hidden="true"></i>
+
+                                                        @endif
+                                                    @else
+                                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                                    @endif
+                                                        </a>
+                                                @endAuth
 
                                             <div data-product-id="{{$botijaInfo->id}}" class="block2-btn-addcart w-size1 trans-0-4">
                                                 <!-- Button -->
