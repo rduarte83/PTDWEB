@@ -5,13 +5,14 @@ Mapa de Máquinas
 @section("content")
 
   <div class="pos-relative bo11 of-hidden w-size300 m-map">
-      <input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-machine" placeholder="Procurar máquinas...">
+      <input id="input" class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-machine" placeholder="Procurar máquinas...">
 
-      <button class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4">
+      <button class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4" onclick="location.href='/mapa/'+ document.getElementById('input').value;">
         <i class="fs-13 fa fa-search" aria-hidden="true"></i>
       </button>
 	</div>
-	
+
+    @if(isset($result) && isset($maquinas))
 	<div class="map-container">
 		<div id='mapa' class='map-main'></div>
 	</div>
@@ -104,5 +105,9 @@ Mapa de Máquinas
         });
     });
 </script>
+    @else
+        <div class="t-center">Não foram encontradas máquinas.</div>
+        <div style="margin-bottom: 50px;" class="t-center"><a href="/mapa">Recarregar</a></div>
+    @endif
 
 @endsection

@@ -96,6 +96,31 @@ class HomeController extends Controller
         return view("mapa")->with("maquinas", $maquinas)->with("result", $stock);
     }
 
+    public function mapa_search($nome)
+    {
+        $maquinas = Maquina::where("nome", "ILIKE", "%".$nome."%")->get();
+
+        $i=0;
+        foreach($maquinas as $m)
+        {
+            $stock[$i] = BotijasMaquinas::select('botijasid', 'stock','nome')
+            ->join('botijas','botijasid','=','id')
+            ->where('maquinasid', '=', $m->id)
+            ->get();
+
+            $i++;
+        }
+        
+        if(isset($stock))
+        {
+            return view("mapa")->with("maquinas", $maquinas)->with("result", $stock);
+        }
+        else
+        {
+            return view("mapa")->with("maquinas", $maquinas);
+        }
+    }
+
     public function  about(){
         return view("about");
     }

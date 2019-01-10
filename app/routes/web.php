@@ -16,6 +16,7 @@ Route::get('/template/product-detail', "HomeController@productDetailTemplate");
 Route::get('/', "HomeController@index");
 Route::get('/index', "HomeController@index");
 Route::get('/mapa', "HomeController@mapa");
+Route::get('/mapa/{nome}', "HomeController@mapa_search");
 Route::get('/loja', "ProductController@index");
 Route::get('/about', "HomeController@about");
 Route::get('/blog', "HomeController@blog");
