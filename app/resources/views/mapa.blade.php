@@ -42,54 +42,26 @@ Map
                     type: "geojson",
                     data: {
                         type: "FeatureCollection",
-                        features:[{
-                    "type":"Feature",
-                    "properties": {
-                        "description": 
-                        '<h6>Máquina ESTGA</h6><ul>' + 
-                        '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">Galp propano</a><span class="s-text-map-pop-green"> - 3</span></li>' +
-                        '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">BP botano</a><span class="s-text-map-pop-red"> - Sem stock</span></li>' +
-                        '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">Cepsa propano</a><span class="s-text-map-pop-green"> - 1</span></li>' +
-                        '</ul>',
-                        "icon": "theatre"
-                    },
-                    "geometry":{
-                        "type":"Point",
-                        "coordinates":[-8.4441281,40.5744432]
-                    }
-                },
-                {
-                    "type":"Feature",
-                    "properties": {
-                        "description": 
-                        '<h6>Máquina da Campa do Preto</h6><ul>' + 
-                        '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">Galp propano</a><span class="s-text-map-pop-green"> - 3</span></li>' +
-                        '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">BP botano</a><span class="s-text-map-pop-red"> - Sem stock</span></li>' +
-                        '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">Cepsa propano</a><span class="s-text-map-pop-green"> - 1</span></li>' +
-                        '</ul>',
-                        "icon": "theatre"
-                    },
-                    "geometry":{
-                        "type":"Point",
-                        "coordinates":[-8.6380102, 41.2804088]
-                    }
-                },
-                {
-                    "type":"Feature",
-                    "properties": {
-                        "description": 
-                        '<h6>Máquina da Venda das Raparigas</h6><ul>' + 
-                        '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">Galp propano</a><span class="s-text-map-pop-green"> - 3</span></li>' +
-                        '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">BP botano</a><span class="s-text-map-pop-red"> - Sem stock</span></li>' +
-                        '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">Cepsa propano</a><span class="s-text-map-pop-green"> - 1</span></li>' +
-                        '</ul>',
-                        "icon": "theatre"
-                    },
-                    "geometry":{
-                        "type":"Point",
-                        "coordinates":[-8.9607305, 39.411254]
-                    }
-                }]
+                        features:[
+                            @foreach($maquinas as $maquina)
+                            {
+                                "type":"Feature",
+                                "properties": {
+                                    "description": 
+                                    '<h6>{{$maquina->nome}}</h6><ul>' + 
+                                    '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">Galp propano</a><span class="s-text-map-pop-green"> - 3</span></li>' +
+                                    '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">BP botano</a><span class="s-text-map-pop-red"> - Sem stock</span></li>' +
+                                    '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">Cepsa propano</a><span class="s-text-map-pop-green"> - 1</span></li>' +
+                                    '</ul>',
+                                    "icon": "theatre"
+                                },
+                                "geometry":{
+                                    "type":"Point",
+                                    "coordinates":[{{$maquina->lat}}, {{$maquina->long}}]
+                                }
+                            },
+                            @endforeach
+                        ]
                     }
                 },
                 layout: {
