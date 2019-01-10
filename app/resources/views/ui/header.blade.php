@@ -43,7 +43,7 @@
 			<!-- USER DROPDOWN -->
 			<div class="header-wrapicon2">
                 <div class="cs-pointer js-show-user" style="line-height: 27px;">
-                    <img src="{{URL("images/icons/icon-header-01.png")}}" class="header-icon1 " alt="ICON">
+                    <img src="{{URL("images/icons/icon-header-01.png")}}" class="header-icon1 " alt="ICON-User">
                     &nbsp;
 
                     @auth
@@ -94,7 +94,7 @@
         <div class="header-icons-mobile">
 			<!-- USER DROPDOWN -->
 			<div class="header-wrapicon2">
-                <img src="{{URL::asset("images/icons/icon-header-01.png")}}" class="header-icon1 js-show-user" alt="ICON">
+                <img src="{{URL::asset("images/icons/icon-header-01.png")}}" class="header-icon1 js-show-user" alt="ICON-Cart">
 
                 <!-- Header cart noti -->
                 <div class="header-cart header-dropdown header-dropdown-user">

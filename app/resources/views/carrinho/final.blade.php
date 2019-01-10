@@ -57,10 +57,10 @@
                                 <div class="card">
                                     <div class="card-body text-center">
                                         <h5 class="card-title">QR code</h5>
-                                        <img src="{{URL::asset($compra->qr)}}" alt="Código de barras">
+                                        <img id="QRImage" src="{{URL::asset($compra->qr)}}" alt="Código de barras">
                                     </div>
                                     <div class="card-footer text-center">
-                                        <a href="#" class="card-link">Imprimir</a>  |<a href="#" class="card-link">Guardar</a>
+                                        <a onClick="window.print();return false" class="card-link">Imprimir</a>  |<a href="{{URL::asset($compra->qr)}}" class="card-link">Guardar</a>
                                     </div>
                                 </div>
                                 <div class="card m-t-10">

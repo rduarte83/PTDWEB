@@ -21,26 +21,26 @@
                             <!--  -->
                             <form id="formFilters" action="{{URL("loja")}}" method="post" id="search">
                                 @csrf
-                                <label for="categoria" class="m-text14 p-b-7">
+                                <label class="m-text14 p-b-7">
                                     Categoria
                                 </label>
 
                                 <ul class="p-b-54">
                                     <li class="p-t-4">
-                                        <input class="s-text13" type="radio" name="categoria" value="todas"
+                                        <input class="s-text13" type="radio" name="categoria" id="categoria" value="todas"
                                            @if($categoriaSelected == "todas")
                                             checked
                                            @endif
-                                        > Todas
+                                        > <label for="categoria">Todas</label>
                                     </li>
 
                                     @foreach($categorias as $c)
                                     <li class="p-t-4">
-                                        <input class="s-text13" type="radio" name="categoria" value="{{$c->tipo}}"
+                                        <input class="s-text13" type="radio" name="categoria" id="{{$c->tipo}}" value="{{$c->tipo}}"
                                             @if($categoriaSelected == $c->tipo)
                                                 checked
                                             @endif
-                                        > {{$c->tipo}}
+                                        ><label for="{{$c->tipo}}"> {{$c->tipo}}</label>
                                     </li>
                                     @endforeach
                                 </ul>
@@ -51,20 +51,20 @@
 
                                 <ul class="p-b-54">
                                     <li class="p-t-4">
-                                        <input class="s-text13" type="radio" name="marca" value="todas"
+                                        <input class="s-text13" type="radio" name="marca" id="marca" value="todas"
                                            @if($marcaSelected == "todas")
                                             checked
                                            @endif
-                                        > Todas
+                                        ><label for="marca">Marca</label>
                                     </li>
 
                                     @foreach($marcas as $m)
                                     <li class="p-t-4">
-                                        <input class="s-text13" type="radio" name="marca" value="{{$m->marca}}"
+                                        <input class="s-text13" type="radio" name="marca" id="{{$m->marca}}" value="{{$m->marca}}"
                                            @if($marcaSelected == $m->marca)
                                                checked
                                            @endif
-                                        > {{$m->marca}}
+                                        ><label for="{{$m->marca}}"> {{$m->marca}}</label>
                                     </li>
                                     @endforeach
                                 </ul>
@@ -121,18 +121,18 @@
                                     <!-- Block2 -->
                                     <div class="block2">
                                         <div class="block2-img wrap-pic-w img-product of-hidden pos-relative">
-                                            <img class="img-fluid mx-auto d-block" style="width:auto; max-height:100%" src="{{URL::asset($botija->imagem)}}" alt="IMG-PRODUCT">
+                                            <img class="img-fluid mx-auto d-block" style="width:auto; max-height:100%" src="{{URL::asset($botija->imagem)}}" alt="{{$botija->nome}}">
 
                                             <div data-product-id="{{$botija->id}}" class="block2-overlay trans-0-4">
                                                 @auth
                                                     @if ($isInFavourite != null )
                                                         @if( !$isInFavourite->favorito )
-                                                            <a href="#"  data-product-id="{{$botija->id}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                                            <a data-product-id="{{$botija->id}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
                                                         @else
-                                                            <a href="#"  data-product-id="{{$botija->id}}" class="block2-btn-towishlist hov-pointer trans-0-4">
+                                                            <a data-product-id="{{$botija->id}}" class="block2-btn-towishlist hov-pointer trans-0-4">
                                                         @endif
                                                     @else
-                                                        <a href="#"  data-product-id="{{$botija->id}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                                        <a data-product-id="{{$botija->id}}" class="block2-btn-addwishlist hov-pointer trans-0-4">
                                                     @endif
                                                         @if ($isInFavourite != null )
                                                             @if( !$isInFavourite->favorito )

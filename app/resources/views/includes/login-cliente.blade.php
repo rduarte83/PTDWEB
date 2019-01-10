@@ -1,5 +1,3 @@
-
-
 <div class="body">
     <form class="form" role="form" method="POST" action="{{URL("login")}}" accept-charset="UTF-8" id="login-nav">
         @csrf
@@ -14,7 +12,7 @@
             @endif
         </div>
         <div class="form-group">
-            <label class="sr-only" for="Password">Password</label>
+            <label class="sr-only" for="password">Password</label>
             <input type="password" class="form-control {{$errors->has('password') ? 'is-invalid' : ''}}" name="password" id="password" placeholder="Password" required="">
             @if($errors->has('password'))
                 <div class="invalid-feedback">

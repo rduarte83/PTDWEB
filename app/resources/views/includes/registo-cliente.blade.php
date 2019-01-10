@@ -57,7 +57,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label class="sr-only" for="Password1">Palavra-passe</label>
+                            <label class="sr-only" for="password1">Palavra-passe</label>
                             <input type="password" class="form-control {{$errors->has('password1') ? 'is-invalid' : ''}}" id="password1" placeholder="Palavra-passe">
                             @if($errors->has('password1'))
                                 <div class="invalid-feedback">
