@@ -50,6 +50,18 @@ class Inserts extends Migration
             
             INSERT INTO botijas_carrinhos VALUES (1, 1, 1);
             INSERT INTO botijas_carrinhos VALUES (2, 1, 4);
+
+            INSERT INTO maquinas (id, nome, online, lat, long) VALUES (1, 'Máquina ESTGA', TRUE, '-8.4441281', '40.5744432');
+            INSERT INTO maquinas (id, nome, online, lat, long) VALUES (2, 'Máquina de Coimbra', TRUE, '-8.42424', '40.209239');
+            INSERT INTO maquinas (id, nome, online, lat, long) VALUES (3, 'Máquina de Aveiro', TRUE, '-8.649457', '40.642052');
+
+            INSERT INTO botijas_maquinas (botijasid, maquinasid, stock, num_reservas) VALUES (1, 1, 4, 1);
+            INSERT INTO botijas_maquinas (botijasid, maquinasid, stock, num_reservas) VALUES (2, 1, 0, 1);
+            INSERT INTO botijas_maquinas (botijasid, maquinasid, stock, num_reservas) VALUES (3, 2, 4, 1);
+            INSERT INTO botijas_maquinas (botijasid, maquinasid, stock, num_reservas) VALUES (6, 3, 0, 1);
+            INSERT INTO botijas_maquinas (botijasid, maquinasid, stock, num_reservas) VALUES (7, 2, 4, 1);
+            INSERT INTO botijas_maquinas (botijasid, maquinasid, stock, num_reservas) VALUES (5, 3, 4, 1);
+            INSERT INTO botijas_maquinas (botijasid, maquinasid, stock, num_reservas) VALUES (4, 1, 0, 1);
         ");
     }
 

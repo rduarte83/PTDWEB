@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\BotijaCompra;
 use App\Carrinho;
 use App\Compra;
+use App\Botija;
 use App\Maquina;
+use App\BotijasMaquinas;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -80,7 +82,18 @@ class HomeController extends Controller
     {
         $maquinas = Maquina::get();
 
-        return view("mapa")->with("maquinas", $maquinas);
+        $i=0;
+        foreach($maquinas as $m)
+        {
+            $stock[$i] = BotijasMaquinas::select('botijasid', 'stock','nome')
+            ->join('botijas','botijasid','=','id')
+            ->where('maquinasid', '=', $m->id)
+            ->get();
+
+            $i++;
+        }
+
+        return view("mapa")->with("maquinas", $maquinas)->with("result", $stock);
     }
 
     public function  about(){

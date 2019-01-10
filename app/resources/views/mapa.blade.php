@@ -1,6 +1,6 @@
 @extends("layouts.default")
 @section("title")
-Map
+Mapa de Máquinas
 @endsection
 @section("content")
 
@@ -43,15 +43,21 @@ Map
                     data: {
                         type: "FeatureCollection",
                         features:[
+                            @php($i = 0)
                             @foreach($maquinas as $maquina)
                             {
                                 "type":"Feature",
                                 "properties": {
                                     "description": 
-                                    '<h6>{{$maquina->nome}}</h6><ul>' + 
-                                    '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">Galp propano</a><span class="s-text-map-pop-green"> - 3</span></li>' +
-                                    '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">BP botano</a><span class="s-text-map-pop-red"> - Sem stock</span></li>' +
-                                    '<li><a href=\"http://localhost:8000/product" target=\"_blank\" title=\"Comprar esta botija\">Cepsa propano</a><span class="s-text-map-pop-green"> - 1</span></li>' +
+                                    '<h6>{{$maquina->nome}}</h6><ul>' +
+                                    @foreach($result[$i] as $r)
+                                    '<li><a href="/produto/{{$r->botijasid}}">{{$r->nome}}</a>' +
+                                    @if ($r->stock > 0)
+                                    '<span class="s-text-map-pop-green"> - {{$r->stock}}</span></li>' +
+                                    @else
+                                    '<span class="s-text-map-pop-red"> - {{$r->stock}}</span></li>' +
+                                    @endif
+                                    @endforeach
                                     '</ul>',
                                     "icon": "theatre"
                                 },
@@ -60,6 +66,7 @@ Map
                                     "coordinates":[{{$maquina->lat}}, {{$maquina->long}}]
                                 }
                             },
+                            @php($i++)
                             @endforeach
                         ]
                     }
