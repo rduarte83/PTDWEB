@@ -34,6 +34,12 @@ class ProductController extends Controller
         $categoria =  $request->input('categoria');
         $marca =  $request->input('marca');
 
+        $sort =  intval($request->get('sorting', -1));
+        $sorting = "asc";
+        if( $sort == 0 ) $sorting = "asc";
+        else if( $sort == 1 ) $sorting = "desc";
+        else $sorting = "asc";
+
         $search =  $request->input('search-product');
         $res = Botija::query()
             ->where('tipo', 'ILIKE', "%".$search."%")
@@ -54,6 +60,7 @@ class ProductController extends Controller
             "categorias" => $categorias,
             "categoriaSelected" => "todas",
             "marcaSelected" => "todas",
+            "sortedSelect" => $sort
 
         ];
         return view("products")->with($response);

@@ -84,17 +84,13 @@
                                         <select id="selectSort" class="selection-1" name="sorting">
                                             <option value="-1">Ordenar por</option>
                                             <option value="0"
-                                                @if (isset($sortedSelect))
-                                                    @if($sortedSelect == 0)
-                                                        selected
-                                                    @endif
+                                                @if($sortedSelect == 0)
+                                                    selected
                                                 @endif
                                             >Preço: mais baixo primeiro</option>
                                             <option value="1"
-                                                @if (isset($sortedSelect))
-                                                    @if($sortedSelect == 1)
-                                                        selected
-                                                    @endif
+                                                @if($sortedSelect == 1)
+                                                    selected
                                                 @endif
                                             >Preço: mais alto primeiro</option>
                                         </select>
