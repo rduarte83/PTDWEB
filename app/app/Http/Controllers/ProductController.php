@@ -53,7 +53,7 @@ class ProductController extends Controller
         $categorias = Botija::distinct()->get(['tipo']);
 
         $response = [
-            "title" => "Search -" . $search,
+            "title" => "Search - " . $search,
             "botijas" => $res,
             "n_res" => $n_res,
             "marcas" => $marcas,

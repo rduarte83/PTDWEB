@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Compra;
 use App\Favorito;
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Http\Request;
 use App\Utilizador;
 use Illuminate\Support\Facades\Auth;
@@ -115,7 +116,14 @@ class UtilizadorController extends Controller
 
         if ($model->create($request->all())) {
             $request->session()->flash('success', 'Sucesso!');
+            $logController = new LoginController();
+            $user = Utilizador::where("email",$request->input('email'))->first();
 
+            //$post = array('password' => $pass_for_auth, 'email' => $email);
+            $request->session()->setExists(true);
+            $request->session()->put("isLogged",true);
+            Auth::loginUsingId($user->id);
+            //$logController->authenticated($request, $user);
             //return redirect()->route('route.infoTeste');
                 //->route('profile.info');
             return redirect('/info');
