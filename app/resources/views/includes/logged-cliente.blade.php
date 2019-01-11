@@ -3,7 +3,9 @@
 <div class="body">
     <div class="form-group  text-center">
         <div class="m-auto p-t-10">
+            @auth
             <h5>{{Auth::user()->nome}}</h5>
+            @endauth
         </div>
     </div>
     <hr>
