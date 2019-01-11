@@ -24,7 +24,7 @@
                                 $botijasCarrinhos = $carrinho;
                             }
                         ?>
-
+                        @if ( $botijasCarrinhos != null)
                         @foreach ($botijasCarrinhos as $botijasCarrinho)
                             <?php
                             if(Auth::check())
@@ -68,6 +68,11 @@
                                 </tr>
                             @endforeach
                         @endforeach
+                        @else
+                            <tr class="table-row">
+                                <td colspan="5" class="column-1 text-center">Não tem items no carrinho.</td>
+                            </tr>
+                        @endif
                         </tbody>
                     </table>
                 </div>
