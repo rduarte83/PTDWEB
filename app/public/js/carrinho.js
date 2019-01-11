@@ -143,7 +143,7 @@ $(document).ready(function(){
         let name = $(".product-detail-name").html();
 
 
-        addItemToCart(id,numProduct,urlCarrinhoAdd)
+        addItemToCart(id, name,numProduct,urlCarrinhoAdd)
         swal(name, "foi adicionado ao carrinho!", "success");
     });
 
