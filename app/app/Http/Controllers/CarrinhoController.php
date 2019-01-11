@@ -235,6 +235,36 @@ class CarrinhoController extends Controller
      * @param  \App\Carrinho  $carrinho
      * @return \Illuminate\Http\Response
      */
+
+    public function remove(Request $request)
+    {
+        $productID = $request->get("productID");
+        if(!Auth::check()) {
+            // Work with sessions
+            $carrinho = Session::get("carrinho");
+            foreach ($carrinho as $key => $atual){
+                if($atual["botijasid"] == $productID) {
+                    unset($carrinho[$key]);
+                    break;
+                }
+            }
+
+            Session::put("carrinho", $carrinho);
+            $this->response["carrinho"]=$carrinho;
+
+            return Response::json($this->response);
+        }
+
+        $user = Auth::user();
+        $carrinho = Carrinho::where("utilizador", $user->id)->first();
+
+        BotijaCarrinho::where("carrinhosid", $carrinho->id)
+            ->where("botijasid", $productID)
+            ->delete();
+        $this->response["message"]="Produto removido";
+        return Response::json($this->response);
+    }
+
     public function destroy($carrinho)
     {
         if(!Auth::check()) {

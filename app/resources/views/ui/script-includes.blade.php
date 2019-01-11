@@ -18,6 +18,7 @@
     var urlUpdate = "{{URL("carrinho/update")}}";
     var urlCarrinhoHeader = "{{URL("carrinho-header/atualiza")}}";
     var urlCarrinhoAdd = "{{URL("carrinho/add")}}";
+    var urlCarrinhoRemove = "{{URL("carrinho/remove")}}";
     var urlAddRemoveToFavourites = "{{URL("favoritos/addRemove")}}";
     var urlProduct = "{{URL("produto/")}}";
 

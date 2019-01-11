@@ -38,8 +38,8 @@
 
                 @foreach ($botijas as $botija)
                 <li class="header-cart-item">
-                    <div class="header-cart-item-img">
-                        <img src="{{URL::asset($botija->imagem)}}" alt="IMG">
+                    <div data-product-id="{{$botija->id}}" class="header-cart-item-img">
+                        <img src="{{URL::asset($botija->imagem)}}" alt="{{$botija->nome}}">
                     </div>
                     <div class="header-cart-item-txt">
                         <a href="#" class="header-cart-item-name">

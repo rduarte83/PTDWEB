@@ -149,7 +149,7 @@
                                                             <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 
                                                         @endif
-                                                    </a>
+                                                        </a>
                                                 @endAuth
 
                                                 <div data-product-id="{{$botija->id}}" class="block2-btn-addcart w-size1 trans-0-4">

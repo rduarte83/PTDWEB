@@ -1,3 +1,4 @@
+// Add item to cart
 function addItemToCart(id, nomeProduto, quantidade, url){
     $.ajaxSetup({
         headers: {
@@ -22,6 +23,34 @@ function addItemToCart(id, nomeProduto, quantidade, url){
         error: function(data) {
             console.log("Error");
             console.log(data);
+        },
+    });
+}
+
+// Remove item from cart
+function removeItemFromCart(id, url){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN':  $('meta[name="_token"]').attr('content')
+        }
+    });
+
+    $.ajax({
+        type:"post",
+        dataType:"json",
+        url: url,
+        data: {
+            productID: id
+        },
+        success: function(data) {
+            if ( data.status === "success" ){
+                //swal(nomeProduto, "foi adicionado ao carrinho!", "success");
+                atualizaCarrinho();
+            }
+        },
+        error: function(data) {
+            console.log("Error");
+            console.log(data.responseText);
         },
     });
 }
@@ -125,13 +154,23 @@ $(document).ready(function(){
 
 
 
+
     $(".js-show-user").on("click", function(){
         $(".header-dropdown-user").toggleClass("show-header-dropdown");
         $(".header-dropdown-cart").removeClass("show-header-dropdown");
     });
 });
 
+
+// Get it from global ( Dynamic )
 $(document).on("click", '.js-show-cart', function(){
     $(".header-dropdown-user").removeClass("show-header-dropdown");
     $('.header-dropdown-cart').toggleClass("show-header-dropdown");
+});
+
+$(document).on("click", ".header-cart-item-img", function () {
+    let productID = $(this).data("product-id");
+
+    removeItemFromCart(productID, urlCarrinhoRemove);
+    console.log("clicaste no produto-"+productID);
 });
