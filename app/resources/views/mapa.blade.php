@@ -7,7 +7,7 @@ Mapa de Máquinas
   <div class="pos-relative bo11 of-hidden w-size300 m-map">
       <input id="input" class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-machine" placeholder="Procurar máquinas...">
 
-      <button class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4" onclick="location.href='/mapa/'+ document.getElementById('input').value;">
+      <button class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4" onclick="location.href='../mapa/'+ document.getElementById('input').value;">
         <i class="fs-13 fa fa-search" aria-hidden="true"></i>
       </button>
 	</div>
@@ -52,7 +52,7 @@ Mapa de Máquinas
                                     "description": 
                                     '<h6>{{$maquina->nome}}</h6><ul>' +
                                     @foreach($result[$i] as $r)
-                                    '<li><a href="/produto/{{$r->botijasid}}">{{$r->nome}}</a>' +
+                                    '<li><a href="../produto/{{$r->botijasid}}">{{$r->nome}}</a>' +
                                     @if ($r->stock > 0)
                                     '<span class="s-text-map-pop-green"> - {{$r->stock}}</span></li>' +
                                     @else
@@ -107,7 +107,7 @@ Mapa de Máquinas
 </script>
     @else
         <div class="t-center">Não foram encontradas máquinas.</div>
-        <div style="margin-bottom: 50px;" class="t-center"><a href="/mapa">Recarregar</a></div>
+        <div style="margin-bottom: 50px;" class="t-center"><a href="../mapa">Recarregar</a></div>
     @endif
 
 @endsection
