@@ -116,7 +116,8 @@ class UtilizadorController extends Controller
 
         if ($model->create($request->all())) {
             $request->session()->flash('success', 'Sucesso!');
-            LoginController::authenticated($request, $reg);
+            $logController = new LoginController();
+            $logController->authenticated($request, $reg);
             //return redirect()->route('route.infoTeste');
                 //->route('profile.info');
             return redirect('/info');
