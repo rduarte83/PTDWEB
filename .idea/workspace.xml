@@ -79,72 +79,21 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/resources/views/ui/head.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="731">
+              <caret line="46" column="24" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/resources/views/profile/history.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/resources/views/carrinho/carrinho-header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="29" column="85" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="85" />
-              <folding>
-                <element signature="e#1412#1448#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/resources/views/profile/favourites.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-              <folding>
-                <element signature="e#853#890#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f/database/ptdweb/schema/public/table/utilizadores_botijas">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/resources/views/product.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/resources/views/products.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="71" column="106" selection-start-line="71" selection-start-column="106" selection-end-line="71" selection-end-column="106" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/resources/views/home.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+            <state relative-caret-position="1270">
+              <caret line="84" column="49" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -153,7 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>csrf</find>
       <find>redirect</find>
       <find>pin</find>
       <find>redirec</find>
@@ -183,10 +131,11 @@
       <find>datatables</find>
       <find>Datat</find>
       <find>procurar</find>
+      <find>checkout</find>
     </findStrings>
     <dirStrings>
-      <dir>D:\git\ptdw-gr2-2018\app</dir>
       <dir>D:\git\ptdw-gr2-2018</dir>
+      <dir>D:\git\ptdw-gr2-2018\app</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -239,6 +188,7 @@
         <option value="$PROJECT_DIR$/app/resources/views/ui/head.blade.php" />
         <option value="$PROJECT_DIR$/app/resources/views/profile/favourites.blade.php" />
         <option value="$PROJECT_DIR$/app/resources/views/profile/history.blade.php" />
+        <option value="$PROJECT_DIR$/app/resources/views/carrinho/carrinho-header.blade.php" />
       </list>
     </option>
   </component>
@@ -326,7 +276,7 @@
       <path value="$PROJECT_DIR$/app/vendor/werneckbh/qr-code" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="20" />
     <option name="y" value="47" />
     <option name="width" value="1400" />
@@ -353,36 +303,7 @@
               <item name="ptdw-gr2-2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="ptdw-gr2-2018" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ptdw-gr2-2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ptdw-gr2-2018" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ptdw-gr2-2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ptdw-gr2-2018" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ptdw-gr2-2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ptdw-gr2-2018" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="carrinho" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ptdw-gr2-2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ptdw-gr2-2018" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="profile" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -395,9 +316,9 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Blade" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -456,12 +377,15 @@
       <workItem from="1546972675126" duration="6172000" />
       <workItem from="1547073093220" duration="2211000" />
       <workItem from="1547075353663" duration="6968000" />
-      <workItem from="1547083823578" duration="1533000" />
+      <workItem from="1547083823578" duration="1693000" />
+      <workItem from="1547144295994" duration="912000" />
+      <workItem from="1547162321151" duration="10000" />
+      <workItem from="1547226199817" duration="387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84214000" />
+    <option name="totallyTimeSpent" value="85683000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -474,9 +398,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29317698" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32900432" />
@@ -489,7 +412,7 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32900432" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32900432" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30952382" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30952382" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -503,26 +426,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/resources/views/includes/historico-compras.blade.php" />
-    <entry file="file://$PROJECT_DIR$/app/resources/views/includes/carrinho-final.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/views/carrinho.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1038">
-          <caret line="110" column="24" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2018_11_12_000200_create_utilizadores_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102" />
-      </provider>
-    </entry>
     <entry file="das://7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f/database/ptdweb/schema/public/table/botijas_carrinhos" />
     <entry file="das://7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f/database/ptdweb/schema/public/table/carrinhos" />
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2018_11_12_000900_create_botijas_maquinas_table.php">
@@ -713,13 +616,6 @@
     <entry file="file://$PROJECT_DIR$/app/resources/views/includes/carrinho-detalhes.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="24" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2018_11_12_100000_inserts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -744,24 +640,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/views/product.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/resources/views/ui/head.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+        <state relative-caret-position="969">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/views/products.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/resources/views/profile/history.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="106" selection-start-line="71" selection-start-column="106" selection-end-line="71" selection-end-column="106" />
+        <state relative-caret-position="442">
+          <caret line="29" column="85" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="85" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/views/home.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2018_11_12_000200_create_utilizadores_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        <state relative-caret-position="425">
+          <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="uml://DATABASE/7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f</OriginalElement>
+          <nodes>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.botijas_maquinas</node>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.logs</node>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.compras</node>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.maquinas</node>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.botijas_compras</node>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.utilizadores_botijas</node>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.utilizadores</node>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.carrinhos</node>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.roles</node>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.botijas_carrinhos</node>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.notificacoes</node>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.pagamentos</node>
+            <node x="" y="">7e221f44-a1d8-4e20-b7fe-4e2291ca3c6f.TABLE:ptdweb.public.botijas</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7869479235332892" x="622.0" y="353.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/resources/views/profile/favourites.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -772,30 +710,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/views/ui/head.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/resources/views/product.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="556">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/views/profile/favourites.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/resources/views/products.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-          <folding>
-            <element signature="e#853#890#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="556">
+          <caret line="71" column="106" selection-start-line="71" selection-start-column="106" selection-end-line="71" selection-end-column="106" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/views/profile/history.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="85" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="85" />
-          <folding>
-            <element signature="e#1412#1448#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="556">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="46" column="24" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/resources/views/carrinho/carrinho-header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1270">
+          <caret line="84" column="49" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
         </state>
       </provider>
     </entry>
