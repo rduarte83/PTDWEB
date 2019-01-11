@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Compra;
 use App\Favorito;
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Http\Request;
 use App\Utilizador;
 use Illuminate\Support\Facades\Auth;
@@ -115,7 +116,7 @@ class UtilizadorController extends Controller
 
         if ($model->create($request->all())) {
             $request->session()->flash('success', 'Sucesso!');
-
+            LoginController::authenticated($request, $reg);
             //return redirect()->route('route.infoTeste');
                 //->route('profile.info');
             return redirect('/info');

@@ -4,7 +4,7 @@
 @endsection
 @section("content")
     <!-- Title Page -->
-    <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(images/wallpaper2_crop_dark.jpg);">
+    <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url({{URL::asset("images/wallpaper2_crop_dark.jpg")}});">
         <h2 class="l-text2 t-center">
             Contactos
         </h2>

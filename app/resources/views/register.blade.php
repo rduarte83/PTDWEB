@@ -12,7 +12,7 @@
             <div class="title text-lg-center">
                 <h2 class="m-text26 p-b-36 p-t-15">Registo de Cliente</h2>
             </div>
-            <form action="/register" method="POST">
+            <form action="{{URL("register")}}" method="POST">
                 <!-- Token -->
                 @csrf
                 <div class="form-group bo4">
