@@ -82,7 +82,7 @@
 
             <div class="header-cart-wrapbtn">
                 <!-- Button -->
-                <a href="{{URL("carrinho/resumo")}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                <a href="{{URL("carrinho/detalhes")}}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                     Checkout
                 </a>
             </div>
